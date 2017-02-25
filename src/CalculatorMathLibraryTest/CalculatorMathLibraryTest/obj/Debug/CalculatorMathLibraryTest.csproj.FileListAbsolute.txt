@@ -1,8 +1,0 @@
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\bin\Debug\CalculatorMathLibraryTest.dll
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\bin\Debug\CalculatorMathLibraryTest.pdb
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\obj\Debug\CalculatorMathLibraryTest.csprojResolveAssemblyReference.cache
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\obj\Debug\CalculatorMathLibraryTest.dll
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\obj\Debug\CalculatorMathLibraryTest.pdb
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\bin\Debug\nunit.framework.dll
-c:\users\sparkesix\documents\visual studio 2015\Projects\CalculatorMathLibraryTest\CalculatorMathLibraryTest\bin\Debug\nunit.framework.xml
