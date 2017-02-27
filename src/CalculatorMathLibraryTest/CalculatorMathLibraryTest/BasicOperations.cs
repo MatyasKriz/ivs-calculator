@@ -7,7 +7,7 @@ namespace MathLibraryTesting
     {
         #region Simple Tests Testing Basic Operations
         [Test]
-        public void Adding()
+        public void BasicAdding()
         {
             Assert.That(1 + 1 == 2);
             Assert.That(100 + 100 == 200);
@@ -15,7 +15,7 @@ namespace MathLibraryTesting
         }
 
         [Test]
-        public void Subtracting()
+        public void BasicSubtracting()
         {
             Assert.That(1 - 1 == 0);
             Assert.That(100 - 50 == 50);
@@ -23,7 +23,7 @@ namespace MathLibraryTesting
         }
 
         [Test]
-        public void Multiplying()
+        public void BasicMultiplying()
         {
             Assert.That(1 * 1 == 1);
             Assert.That(10 * 10 == 100);
@@ -31,7 +31,7 @@ namespace MathLibraryTesting
         }
 
         [Test]
-        public void Dividing()
+        public void BasicDividing()
         {
             Assert.That(1 / 1 == 1);
             Assert.That(100 / 1 == 100);
