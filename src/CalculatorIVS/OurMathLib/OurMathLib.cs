@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OurMathLib
 {
 
-    public class Math
+    public static class Math
     {
         public static int Add(int x, int y)
         {
@@ -17,7 +17,9 @@ namespace OurMathLib
 
         public static long Factorial(long inputNumber)
         {
+            // so wow
             return 1;
+           
         }
     }
 }
