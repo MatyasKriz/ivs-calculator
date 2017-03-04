@@ -1,41 +1,43 @@
 ﻿using NUnit.Framework;
+using OurMathLib;
 
 namespace MathLibraryTesting
 {
     [TestFixture]
     public class BasicOperations
     {
+        double delta = OurMathLib.Math.Delta;
         #region Simple Tests Testing Basic Operations
         [Test]
-        public void BasicAdding()
+        public void Basic_Add()
         {
-            Assert.That(1 + 1 == 2);
-            Assert.That(100 + 100 == 200);
-            Assert.That(1000 + 1000 == 2000);
+            Assert.AreEqual(2, OurMathLib.Math.Add(1, 1));
+            Assert.AreEqual(250.75, OurMathLib.Math.Add(150, 100.75));
+            Assert.AreEqual(101010, OurMathLib.Math.Add(100010, 1000));
         }
 
         [Test]
-        public void BasicSubtracting()
+        public void Basic_Subtract()
         {
-            Assert.That(1 - 1 == 0);
-            Assert.That(100 - 50 == 50);
-            Assert.That(1000 - 900 == 100);
+            Assert.AreEqual(0, OurMathLib.Math.Subtract(1, 1));
+            Assert.AreEqual(50.5, OurMathLib.Math.Subtract(100, 49.5));
+            Assert.AreEqual(1999999, OurMathLib.Math.Subtract(2000000, 1));
         }
 
         [Test]
-        public void BasicMultiplying()
+        public void Basic_Multiply()
         {
-            Assert.That(1 * 1 == 1);
-            Assert.That(10 * 10 == 100);
-            Assert.That(13 * 1000 == 13000);
+            Assert.AreEqual(1, OurMathLib.Math.Multiply(1, 1));
+            Assert.AreEqual(33.3, OurMathLib.Math.Multiply(11.1, 3));
+            Assert.AreEqual(424242, OurMathLib.Math.Multiply(42, 10101));
         }
 
         [Test]
-        public void BasicDividing()
+        public void Basic_Divide()
         {
-            Assert.That(1 / 1 == 1);
-            Assert.That(100 / 1 == 100);
-            Assert.That(2000 / 1000 == 2);
+            Assert.AreEqual(1, OurMathLib.Math.Divide(1, 1));
+            Assert.AreEqual(0.5, OurMathLib.Math.Divide(50, 100));
+            Assert.AreEqual(12345, OurMathLib.Math.Divide(12345, 1));
         }
         #endregion
     }

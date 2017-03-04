@@ -9,7 +9,7 @@ namespace MathLibraryTesting
     {
         #region Factorial tests
         [Test]
-        public void FactorialNonNegative()
+        public void Factorial_NonNegative()
         {
             Assert.That(OurMathLib.Math.Factorial(5) == 120);
             Assert.That(OurMathLib.Math.Factorial(2) == 2);
@@ -17,7 +17,7 @@ namespace MathLibraryTesting
         }
 
         [Test]
-        public void FactorialNegative()
+        public void Factorial_Negative()
         {
             Assert.Throws<ArgumentException>(delegate { OurMathLib.Math.Factorial(-1); });
             Assert.Throws<ArgumentException>(delegate { OurMathLib.Math.Factorial(-5); });
@@ -25,7 +25,7 @@ namespace MathLibraryTesting
         }
 
         [Test]
-        public void FactorialLargeNumbers()
+        public void Factorial_LargeNumbers()
         {
             Assert.That(OurMathLib.Math.Factorial(10) == 3628800);
             Assert.That(OurMathLib.Math.Factorial(13) == 6227020800);
