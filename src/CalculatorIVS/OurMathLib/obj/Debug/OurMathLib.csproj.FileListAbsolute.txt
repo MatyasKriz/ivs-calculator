@@ -1,5 +1,0 @@
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\OurMathLib\obj\Debug\OurMathLib.csprojResolveAssemblyReference.cache
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\OurMathLib\bin\Debug\OurMathLib.dll
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\OurMathLib\bin\Debug\OurMathLib.pdb
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\OurMathLib\obj\Debug\OurMathLib.dll
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\OurMathLib\obj\Debug\OurMathLib.pdb

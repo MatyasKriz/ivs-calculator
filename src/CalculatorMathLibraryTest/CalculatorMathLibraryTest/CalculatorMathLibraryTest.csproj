@@ -65,6 +65,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CalculatorIVS\OurMathLib\OurMathLib.csproj">
+      <Project>{236743a7-8d04-4369-aeda-40cc3b825b55}</Project>
+      <Name>OurMathLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

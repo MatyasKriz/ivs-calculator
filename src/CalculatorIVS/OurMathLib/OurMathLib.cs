@@ -7,19 +7,73 @@ using System.Threading.Tasks;
 namespace OurMathLib
 {
 
-    public static class Math
+    public class Math
     {
-        public static int Add(int x, int y)
+        public static double Delta = 0.0000001; //how precise we guarantee our functions to be
+
+        public static double PI = GetPI();
+        public static double E = GetE();
+        public static double Add(double x, double y)
         {
-            int result = x + y;
+            double result = x + y;
             return result;
         }
 
-        public static long Factorial(long inputNumber)
+        public static double Subtract(double x, double y)
         {
-            // so wow
+            double result = x - y;
+            return result;
+        }
+
+        public static double Multiply(double x, double y)
+        {
+            double result = x * y;
+            return result;
+        }
+
+        public static double Divide(double x, double y)
+        {
+            double result = x / y;
+            return result;
+        }
+
+        public static double Power(double inputNumber, double exponent = 2)
+        {
             return 1;
-           
+        }
+
+        public static double Root(double inputNumber, double exponent = 2)
+        {
+            return 1;
+        }
+
+        public static ulong Factorial(ulong inputNumber)
+        {
+            ulong result = 1;
+            for(uint i = 2; i <= inputNumber; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        
+        public static double Logarithm(double inputNumber)
+        {
+            return 1;
+        }
+
+        public static double Abs(double inputNumber)
+        {
+            return inputNumber < 0 ? -inputNumber : inputNumber;
+        }
+
+        private static double GetPI()
+        {
+            return 3.14;
+        }
+
+        private static double GetE()
+        {
+            return 2.71;
         }
     }
 }
