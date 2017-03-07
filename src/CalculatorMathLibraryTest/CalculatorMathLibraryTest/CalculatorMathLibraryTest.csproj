@@ -54,7 +54,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Root.cs" />
+    <Compile Include="Power.cs" />
+    <Compile Include="Logarithm.cs" />
     <Compile Include="Factorial.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="BasicOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
