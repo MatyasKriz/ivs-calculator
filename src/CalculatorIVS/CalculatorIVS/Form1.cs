@@ -21,5 +21,25 @@ namespace CalculatorIVS
         {
 
         }
+
+        private void addNumber(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addOperation(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calculate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete(object sender, EventArgs e)
+        {
+
+        }
     }
 }
