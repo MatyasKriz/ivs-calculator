@@ -1,12 +1,20 @@
-﻿namespace OurMathLib
-{
-    using System;
-    public class OurMath
-    {
-        public static double Delta = 0.0000001; //how precise we guarantee our functions to be
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        public static double PI = GetPI(); // needs to add const
-        public static double E = GetE(); // same
+namespace OurMathLib
+{
+    public class Math
+    {
+        /// <summary>
+        /// We guarantee our functions to be this precise.
+        /// </summary>
+        public static double Delta = 0.0000001;
+
+        public static double PI = System.Math.PI;
+        public static double E = System.Math.E;
         public static double Add(double x, double y)
         {
             double result = x + y;
@@ -31,49 +39,33 @@
             return result;
         }
 
-        public static double Power(double inputNumber, double exponent)
+        public static double Power(double inputNumber, double exponent = 2)
         {
-           return Math.Pow(inputNumber, exponent);
+            return System.Math.Pow(inputNumber, exponent);
         }
 
         public static double Root(double inputNumber)
         {
-            return Math.Sqrt(inputNumber);
-            // square root of the number
+            return System.Math.Sqrt(inputNumber);
         }
 
         public static ulong Factorial(ulong inputNumber)
         {
-            // improve data types
-            ulong x = 1;
-            ulong m = inputNumber;
-
-            for (ulong i = inputNumber; i > 0; i--)
-            {
-                x = x * m;
-                m--;
+            ulong result = 1;
+            for(ulong i = 2; i <= inputNumber; i++) {
+                result *= i;
             }
-            return x;
+            return result;
         }
         
         public static double Logarithm(double inputNumber, double inputNumber2)
         {
-            return Math.Log(inputNumber, inputNumber2);
+            return System.Math.Log(inputNumber, inputNumber2);
         }
 
         public static double Abs(double inputNumber)
         {
-            return Math.Abs(inputNumber);
-        }
-
-        private static double GetPI()
-        {
-            return Math.PI;
-        }
-
-        private static double GetE()
-        {
-            return Math.E;
+            return System.Math.Abs(inputNumber);
         }
     }
 }
