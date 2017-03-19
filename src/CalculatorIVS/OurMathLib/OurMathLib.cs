@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OurMathLib
+﻿namespace OurMathLib
 {
-
-    public class Math
+    using System;
+    public class OurMath
     {
         public static double Delta = 0.0000001; //how precise we guarantee our functions to be
 
@@ -39,29 +33,32 @@ namespace OurMathLib
 
         public static double Power(double inputNumber, double exponent)
         {
-           return Math.Power(inputNumber, exponent);
+           return Math.Pow(inputNumber, exponent);
         }
 
-        public static double Root(double inputNumber, double exponent)
+        public static double Root(double inputNumber)
         {
-            return Math.Root(inputNumber, exponent);
+            return Math.Sqrt(inputNumber);
+            // square root of the number
         }
 
         public static ulong Factorial(ulong inputNumber)
         {
-            //ulong result = 1;
-            //for (uint i = 2; i <= inputNumber; i++)
-            //{
-            //    result *= i;
-            //}
-            //return result;
+            // improve data types
+            ulong x = 1;
+            ulong m = inputNumber;
 
-            return Math.Factorial(inputNumber);
+            for (ulong i = inputNumber; i > 0; i--)
+            {
+                x = x * m;
+                m--;
+            }
+            return x;
         }
         
-        public static double Logarithm(double inputNumber)
+        public static double Logarithm(double inputNumber, double inputNumber2)
         {
-            return Math.Logarithm(inputNumber);
+            return Math.Log(inputNumber, inputNumber2);
         }
 
         public static double Abs(double inputNumber)
