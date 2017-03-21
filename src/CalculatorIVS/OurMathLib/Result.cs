@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OurMathLib
 {
-    public static class Result
+    public class Result
     {
         //TODO: add enumerations based on functions in OurMathLib.Math
         public enum Operation { none, add, subtract, multiply, divide }
@@ -14,38 +14,38 @@ namespace OurMathLib
         /// <summary>
         /// The number that all operations are applied to.
         /// </summary>
-        public static double CurrentNumber = 0;
+        public double CurrentValue = 0;
 
         /// <summary>
         /// Applied along with Operation to CurrentNumber.
         /// Is on screen all the time.
         /// </summary>
-        public static double DisplayNumber = 0;
+        public double DisplayValue = 0;
 
-        public static Operation CurrentOperation = Operation.none;
+        public Operation CurrentOperation = Operation.none;
 
         /// <summary>
         /// Applies CurrentOperation using DisplayNumber to CurrentNumber if CurrentOperation is set.
         /// </summary>
-        public static void ApplyOperation() //TODO: discuss what to do after applying operation, if we should wipe it or leave it the same
+        public void ApplyOperation() //TODO: discuss what to do after applying operation, if we should wipe it or leave it the same
         {
             switch(CurrentOperation) {
             case Operation.add:
-                CurrentNumber = OurMathLib.Math.Add(CurrentNumber, DisplayNumber);
+                CurrentValue = OurMathLib.Math.Add(CurrentValue, DisplayValue);
                 break;
             case Operation.subtract:
-                CurrentNumber = OurMathLib.Math.Subtract(CurrentNumber, DisplayNumber);
+                CurrentValue = OurMathLib.Math.Subtract(CurrentValue, DisplayValue);
                 break;
             case Operation.multiply:
-                CurrentNumber = OurMathLib.Math.Multiply(CurrentNumber, DisplayNumber);
+                CurrentValue = OurMathLib.Math.Multiply(CurrentValue, DisplayValue);
                 break;
             case Operation.divide:
-                CurrentNumber = OurMathLib.Math.Divide(CurrentNumber, DisplayNumber);
+                CurrentValue = OurMathLib.Math.Divide(CurrentValue, DisplayValue);
                 break;
             default:
                 return;
             }
-            DisplayNumber = CurrentNumber;
+            DisplayValue = CurrentValue;
         }
     }
 }
