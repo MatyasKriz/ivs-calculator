@@ -44,9 +44,9 @@ namespace OurMathLib
             return System.Math.Pow(inputNumber, exponent);
         }
 
-        public static double Root(double inputNumber)
+        public static double Root(double inputNumber, double exponent = 2)
         {
-            return System.Math.Sqrt(inputNumber);
+            return System.Math.Pow(inputNumber, 1 / exponent);
         }
 
         public static ulong Factorial(ulong inputNumber)
@@ -58,9 +58,9 @@ namespace OurMathLib
             return result;
         }
         
-        public static double Logarithm(double inputNumber, double inputNumber2)
+        public static double Logarithm(double inputNumber, double logBase = System.Math.E)
         {
-            return System.Math.Log(inputNumber, inputNumber2);
+            return System.Math.Log(inputNumber, logBase);
         }
 
         public static double Abs(double inputNumber)
