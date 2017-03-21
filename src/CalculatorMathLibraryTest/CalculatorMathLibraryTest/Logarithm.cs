@@ -7,7 +7,7 @@ namespace MathLibraryTesting
     [TestFixture]
     public class Logarithm
     {
-        double delta = OurMathLib.Math.delta;
+        double delta = OurMathLib.Math.Delta;
         #region Logarithm tests
         [Test]
         public void Logarithm_PositiveNumber()

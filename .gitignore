@@ -2,9 +2,10 @@ src/CalculatorMathLibraryTest/.vs/CalculatorMathLibraryTest/v14/.suo
 src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/bin/Debug/*
 src/CalculatorMathLibraryTest/packages/*
 src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/CalculatorMathLibraryTest.csproj.FileListAbsolute.txt
-src/CalculatorIVS/CalculatorIVS/bin/
-src/CalculatorIVS/packages/
-src/CalculatorIVS/OurMathLib/obj/Debug/
-src/CalculatorIVS/OurMathLib/bin/
-src/CalculatorIVS/CalculatorIVS/obj/Debug/
-src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/
+src/CalculatorIVS/.vs/CalculatorIVS/v14/.suo
+src/CalculatorIVS/CalculatorIVS/obj/Debug/*
+src/CalculatorIVS/packages/*
+src/CalculatorIVS/OurMathLib/bin/Debug/*
+src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/*
+src/CalculatorIVS/CalculatorIVS/bin/Debug/*
+src/CalculatorIVS/OurMathLib/obj/Debug/*

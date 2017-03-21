@@ -16,13 +16,7 @@ namespace MathLibraryTesting
             Assert.That(OurMathLib.Math.Factorial(0) == 1);
         }
 
-        [Test]
-        public void Factorial_Negative()
-        {
-            Assert.Throws<ArgumentException>(delegate { OurMathLib.Math.Factorial(-1); });
-            Assert.Throws<ArgumentException>(delegate { OurMathLib.Math.Factorial(-5); });
-            Assert.Throws<ArgumentException>(delegate { OurMathLib.Math.Factorial(-1024); });
-        }
+        //negative numbers can't even be used as the IDE complains that they are not ulong
 
         [Test]
         public void Factorial_LargeNumbers()
