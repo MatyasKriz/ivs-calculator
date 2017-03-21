@@ -7,18 +7,18 @@ namespace MathLibraryTesting
     [TestFixture]
     public class Logarithm
     {
-        double delta = OurMathLib.Math.delta;
+        double Delta = OurMathLib.Math.Delta;
         #region Constants tests
         [Test]
         public void Pi()
         {
-            Assert.AreEqual(Math.PI, OurMathLib.Math.PI, delta);
+            Assert.AreEqual(Math.PI, OurMathLib.Math.PI, Delta);
         }
 
         [Test]
         public void Euler()
         {
-            Assert.AreEqual(Math.E, OurMathLib.Math.E, delta);
+            Assert.AreEqual(Math.E, OurMathLib.Math.E, Delta);
         }
         #endregion
     }

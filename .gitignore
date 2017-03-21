@@ -3,3 +3,10 @@ src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/bin/Debug/*
 src/CalculatorMathLibraryTest/packages/*
 src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/CalculatorMathLibraryTest.csproj.FileListAbsolute.txt
 *.exe
+src/CalculatorIVS/CalculatorIVS/obj/Debug/
+src/CalculatorIVS/packages/
+src/CalculatorIVS/OurMathLib/bin/
+src/CalculatorIVS/OurMathLib/obj/Debug/
+src/CalculatorIVS/CalculatorIVS/bin/
+src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/
+*.suo

@@ -7,14 +7,14 @@ namespace MathLibraryTesting
     [TestFixture]
     public class Root
     {
-        double delta = OurMathLib.Math.delta;
+        double Delta = OurMathLib.Math.Delta;
         #region Root tests
         [Test]
         public void Root_PositiveNumber()
         {
             Assert.AreEqual(1, OurMathLib.Math.Root(1));
             Assert.AreEqual(2, OurMathLib.Math.Root(4));
-            Assert.AreEqual(Math.Sqrt(2), OurMathLib.Math.Root(2), delta);
+            Assert.AreEqual(Math.Sqrt(2), OurMathLib.Math.Root(2), Delta);
         }
 
         public void Root_Zero()
