@@ -7,13 +7,13 @@ namespace MathLibraryTesting
     [TestFixture]
     public class Logarithm
     {
-        double delta = OurMathLib.Math.Delta;
+        double Delta = OurMathLib.Math.Delta;
         #region Logarithm tests
         [Test]
         public void Logarithm_PositiveNumber()
         {
-            Assert.AreEqual(0, OurMathLib.Math.Logarithm(1), delta);
-            Assert.AreEqual(1, OurMathLib.Math.Logarithm(OurMathLib.Math.E), delta);
+            Assert.AreEqual(0, OurMathLib.Math.Logarithm(1), Delta);
+            Assert.AreEqual(1, OurMathLib.Math.Logarithm(OurMathLib.Math.E), Delta);
         }
 
         public void Logarithm_Zero()

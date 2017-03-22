@@ -6,7 +6,7 @@ namespace MathLibraryTesting
     [TestFixture]
     public class BasicOperations
     {
-        double delta = OurMathLib.Math.Delta;
+        double Delta = OurMathLib.Math.Delta;
         #region Simple Tests Testing Basic Operations
         [Test]
         public void Basic_Add()
