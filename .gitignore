@@ -10,3 +10,4 @@ src/CalculatorIVS/OurMathLib/obj/Debug/
 src/CalculatorIVS/CalculatorIVS/bin/
 src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/
 *.suo
+*.cache
