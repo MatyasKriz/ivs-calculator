@@ -12,6 +12,11 @@ namespace OurMathLib
         public enum Operation { none, add, subtract, multiply, divide }
 
         /// <summary>
+        /// The number of digits that can be displayed in the textbox.
+        /// </summary>
+        static public double DigitLimit = 15;
+
+        /// <summary>
         /// The number that all operations are applied to.
         /// </summary>
         public double CurrentValue = 0;
@@ -23,6 +28,42 @@ namespace OurMathLib
         public double DisplayValue = 0;
 
         public Operation CurrentOperation = Operation.none;
+
+        /// <summary>
+        /// Adds a digit to DisplayValue
+        /// </summary>
+        /// <param name="number">A digit to be added</param>
+        /// <returns>True on success; False otherwise</returns>
+        public bool AddNumber(int number)
+        {
+            //TODO
+
+            return true;
+        }
+
+        /// <summary>
+        /// Sets DisplayValue to 0, CurrentValue doesn't change
+        /// </summary>
+       public void Revert()
+        {
+            DisplayValue = 0;
+
+        }
+
+        /// <summary>
+        /// Sets both DisplayValue and CurrentValue to 0
+        /// </summary>
+        public void Reset()
+        {
+            DisplayValue = 0;
+            CurrentValue = 0;
+        }
+
+
+        public void AddOperation(Operation op)
+        {
+            //TODO
+        }
 
         /// <summary>
         /// Applies CurrentOperation using DisplayNumber to CurrentNumber if CurrentOperation is set.
