@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Class Result.cs" />
     <Compile Include="Root.cs" />
     <Compile Include="Power.cs" />
     <Compile Include="Logarithm.cs" />
