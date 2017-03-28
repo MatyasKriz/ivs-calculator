@@ -85,6 +85,7 @@ namespace CalculatorIVS
         private void addNumber(object sender, EventArgs e)
         {
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
+            if (pressedNumber[0] == 'd') { pressedNumber[0] = ','; } // better pass 'd'?
             result1.AddNumber(pressedNumber[0]);
             resultBox.Text = result1.GetDisplayValue().ToString();
         }
