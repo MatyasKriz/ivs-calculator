@@ -84,6 +84,7 @@ namespace OurMathLib
                     return;
                 }
                 errMessage = e.Message;
+                return;
             }
             displayValue *= 10;
             displayValue += numToAdd;
