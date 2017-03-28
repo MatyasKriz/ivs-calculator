@@ -7,13 +7,13 @@ namespace MathLibraryTesting
     [TestFixture]
     public class ResultClass
     {
-        double DigitLimit = OurMathLib.Result.DigitLimit;
-        OurMathLib.Result result;
+        double DigitLimit = OurMathLib.result.DigitLimit;
+        OurMathLib.result result;
 
         [OneTimeSetUp]
         public void Setup()
         {
-            result = new OurMathLib.Result();
+            result = new OurMathLib.result();
         }
 
         #region ResultClass tests
@@ -21,7 +21,7 @@ namespace MathLibraryTesting
         {
             Assert.AreEqual(0, result.DisplayValue);
             Assert.AreEqual(0, result.CurrentValue);
-            Assert.AreEqual(OurMathLib.Result.Operation.none, result.CurrentOperation);
+            Assert.AreEqual(OurMathLib.result.Operation.none, result.CurrentOperation);
         }
 
         public void ResultClass_ApplyOperationNone()
@@ -79,7 +79,7 @@ namespace MathLibraryTesting
 
         public void ResultClass_ApplyOperation()
         {
-            result.AddOperation(OurMathLib.Result.Operation.subtract);
+            result.AddOperation(OurMathLib.result.Operation.subtract);
             result.ApplyOperation();
             Assert.AreEqual(-420, result.DisplayValue);
             Assert.AreEqual(-420, result.CurrentValue);
@@ -87,7 +87,7 @@ namespace MathLibraryTesting
 
         public void ResultClass_DivideZero()
         {
-            result.AddOperation(OurMathLib.Result.Operation.divide);
+            result.AddOperation(OurMathLib.result.Operation.divide);
             Assert.Throws<InvalidOperationException>(delegate { result.ApplyOperation(); });
         }
         #endregion

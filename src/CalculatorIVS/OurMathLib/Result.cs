@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OurMathLib
 {
-    public class Result
+    public class result
     {
         //TODO: add enumerations based on functions in OurMathLib.Math
         public enum Operation { none, add, subtract, multiply, divide }
