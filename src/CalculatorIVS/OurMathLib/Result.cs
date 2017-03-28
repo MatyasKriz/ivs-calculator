@@ -119,10 +119,10 @@ namespace OurMathLib
         {
             //TODO: add all
             switch(op) {
-            case "add":
+            case "plus":
                 CurrentOperation = Operation.add;
                 break;
-            case "sub":
+            case "minus":
                 CurrentOperation = Operation.subtract;
                 break;
             case "mul":
