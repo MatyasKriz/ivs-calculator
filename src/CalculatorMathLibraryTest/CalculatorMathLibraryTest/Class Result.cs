@@ -7,22 +7,33 @@ namespace MathLibraryTesting
     [TestFixture]
     public class ResultClass
     {
+<<<<<<< HEAD
+        double DigitLimit = OurMathLib.result.DigitLimit;
+        OurMathLib.result result;
+=======
         double DigitLimit = OurMathLib.Result.DigitLimit;
         double Delta = OurMathLib.Math.Delta;
         OurMathLib.Result result;
+>>>>>>> refs/remotes/origin/Result-class
 
         [OneTimeSetUp]
         public void Setup()
         {
-            result = new OurMathLib.Result();
+            result = new OurMathLib.result();
         }
 
         #region ResultClass tests
         public void ResultClass_DefaultValues()
         {
+<<<<<<< HEAD
+            Assert.AreEqual(0, result.DisplayValue);
+            Assert.AreEqual(0, result.CurrentValue);
+            Assert.AreEqual(OurMathLib.result.Operation.none, result.CurrentOperation);
+=======
             Assert.AreEqual(0, result.GetDisplayValue());
             Assert.AreEqual(0, result.GetCurrentValue());
             Assert.AreEqual(OurMathLib.Result.Operation.none, result.CurrentOperation);
+>>>>>>> refs/remotes/origin/Result-class
         }
 
         public void ResultClass_ApplyOperationNone()
@@ -106,8 +117,12 @@ namespace MathLibraryTesting
 
         public void ResultClass_ApplyOperation()
         {
+<<<<<<< HEAD
+            result.AddOperation(OurMathLib.result.Operation.subtract);
+=======
             result.SetOperation(OurMathLib.Result.Operation.subtract);
             result.AddNumber('9');
+>>>>>>> refs/remotes/origin/Result-class
             result.ApplyOperation();
             Assert.AreEqual(-9, result.GetDisplayValue());
             Assert.AreEqual(-9, result.GetCurrentValue());
@@ -115,7 +130,11 @@ namespace MathLibraryTesting
 
         public void ResultClass_DivideZero()
         {
+<<<<<<< HEAD
+            result.AddOperation(OurMathLib.result.Operation.divide);
+=======
             result.SetOperation(OurMathLib.Result.Operation.divide);
+>>>>>>> refs/remotes/origin/Result-class
             Assert.Throws<InvalidOperationException>(delegate { result.ApplyOperation(); });
         }
         #endregion
