@@ -41,7 +41,7 @@
             this.btn0 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.btnplus = new System.Windows.Forms.Button();
-            this.btnsub = new System.Windows.Forms.Button();
+            this.btnminus = new System.Windows.Forms.Button();
             this.btndiv = new System.Windows.Forms.Button();
             this.btneq = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -199,16 +199,16 @@
             this.btnplus.UseVisualStyleBackColor = true;
             this.btnplus.Click += new System.EventHandler(this.addOperation);
             // 
-            // btnsub
+            // btnminus
             // 
-            this.btnsub.Location = new System.Drawing.Point(225, 276);
-            this.btnsub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsub.Name = "btnsub";
-            this.btnsub.Size = new System.Drawing.Size(67, 60);
-            this.btnsub.TabIndex = 12;
-            this.btnsub.Text = "-";
-            this.btnsub.UseVisualStyleBackColor = true;
-            this.btnsub.Click += new System.EventHandler(this.addOperation);
+            this.btnminus.Location = new System.Drawing.Point(225, 276);
+            this.btnminus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnminus.Name = "btnminus";
+            this.btnminus.Size = new System.Drawing.Size(67, 60);
+            this.btnminus.TabIndex = 12;
+            this.btnminus.Text = "-";
+            this.btnminus.UseVisualStyleBackColor = true;
+            this.btnminus.Click += new System.EventHandler(this.addOperation);
             // 
             // btndiv
             // 
@@ -289,8 +289,6 @@
             // 
             // resultBox
             // 
-            this.resultBox.Enabled = false;
-            this.resultBox.HideSelection = false;
             this.resultBox.Location = new System.Drawing.Point(5, 5);
             this.resultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resultBox.Multiline = true;
@@ -432,7 +430,7 @@
             this.Controls.Add(this.button16);
             this.Controls.Add(this.btneq);
             this.Controls.Add(this.btndiv);
-            this.Controls.Add(this.btnsub);
+            this.Controls.Add(this.btnminus);
             this.Controls.Add(this.btnplus);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.btn0);
@@ -476,7 +474,7 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button btneq;
         private System.Windows.Forms.Button btndiv;
-        private System.Windows.Forms.Button btnsub;
+        private System.Windows.Forms.Button btnminus;
         private System.Windows.Forms.Button btnplus;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btn0;
