@@ -30,7 +30,7 @@ namespace OurMathLib
         /// <summary>
         /// If any errors occur, the error message will be stored here
         /// </summary>
-        private string? errMessage = null;
+        private string errMessage = "";
     
 
         public Operation CurrentOperation = Operation.none;
@@ -39,9 +39,8 @@ namespace OurMathLib
         /// 
         /// </summary>
         /// <returns></returns>
-        public string? GetErrMessage()
+        public string GetErrMessage()
         {
-
             return errMessage;
         }
 
@@ -68,24 +67,28 @@ namespace OurMathLib
         /// </summary>
         /// <param name="number">A digit or an operation to be added</param>
         /// <returns>True on success; False otherwise</returns>
-        public bool AddNumber(char number)
+        public void AddNumber(char number)
         {
-            //TODO
-            
+            int numToAdd = 0;
             try
             {
-                int numToAdd = (int)number;
+                numToAdd = (int)number;
             }
             catch (InvalidCastException e)
             {
                 if (number == ',' || number == '.')
                 {
-                    return false;
+                    Operation result;
+                    CurrentOperation = Enum.TryParse(number.ToString(), out result) ? result : Operation.none;
+                    errMessage = "";
+                    return;
                 }
+                errMessage = e.Message;
             }
-            displayValue += number;
+            displayValue *= 10;
+            displayValue += numToAdd;
 
-            return true;
+            return;
         }
 
         /// <summary>
@@ -94,7 +97,7 @@ namespace OurMathLib
        public void Revert()
         {
             displayValue = 0;
-
+            errMessage = null;
         }
 
         /// <summary>
@@ -104,6 +107,7 @@ namespace OurMathLib
         {
             displayValue = 0;
             currentValue = 0;
+            errMessage = null;
         }
 
         /// <summary>
@@ -112,7 +116,21 @@ namespace OurMathLib
         /// <param name="op">String of the operation</param>
         public void SetOperation(string op)
         {
-            //TODO
+            //TODO: add all
+            switch(op) {
+            case "plus":
+                CurrentOperation = Operation.add;
+                break;
+            case "minus":
+                CurrentOperation = Operation.subtract;
+                break;
+            case "mul":
+                CurrentOperation = Operation.multiply;
+                break;
+            case "div":
+                CurrentOperation = Operation.divide;
+                break;
+            }
         }
 
         /// <summary>
