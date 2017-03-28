@@ -131,6 +131,9 @@ namespace OurMathLib
             case "div":
                 CurrentOperation = Operation.divide;
                 break;
+            default:
+                CurrentOperation = Operation.none;
+                break;
             }
         }
 
