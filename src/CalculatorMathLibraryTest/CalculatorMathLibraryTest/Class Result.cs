@@ -22,7 +22,7 @@ namespace MathLibraryTesting
         {
             Assert.AreEqual(0, result.GetDisplayValue());
             Assert.AreEqual(0, result.GetCurrentValue());
-            Assert.AreEqual(OurMathLib.Result.Operation.none, result.CurrentOperation);
+            Assert.AreEqual("", result.GetCurrentOperationSymbol());
         }
 
         public void ResultClass_ApplyOperationNone()
@@ -42,18 +42,19 @@ namespace MathLibraryTesting
 
         public void ResultClass_Revert()
         {
-            result.SetOperation(OurMathLib.Result.Operation.add);
+            result.SetOperation("sub");
             result.AddNumber('6');
             result.ApplyOperation();
             result.AddNumber('2');
             result.Revert();
             Assert.AreEqual(0, result.GetDisplayValue());
-            Assert.AreEqual(6, result.GetCurrentValue());
+            Assert.AreEqual(4, result.GetCurrentValue());
+            Assert.AreEqual("-", result.GetCurrentOperationSymbol());
         }
 
         public void ResultClass_Reset()
         {
-            result.SetOperation(OurMathLib.Result.Operation.add);
+            result.SetOperation("add");
             result.AddNumber('6');
             result.ApplyOperation();
             result.AddNumber('9');
@@ -61,14 +62,16 @@ namespace MathLibraryTesting
             result.Reset();
             Assert.AreEqual(0, result.GetDisplayValue());
             Assert.AreEqual(0, result.GetCurrentValue());
+            Assert.AreEqual("+", result.GetCurrentOperationSymbol());
         }
 
         public void ResultClass_ExceedLimit()
         {
             for(int i = 1; i <= DigitLimit; i++) {
-                result.AddNumber((i % 9) + 1);
+                char number = ((i % 9) + 1).ToString().ToCharArray()[0];
+                result.AddNumber(number);
             }
-            Assert.Throws<InvalidOperationException>(delegate { result.AddNumber(7); });
+            Assert.Throws<InvalidOperationException>(delegate { result.AddNumber('7'); });
         }
 
         public void ResultClass_AddLeadingZeroes()
@@ -98,15 +101,9 @@ namespace MathLibraryTesting
             Assert.AreEqual(234.35, result.GetCurrentValue(), Delta);
         }
 
-        public void ResultClass_AddNumbersInAscii()
-        {
-            Assert.DoesNotThrow<ArgumentException>(delegate { result.AddNumber(53); });
-            Assert.Throws<ArgumentException>(delegate { result.AddNumber(65); });
-        }
-
         public void ResultClass_ApplyOperation()
         {
-            result.SetOperation(OurMathLib.Result.Operation.subtract);
+            result.SetOperation("sub");
             result.AddNumber('9');
             result.ApplyOperation();
             Assert.AreEqual(-9, result.GetDisplayValue());
@@ -115,7 +112,7 @@ namespace MathLibraryTesting
 
         public void ResultClass_DivideZero()
         {
-            result.SetOperation(OurMathLib.Result.Operation.divide);
+            result.SetOperation("div");
             Assert.Throws<InvalidOperationException>(delegate { result.ApplyOperation(); });
         }
         #endregion

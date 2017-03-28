@@ -5,7 +5,7 @@ using OurMathLib;
 namespace MathLibraryTesting
 {
     [TestFixture]
-    public class Logarithm
+    public class Constants
     {
         double Delta = OurMathLib.Math.Delta;
         #region Constants tests
