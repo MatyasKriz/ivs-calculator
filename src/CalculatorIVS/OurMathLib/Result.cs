@@ -19,24 +19,71 @@ namespace OurMathLib
         /// <summary>
         /// The number that all operations are applied to.
         /// </summary>
-        public double CurrentValue = 0;
+        private double currentValue = 0;
 
         /// <summary>
         /// Applied along with Operation to CurrentNumber.
         /// Is on screen all the time.
         /// </summary>
-        public double DisplayValue = 0;
+        private double displayValue = 0;
+
+        /// <summary>
+        /// If any errors occur, the error message will be stored here
+        /// </summary>
+        private string? errMessage = null;
+    
 
         public Operation CurrentOperation = Operation.none;
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public string? GetErrMessage()
+        {
+
+            return errMessage;
+        }
+
+        /// <summary>
+        /// Returns the displayValue
+        /// </summary>
+        /// <returns>Value of displayValue</returns>
+        public double GetDisplayValue()
+        {
+            return displayValue;
+        }
+
+        /// <summary>
+        /// Returns the currentValue
+        /// </summary>
+        /// <returns>Value of currentValue</returns>
+        public double GetCurrentValue()
+        {
+            return currentValue;
+        }
+
+        /// <summary>
         /// Adds a digit to DisplayValue
         /// </summary>
-        /// <param name="number">A digit to be added</param>
+        /// <param name="number">A digit or an operation to be added</param>
         /// <returns>True on success; False otherwise</returns>
-        public bool AddNumber(int number)
+        public bool AddNumber(char number)
         {
             //TODO
+            
+            try
+            {
+                int numToAdd = (int)number;
+            }
+            catch (InvalidCastException e)
+            {
+                if (number == ',' || number == '.')
+                {
+                    return false;
+                }
+            }
+            displayValue += number;
 
             return true;
         }
@@ -46,7 +93,7 @@ namespace OurMathLib
         /// </summary>
        public void Revert()
         {
-            DisplayValue = 0;
+            displayValue = 0;
 
         }
 
@@ -55,12 +102,15 @@ namespace OurMathLib
         /// </summary>
         public void Reset()
         {
-            DisplayValue = 0;
-            CurrentValue = 0;
+            displayValue = 0;
+            currentValue = 0;
         }
 
-
-        public void AddOperation(Operation op)
+        /// <summary>
+        /// Sets the currentOperation to the op param
+        /// </summary>
+        /// <param name="op">String of the operation</param>
+        public void SetOperation(string op)
         {
             //TODO
         }
@@ -72,21 +122,21 @@ namespace OurMathLib
         {
             switch(CurrentOperation) {
             case Operation.add:
-                CurrentValue = OurMathLib.Math.Add(CurrentValue, DisplayValue);
+                currentValue = OurMathLib.Math.Add(currentValue, displayValue);
                 break;
             case Operation.subtract:
-                CurrentValue = OurMathLib.Math.Subtract(CurrentValue, DisplayValue);
+                currentValue = OurMathLib.Math.Subtract(currentValue, displayValue);
                 break;
             case Operation.multiply:
-                CurrentValue = OurMathLib.Math.Multiply(CurrentValue, DisplayValue);
+                currentValue = OurMathLib.Math.Multiply(currentValue, displayValue);
                 break;
             case Operation.divide:
-                CurrentValue = OurMathLib.Math.Divide(CurrentValue, DisplayValue);
+                currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
             default:
                 return;
             }
-            DisplayValue = CurrentValue;
+            displayValue = currentValue;
         }
     }
 }
