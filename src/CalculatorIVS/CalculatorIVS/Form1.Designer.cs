@@ -40,13 +40,13 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.btnplus = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.btnminus = new System.Windows.Forms.Button();
             this.btndiv = new System.Windows.Forms.Button();
             this.btneq = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.btndelce = new System.Windows.Forms.Button();
+            this.btndel = new System.Windows.Forms.Button();
+            this.btndelc = new System.Windows.Forms.Button();
             this.btnmul = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.resultBox = new System.Windows.Forms.TextBox();
@@ -188,16 +188,16 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.addNumber);
             // 
-            // btnplus
+            // btnadd
             // 
-            this.btnplus.Location = new System.Drawing.Point(225, 342);
-            this.btnplus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnplus.Name = "btnplus";
-            this.btnplus.Size = new System.Drawing.Size(67, 60);
-            this.btnplus.TabIndex = 11;
-            this.btnplus.Text = "+";
-            this.btnplus.UseVisualStyleBackColor = true;
-            this.btnplus.Click += new System.EventHandler(this.addOperation);
+            this.btnadd.Location = new System.Drawing.Point(225, 342);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(67, 60);
+            this.btnadd.TabIndex = 11;
+            this.btnadd.Text = "+";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.addOperation);
             // 
             // btnminus
             // 
@@ -232,38 +232,38 @@
             this.btneq.UseVisualStyleBackColor = true;
             this.btneq.Click += new System.EventHandler(this.calculate);
             // 
-            // button16
+            // btndelce
             // 
-            this.button16.Location = new System.Drawing.Point(5, 144);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(67, 60);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "CE";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.delete);
+            this.btndelce.Location = new System.Drawing.Point(5, 144);
+            this.btndelce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndelce.Name = "btndelce";
+            this.btndelce.Size = new System.Drawing.Size(67, 60);
+            this.btndelce.TabIndex = 15;
+            this.btndelce.Text = "CE";
+            this.btndelce.UseVisualStyleBackColor = true;
+            this.btndelce.Click += new System.EventHandler(this.delete);
             // 
-            // button17
+            // btndel
             // 
-            this.button17.Location = new System.Drawing.Point(152, 144);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(67, 60);
-            this.button17.TabIndex = 16;
-            this.button17.Text = "delete";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.delete);
+            this.btndel.Location = new System.Drawing.Point(152, 144);
+            this.btndel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndel.Name = "btndel";
+            this.btndel.Size = new System.Drawing.Size(67, 60);
+            this.btndel.TabIndex = 16;
+            this.btndel.Text = "delete";
+            this.btndel.UseVisualStyleBackColor = true;
+            this.btndel.Click += new System.EventHandler(this.delete);
             // 
-            // button18
+            // btndelc
             // 
-            this.button18.Location = new System.Drawing.Point(79, 144);
-            this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(67, 60);
-            this.button18.TabIndex = 17;
-            this.button18.Text = "C";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.delete);
+            this.btndelc.Location = new System.Drawing.Point(79, 144);
+            this.btndelc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndelc.Name = "btndelc";
+            this.btndelc.Size = new System.Drawing.Size(67, 60);
+            this.btndelc.TabIndex = 17;
+            this.btndelc.Text = "C";
+            this.btndelc.UseVisualStyleBackColor = true;
+            this.btndelc.Click += new System.EventHandler(this.delete);
             // 
             // btnmul
             // 
@@ -425,13 +425,13 @@
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.btnmul);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.btndelc);
+            this.Controls.Add(this.btndel);
+            this.Controls.Add(this.btndelce);
             this.Controls.Add(this.btneq);
             this.Controls.Add(this.btndiv);
             this.Controls.Add(this.btnminus);
-            this.Controls.Add(this.btnplus);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btn9);
@@ -469,13 +469,13 @@
         private System.Windows.Forms.TextBox resultBox;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button btnmul;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btndelc;
+        private System.Windows.Forms.Button btndel;
+        private System.Windows.Forms.Button btndelce;
         private System.Windows.Forms.Button btneq;
         private System.Windows.Forms.Button btndiv;
         private System.Windows.Forms.Button btnminus;
-        private System.Windows.Forms.Button btnplus;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btn9;

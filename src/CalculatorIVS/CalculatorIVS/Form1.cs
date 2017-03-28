@@ -50,7 +50,7 @@ namespace CalculatorIVS
             }
             else if (e.KeyCode == Keys.Add)
             {
-                result1.SetOperation("plus");
+                result1.SetOperation("add");
                 resultBox.Text = result1.GetDisplayValue().ToString();
                     //resultBox.Text = "plus";
             }
@@ -59,6 +59,15 @@ namespace CalculatorIVS
                 result1.SetOperation("sub");
                 resultBox.Text = result1.GetDisplayValue().ToString();
                     //resultBox.Text = "sub";
+            }
+            else if(e.KeyCode == Keys.Enter)
+            {
+                result1.ApplyOperation();
+                resultBox.Text = result1.GetDisplayValue().ToString();
+            }
+            else if(e.KeyCode == Keys.Back)
+            {
+                result1.Revert();
             }
             else if (e.KeyCode >= Keys.D0 && e.KeyCode >= Keys.D9) // non-numeric BUG - TODO
             {
@@ -90,12 +99,20 @@ namespace CalculatorIVS
 
         private void calculate(object sender, EventArgs e)
         {
+            result1.ApplyOperation();
+            resultBox.Text = result1.GetDisplayValue().ToString();
 
         }
 
         private void delete(object sender, EventArgs e)
         {
-
+            string operaceMazani = ((Button)sender).Name.Remove(0, 3);
+            if (operaceMazani == "delce")
+                result1.Revert();
+            else if (operaceMazani == "delc")
+                result1.Reset();
+            else if (operaceMazani == "del") ;
+                // remove last character;
         }
 
         
