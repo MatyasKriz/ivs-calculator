@@ -7,14 +7,14 @@ namespace MathLibraryTesting
     [TestFixture]
     public class Power
     {
-        double delta = OurMathLib.Math.Delta;
+        double Delta = OurMathLib.Math.Delta;
         #region Power to 2 tests
         [Test]
         public void Power_PositiveNumber()
         {
             Assert.AreEqual(1, OurMathLib.Math.Power(1));
             Assert.AreEqual(4, OurMathLib.Math.Power(2));
-            Assert.AreEqual(2, OurMathLib.Math.Power(OurMathLib.Math.Root(2)), delta);
+            Assert.AreEqual(2, OurMathLib.Math.Power(OurMathLib.Math.Root(2), Delta));
         }
 
         public void Power_Zero()
