@@ -18,6 +18,7 @@ namespace MathLibraryTesting
         }
 
         #region ResultClass tests
+        [Test]
         public void ResultClass_DefaultValues()
         {
             Assert.AreEqual(0, result.GetDisplayValue());
@@ -25,11 +26,13 @@ namespace MathLibraryTesting
             Assert.AreEqual("", result.GetCurrentOperationSymbol());
         }
 
+        [Test]
         public void ResultClass_ApplyOperationNone()
         {
             Assert.Throws<InvalidOperationException>(delegate { result.ApplyOperation(); });
         }
 
+        [Test]
         public void ResultClass_InsertNumber()
         {
             result.AddNumber('4');
@@ -40,6 +43,7 @@ namespace MathLibraryTesting
             Assert.AreEqual(420, result.GetDisplayValue());
         }
 
+        [Test]
         public void ResultClass_Revert()
         {
             result.SetOperation("sub");
@@ -52,6 +56,7 @@ namespace MathLibraryTesting
             Assert.AreEqual("-", result.GetCurrentOperationSymbol());
         }
 
+        [Test]
         public void ResultClass_Reset()
         {
             result.SetOperation("add");
@@ -65,6 +70,7 @@ namespace MathLibraryTesting
             Assert.AreEqual("+", result.GetCurrentOperationSymbol());
         }
 
+        [Test]
         public void ResultClass_ExceedLimit()
         {
             for(int i = 1; i <= DigitLimit; i++) {
@@ -74,6 +80,7 @@ namespace MathLibraryTesting
             Assert.Throws<InvalidOperationException>(delegate { result.AddNumber('7'); });
         }
 
+        [Test]
         public void ResultClass_AddLeadingZeroes()
         {
             for(int i = 1; i <= 5; i++) {
@@ -84,6 +91,7 @@ namespace MathLibraryTesting
             Assert.AreEqual(67, result.GetCurrentValue());
         }
 
+        [Test]
         public void ResultClass_AddTrailingZeroes()
         {
             result.AddNumber('2');
@@ -101,6 +109,7 @@ namespace MathLibraryTesting
             Assert.AreEqual(234.35, result.GetCurrentValue(), Delta);
         }
 
+        [Test]
         public void ResultClass_ApplyOperation()
         {
             result.SetOperation("sub");
@@ -110,6 +119,7 @@ namespace MathLibraryTesting
             Assert.AreEqual(-9, result.GetCurrentValue());
         }
 
+        [Test]
         public void ResultClass_DivideZero()
         {
             result.SetOperation("div");
