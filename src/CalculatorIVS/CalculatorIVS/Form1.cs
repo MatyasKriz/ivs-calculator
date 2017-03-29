@@ -14,13 +14,14 @@ namespace CalculatorIVS
 {
     public partial class Form1 : Form
     {
-        OurMathLib.Result result1;
+        Result result1;
 
         public Form1()
         {
             InitializeComponent();
             KeyPreview = true;
             result1 = new Result();
+            //Update();
         }
         // po kazde operaci nacist displayvalue
         // kopirovai z display value ale psat se tam nemuze
@@ -33,41 +34,42 @@ namespace CalculatorIVS
             {
                 char[] pressedKey = e.KeyCode.ToString().Remove(0, 6).ToCharArray();
                 result1.AddNumber(pressedKey[0]);
-                resultBox.Text = result1.GetDisplayValue().ToString();
-                    //resultBox.Text = pressedKey[0].ToString();
+                update();
+                //resultBox.Text = pressedKey[0].ToString();
             }
             else if (e.KeyCode == Keys.Divide)
             {
                 result1.SetOperation("div");
-                resultBox.Text = result1.GetDisplayValue().ToString();
-                    //resultBox.Text = "div";
+                update();
+                //resultBox.Text = "div";
             }
             else if (e.KeyCode == Keys.Multiply)
             {
                 result1.SetOperation("mul");
-                resultBox.Text = result1.GetDisplayValue().ToString();
-                    //resultBox.Text = "mul";
+                update();
+                //resultBox.Text = "mul";
             }
             else if (e.KeyCode == Keys.Add)
             {
                 result1.SetOperation("add");
-                resultBox.Text = result1.GetDisplayValue().ToString();
-                    //resultBox.Text = "plus";
+                update();
+                //resultBox.Text = "plus";
             }
             else if (e.KeyCode == Keys.Subtract)
             {
                 result1.SetOperation("sub");
-                resultBox.Text = result1.GetDisplayValue().ToString();
-                    //resultBox.Text = "sub";
+                update();
+                //resultBox.Text = "sub";
             }
             else if(e.KeyCode == Keys.Enter)
             {
                 result1.ApplyOperation();
-                resultBox.Text = result1.GetDisplayValue().ToString();
+                update();
             }
             else if(e.KeyCode == Keys.Back)
             {
                 result1.Revert();
+                update();
             }
             else if (e.KeyCode >= Keys.D0 && e.KeyCode >= Keys.D9) // non-numeric BUG - TODO
             {
@@ -87,21 +89,21 @@ namespace CalculatorIVS
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
             if (pressedNumber[0] == 'd') { pressedNumber[0] = ','; } // better pass 'd'?
             result1.AddNumber(pressedNumber[0]);
-            resultBox.Text = result1.GetDisplayValue().ToString();
+            update();
         }
     
 
         private void addOperation(object sender, EventArgs e)
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
-            resultBox.Text = result1.GetDisplayValue().ToString();
+            update();
 
         }
 
         private void calculate(object sender, EventArgs e)
         {
             result1.ApplyOperation();
-            resultBox.Text = result1.GetDisplayValue().ToString();
+            update();
 
         }
 
@@ -113,7 +115,14 @@ namespace CalculatorIVS
             else if (operaceMazani == "delc")
                 result1.Reset();
             else if (operaceMazani == "del");
-                // remove last character;
+            // remove last character;
+
+            update();
+        }
+
+        private void update()
+        {
+            resultBox.Text = result1.GetDisplayValue().ToString();
         }
 
         

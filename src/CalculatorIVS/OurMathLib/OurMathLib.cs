@@ -39,12 +39,12 @@ namespace OurMathLib
             return result;
         }
 
-        public static double Power(double inputNumber, double exponent)
+        public static double Power(double inputNumber, double exponent = 2)
         {
             return System.Math.Pow(inputNumber, exponent);
         }
 
-        public static double Root(double inputNumber, double exponent)
+        public static double Root(double inputNumber, double exponent = 2)
         {
             return System.Math.Pow(inputNumber, 1 / exponent);
         }
@@ -58,7 +58,7 @@ namespace OurMathLib
             return result;
         }
         
-        public static double Logarithm(double inputNumber, double logBase)
+        public static double Logarithm(double inputNumber, double logBase = System.Math.E)
         {
             return System.Math.Log(inputNumber, logBase);
         }
