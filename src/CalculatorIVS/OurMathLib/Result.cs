@@ -62,6 +62,13 @@ namespace OurMathLib
             return currentValue;
         }
 
+
+        public string GetCurrentOperationSymbol()
+        {
+
+            return CurrentOperation.ToString();
+        }
+
         /// <summary>
         /// Adds a digit to DisplayValue
         /// </summary>
