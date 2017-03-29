@@ -59,7 +59,6 @@
             this.btnlogn = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
-            this.lbltest = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -293,10 +292,12 @@
             this.resultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resultBox.Multiline = true;
             this.resultBox.Name = "resultBox";
+            this.resultBox.ReadOnly = true;
             this.resultBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.resultBox.Size = new System.Drawing.Size(287, 50);
             this.resultBox.TabIndex = 25;
-            this.resultBox.Text = "867";
+            this.resultBox.Text = "42";
+            this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // btnpow
             // 
@@ -397,22 +398,12 @@
             this.btne.UseVisualStyleBackColor = true;
             this.btne.Click += new System.EventHandler(this.addNumber);
             // 
-            // lbltest
-            // 
-            this.lbltest.AutoSize = true;
-            this.lbltest.Location = new System.Drawing.Point(99, 486);
-            this.lbltest.Name = "lbltest";
-            this.lbltest.Size = new System.Drawing.Size(46, 17);
-            this.lbltest.TabIndex = 35;
-            this.lbltest.Text = "label1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(299, 515);
-            this.Controls.Add(this.lbltest);
+            this.ClientSize = new System.Drawing.Size(299, 474);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.btnloge);
             this.Controls.Add(this.btnlogn);
@@ -443,6 +434,7 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "The BEST calculator";
@@ -487,7 +479,6 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Label lbltest;
     }
 }
 
