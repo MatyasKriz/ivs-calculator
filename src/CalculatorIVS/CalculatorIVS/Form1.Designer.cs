@@ -297,7 +297,7 @@
             this.resultBox.Size = new System.Drawing.Size(287, 50);
             this.resultBox.TabIndex = 25;
             this.resultBox.Text = "42";
-            this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
+            //resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // btnpow
             // 
