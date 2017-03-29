@@ -14,13 +14,13 @@ namespace CalculatorIVS
 {
     public partial class Form1 : Form
     {
-        result result1;
+        OurMathLib.Result result1;
 
         public Form1()
         {
             InitializeComponent();
             KeyPreview = true;
-            result1 = new result();
+            result1 = new Result();
         }
         // po kazde operaci nacist displayvalue
         // kopirovai z display value ale psat se tam nemuze
@@ -112,7 +112,7 @@ namespace CalculatorIVS
                 result1.Revert();
             else if (operaceMazani == "delc")
                 result1.Reset();
-            else if (operaceMazani == "del") ;
+            else if (operaceMazani == "del");
                 // remove last character;
         }
 

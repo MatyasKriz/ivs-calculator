@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OurMathLib
 {
-    public class result
+    public class Result
     {
         //TODO: add enumerations based on functions in OurMathLib.Math
         public enum Operation { none, add, subtract, multiply, divide }
@@ -14,7 +14,7 @@ namespace OurMathLib
         /// <summary>
         /// The number of digits that can be displayed in the textbox.
         /// </summary>
-        static public double DigitLimit = 15;
+        public const double DigitLimit = 15;
 
         /// <summary>
         /// The number that all operations are applied to.
@@ -36,7 +36,7 @@ namespace OurMathLib
         public Operation CurrentOperation = Operation.none;
 
         /// <summary>
-        /// 
+        /// Return the error message set 
         /// </summary>
         /// <returns></returns>
         public string GetErrMessage()
@@ -88,7 +88,10 @@ namespace OurMathLib
             }
             displayValue *= 10;
             displayValue += numToAdd;
-
+            if (displayValue.ToString().Length >= DigitLimit)
+            {
+                errMessage = "The number of digits exceed the DigitLimit";
+            }
             return;
         }
 
