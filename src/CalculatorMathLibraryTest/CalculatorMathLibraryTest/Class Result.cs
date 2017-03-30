@@ -64,6 +64,8 @@ namespace MathLibraryTesting
             result.SetOperation("sub");
             result.AddNumber('2');
             result.ApplyOperation();
+            result.AddNumber('9');
+
             result.Revert();
             Assert.AreEqual(0, result.GetDisplayValue());
             Assert.AreEqual(4, result.GetCurrentValue());
@@ -77,6 +79,7 @@ namespace MathLibraryTesting
             result.SetOperation("add");
             result.AddNumber('9');
             result.ApplyOperation();
+            result.AddNumber('1');
 
             result.Reset();
             Assert.AreEqual(0, result.GetDisplayValue());
