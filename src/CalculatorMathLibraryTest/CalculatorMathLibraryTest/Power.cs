@@ -14,7 +14,7 @@ namespace MathLibraryTesting
         {
             Assert.AreEqual(1, OurMathLib.Math.Power(1));
             Assert.AreEqual(4, OurMathLib.Math.Power(2));
-            Assert.AreEqual(2, OurMathLib.Math.Power(OurMathLib.Math.Root(2), Delta));
+            Assert.AreEqual(2, OurMathLib.Math.Power(OurMathLib.Math.Root(2)), Delta);
         }
 
         [Test]
