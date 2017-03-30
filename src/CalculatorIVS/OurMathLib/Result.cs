@@ -127,7 +127,7 @@ namespace OurMathLib
             {
                 if (displayValue == 0.0 && numToAdd == 0)
                 {
-
+                    //Do nothing - leading zeroes
                 }
                 else
                 {
@@ -156,6 +156,8 @@ namespace OurMathLib
        public void Revert()
         {
             displayValue = 0;
+            numOfDecimalDigs = 0;
+            isDecimal = false;
             errMessage = null;
         }
 
@@ -166,6 +168,8 @@ namespace OurMathLib
         {
             displayValue = 0;
             currentValue = 0;
+            numOfDecimalDigs = 0;
+            isDecimal = false;
             errMessage = null;
         }
 
