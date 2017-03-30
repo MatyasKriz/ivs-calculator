@@ -181,10 +181,10 @@ namespace OurMathLib
         {
             //TODO: add all
             switch(op) {
-            case "plus":
+            case "add":
                 CurrentOperation = Operation.add;
                 break;
-            case "minus":
+            case "sub":
                 CurrentOperation = Operation.subtract;
                 break;
             case "mul":
@@ -197,6 +197,8 @@ namespace OurMathLib
                 CurrentOperation = Operation.none;
                 break;
             }
+            currentValue = displayValue;
+            Revert();
         }
 
         /// <summary>
