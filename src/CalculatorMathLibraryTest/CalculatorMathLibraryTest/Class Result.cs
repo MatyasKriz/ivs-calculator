@@ -86,7 +86,7 @@ namespace MathLibraryTesting
             AddZeroes(5);
             result.AddNumber('6');
             result.AddNumber('7');
-            Assert.AreEqual(67, result.GetCurrentValue());
+            Assert.AreEqual(67, result.GetDisplayValue());
         }
 
         [Test]
@@ -103,7 +103,7 @@ namespace MathLibraryTesting
 
             AddZeroes(5);
             
-            Assert.AreEqual(234.35, result.GetCurrentValue(), Delta);
+            Assert.AreEqual(234.35, result.GetDisplayValue(), Delta);
         }
 
         private void AddZeroes(int through)
