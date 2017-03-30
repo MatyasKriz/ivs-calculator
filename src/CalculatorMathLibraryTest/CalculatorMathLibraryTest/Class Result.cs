@@ -83,9 +83,7 @@ namespace MathLibraryTesting
         [Test]
         public void ResultClass_AddLeadingZeroes()
         {
-            for(int i = 1; i <= 5; i++) {
-                result.AddNumber('0');
-            }
+            AddZeroes(5);
             result.AddNumber('6');
             result.AddNumber('7');
             Assert.AreEqual(67, result.GetCurrentValue());
@@ -103,10 +101,16 @@ namespace MathLibraryTesting
             result.AddNumber('3');
             result.AddNumber('5');
 
-            for(int i = 1; i <= 5; i++) {
+            AddZeroes(5);
+            
+            Assert.AreEqual(234.35, result.GetCurrentValue(), Delta);
+        }
+
+        private void AddZeroes(int through)
+        {
+            for(int i = 1; i <= through; i++) {
                 result.AddNumber('0');
             }
-            Assert.AreEqual(234.35, result.GetCurrentValue(), Delta);
         }
 
         [Test]
