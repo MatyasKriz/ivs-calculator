@@ -86,7 +86,7 @@ namespace OurMathLib
             int numToAdd = 0;
             try
             {
-                numToAdd = (int)number;
+                numToAdd = int.Parse(number.ToString());
                 Console.WriteLine(numToAdd);
             }
             catch (InvalidCastException e)
