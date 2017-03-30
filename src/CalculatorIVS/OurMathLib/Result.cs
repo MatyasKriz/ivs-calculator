@@ -94,6 +94,7 @@ namespace OurMathLib
                 toReturn = "";
                 break;
             }
+
             return toReturn;
         }
 
@@ -124,8 +125,15 @@ namespace OurMathLib
             }
             if (!isDecimal)
             {
-                displayValue *= 10;
-                displayValue += numToAdd;
+                if (displayValue == 0.0 && numToAdd == 0)
+                {
+
+                }
+                else
+                {
+                    displayValue *= 10;
+                    displayValue += numToAdd;
+                }
             }
             else
             {
