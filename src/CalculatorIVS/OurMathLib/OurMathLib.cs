@@ -57,7 +57,7 @@ namespace OurMathLib
             }
             return result;
         }
-        
+
         public static double Logarithm(double inputNumber, double logBase = System.Math.E)
         {
             return System.Math.Log(inputNumber, logBase);
@@ -66,6 +66,11 @@ namespace OurMathLib
         public static double Abs(double inputNumber)
         {
             return System.Math.Abs(inputNumber);
+        }
+
+        public static double StdDeviation(int[] data)
+        {
+            return 0.0;
         }
     }
 }
