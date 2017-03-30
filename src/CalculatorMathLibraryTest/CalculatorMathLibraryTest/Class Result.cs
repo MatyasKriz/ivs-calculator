@@ -89,23 +89,6 @@ namespace MathLibraryTesting
             Assert.AreEqual(67, result.GetDisplayValue());
         }
 
-        [Test]
-        public void ResultClass_AddTrailingZeroes()
-        {
-            result.AddNumber('2');
-            result.AddNumber('3');
-            result.AddNumber('4');
-
-            result.AddNumber('.');
-
-            result.AddNumber('3');
-            result.AddNumber('5');
-
-            AddZeroes(5);
-            
-            Assert.AreEqual(234.35, result.GetDisplayValue(), Delta);
-        }
-
         private void AddZeroes(int through)
         {
             for(int i = 1; i <= through; i++) {
