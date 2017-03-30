@@ -12,11 +12,6 @@ namespace OurMathLib
         public enum Operation { none, add, subtract, multiply, divide }
 
         /// <summary>
-        /// The number of digits that can be displayed in the textbox.
-        /// </summary>
-        public const double DigitLimit = 15;
-
-        /// <summary>
         /// The number that all operations are applied to.
         /// </summary>
         private double currentValue = 0;
@@ -142,12 +137,6 @@ namespace OurMathLib
                 numOfDecimalDigs++;
                 displayValue += numToAdd;
             }
-
-            if (displayValue.ToString().Length >= DigitLimit)
-            {
-                errMessage = "The number of digits exceed the DigitLimit";
-            }
-            return;
         }
 
         /// <summary>
