@@ -72,8 +72,29 @@ namespace OurMathLib
         /// <returns>String of the current operation</returns>
         public string GetCurrentOperationSymbol()
         {
-
-            return CurrentOperation.ToString();
+            string toReturn = "";
+            switch (CurrentOperation)
+            {
+            case Operation.none:
+                toReturn = "";
+                break;
+            case Operation.add:
+                toReturn = "+";
+                break;
+            case Operation.subtract:
+                toReturn = "-";
+                break;
+            case Operation.multiply:
+                toReturn = "*";
+                break;
+            case Operation.divide:
+                toReturn = "/";
+                break;
+            default:
+                toReturn = "";
+                break;
+            }
+            return toReturn;
         }
 
         /// <summary>
@@ -112,8 +133,8 @@ namespace OurMathLib
                 numToAdd /= numToDiv;
                 numOfDecimalDigs++;
                 displayValue += numToAdd;
-                return;
             }
+
             if (displayValue.ToString().Length >= DigitLimit)
             {
                 errMessage = "The number of digits exceed the DigitLimit";
