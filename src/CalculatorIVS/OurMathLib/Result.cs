@@ -83,13 +83,12 @@ namespace OurMathLib
         /// <returns>True on success; False otherwise</returns>
         public void AddNumber(char number)
         {
-            int numToAdd = 0;
+            double numToAdd = 0;
             try
             {
-                numToAdd = int.Parse(number.ToString());
-                Console.WriteLine(numToAdd);
+                numToAdd = double.Parse(number.ToString());
             }
-            catch (InvalidCastException e)
+            catch (FormatException e)
             {
                 if (number == ',' || number == '.')
                 {
@@ -109,9 +108,11 @@ namespace OurMathLib
             }
             else
             {
-                //TODO
+                double numToDiv = Math.Power(10, numOfDecimalDigs);
+                numToAdd /= numToDiv;
+                numOfDecimalDigs++;
+                displayValue += numToAdd;
                 return;
-
             }
             if (displayValue.ToString().Length >= DigitLimit)
             {
