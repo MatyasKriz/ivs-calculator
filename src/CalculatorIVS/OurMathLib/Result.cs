@@ -20,6 +20,7 @@ namespace OurMathLib
         /// The number that all operations are applied to.
         /// </summary>
         private double currentValue = 0;
+        private bool isDecimal = false;
 
         /// <summary>
         /// Applied along with Operation to CurrentNumber.
@@ -62,6 +63,19 @@ namespace OurMathLib
             return currentValue;
         }
 
+
+        private int numOfDecimalDigs = 1;
+
+        /// <summary>
+        /// Returns the string representation of the current operation symbol
+        /// </summary>
+        /// <returns>String of the current operation</returns>
+        public string GetCurrentOperationSymbol()
+        {
+
+            return CurrentOperation.ToString();
+        }
+
         /// <summary>
         /// Adds a digit to DisplayValue
         /// </summary>
@@ -72,22 +86,33 @@ namespace OurMathLib
             int numToAdd = 0;
             try
             {
-                numToAdd = (int)number;
+                numToAdd = int.Parse(number.ToString());
+                Console.WriteLine(numToAdd);
             }
             catch (InvalidCastException e)
             {
                 if (number == ',' || number == '.')
                 {
-                    Operation result;
-                    CurrentOperation = Enum.TryParse(number.ToString(), out result) ? result : Operation.none;
-                    errMessage = "";
+                    if (!isDecimal)
+                    {
+                        isDecimal = true;
+                    }
                     return;
                 }
                 errMessage = e.Message;
                 return;
             }
-            displayValue *= 10;
-            displayValue += numToAdd;
+            if (!isDecimal)
+            {
+                displayValue *= 10;
+                displayValue += numToAdd;
+            }
+            else
+            {
+                //TODO
+                return;
+
+            }
             if (displayValue.ToString().Length >= DigitLimit)
             {
                 errMessage = "The number of digits exceed the DigitLimit";
