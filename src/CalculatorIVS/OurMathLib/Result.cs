@@ -208,6 +208,8 @@ namespace OurMathLib
             case Operation.divide:
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
+            case Operation.none:
+                throw new System.InvalidOperationException("No operation selected");
             default:
                 return;
             }
