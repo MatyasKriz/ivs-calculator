@@ -7,11 +7,10 @@ namespace MathLibraryTesting
     [TestFixture]
     public class ResultClass
     {
-        double DigitLimit = OurMathLib.Result.DigitLimit;
         double Delta = OurMathLib.Math.Delta;
         OurMathLib.Result result;
 
-        [OneTimeSetUp]
+        [SetUp]
         public void Setup()
         {
             result = new OurMathLib.Result();
@@ -87,15 +86,6 @@ namespace MathLibraryTesting
             Assert.AreEqual("+", result.GetCurrentOperationSymbol());
         }
 
-        [Test]
-        public void ResultClass_ExceedLimit()
-        {
-            for(int i = 1; i <= DigitLimit; i++) {
-                char number = ((i % 9) + 1).ToString().ToCharArray()[0];
-                result.AddNumber(number);
-            }
-            Assert.Throws<InvalidOperationException>(delegate { result.AddNumber('7'); });
-        }
 
         [Test]
         public void ResultClass_AddLeadingZeroes()
@@ -105,7 +95,7 @@ namespace MathLibraryTesting
             }
             result.AddNumber('6');
             result.AddNumber('7');
-            Assert.AreEqual(67, result.GetCurrentValue());
+            Assert.AreEqual(67, result.GetDisplayValue());
         }
 
         [Test]
@@ -123,7 +113,7 @@ namespace MathLibraryTesting
             for(int i = 1; i <= 5; i++) {
                 result.AddNumber('0');
             }
-            Assert.AreEqual(234.35, result.GetCurrentValue(), Delta);
+            Assert.AreEqual(234.35, result.GetDisplayValue(), Delta);
         }
 
         [Test]
