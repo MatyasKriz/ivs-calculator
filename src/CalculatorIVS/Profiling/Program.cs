@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OurMathLib;
+
 
 namespace Profiling
 {
@@ -11,7 +8,18 @@ namespace Profiling
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("test");
+            Console.WriteLine("Vstup:");
+            string[] tokens = Console.ReadLine().Split();
+            double[] tp = { 1.2, 3.2, 4.2, 4, 4 };
+
+           // int[] myInts = Array.ConvertAll(arr, int.Parse);
+            //double vysledek = OurMathLib.Math.Add(1, 3);
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine(tokens[i]);
+            }
+           // Console.WriteLine("vysledek je " + vysledek);
+            
             Console.ReadKey();
         }
     }

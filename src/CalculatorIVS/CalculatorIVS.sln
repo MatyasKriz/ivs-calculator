@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorMathLibraryTest", "..\CalculatorMathLibraryTest\CalculatorMathLibraryTest\CalculatorMathLibraryTest.csproj", "{EE23DFB4-4713-4032-BF9F-E66D5AC09709}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profiling", "Profiling\Profiling.csproj", "{659B83F5-1336-4666-AA03-2F7B58FCAC0A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{236743A7-8D04-4369-AEDA-40CC3B825B55} = {236743A7-8D04-4369-AEDA-40CC3B825B55}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

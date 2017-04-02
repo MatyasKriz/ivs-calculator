@@ -3,3 +3,6 @@ C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\Prof
 C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\Profiling.pdb
 C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\obj\Debug\Profiling.exe
 C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\obj\Debug\Profiling.pdb
+C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\OurMathLib.dll
+C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\OurMathLib.pdb
+C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\obj\Debug\Profiling.csprojResolveAssemblyReference.cache
