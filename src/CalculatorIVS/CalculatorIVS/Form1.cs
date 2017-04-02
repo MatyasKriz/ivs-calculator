@@ -71,11 +71,11 @@ namespace CalculatorIVS
                 result1.Revert();
                 update();
             }
-            else if (e.KeyCode >= Keys.D0 && e.KeyCode >= Keys.D9) // non-numeric BUG - TODO
-            {
-                string pressedKey2 = e.KeyCode.ToString().Remove(0, 1);
-                resultBox.Text = pressedKey2;
-            }
+            //else if (e.KeyCode >= Keys.D0 && e.KeyCode >= Keys.D9) // non-numeric BUG - TODO
+            //{
+            //    string pressedKey2 = e.KeyCode.ToString().Remove(0, 1);
+            //    resultBox.Text = pressedKey2;
+            //}
 
         }
 

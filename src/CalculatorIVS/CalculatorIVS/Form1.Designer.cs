@@ -56,7 +56,7 @@
             this.btnsqrt2 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.btnloge = new System.Windows.Forms.Button();
-            this.btnlogn = new System.Windows.Forms.Button();
+            this.btnlogx = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -296,8 +296,7 @@
             this.resultBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.resultBox.Size = new System.Drawing.Size(287, 50);
             this.resultBox.TabIndex = 25;
-            this.resultBox.Text = "42";
-            //resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
+            this.resultBox.Text = "0";
             // 
             // btnpow
             // 
@@ -365,16 +364,16 @@
             this.btnloge.UseVisualStyleBackColor = true;
             this.btnloge.Click += new System.EventHandler(this.addOperation);
             // 
-            // btnlogn
+            // btnlogx
             // 
-            this.btnlogn.Location = new System.Drawing.Point(124, 103);
-            this.btnlogn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnlogn.Name = "btnlogn";
-            this.btnlogn.Size = new System.Drawing.Size(52, 36);
-            this.btnlogn.TabIndex = 32;
-            this.btnlogn.Text = "logn";
-            this.btnlogn.UseVisualStyleBackColor = true;
-            this.btnlogn.Click += new System.EventHandler(this.addOperation);
+            this.btnlogx.Location = new System.Drawing.Point(124, 103);
+            this.btnlogx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnlogx.Name = "btnlogx";
+            this.btnlogx.Size = new System.Drawing.Size(52, 36);
+            this.btnlogx.TabIndex = 32;
+            this.btnlogx.Text = "logx";
+            this.btnlogx.UseVisualStyleBackColor = true;
+            this.btnlogx.Click += new System.EventHandler(this.addOperation);
             // 
             // button24
             // 
@@ -406,7 +405,7 @@
             this.ClientSize = new System.Drawing.Size(299, 474);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.btnloge);
-            this.Controls.Add(this.btnlogn);
+            this.Controls.Add(this.btnlogx);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.btne);
             this.Controls.Add(this.btnsqrt2);
@@ -451,7 +450,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button btnloge;
-        private System.Windows.Forms.Button btnlogn;
+        private System.Windows.Forms.Button btnlogx;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button btne;
         private System.Windows.Forms.Button btnsqrt2;
