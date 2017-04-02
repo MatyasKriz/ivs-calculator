@@ -1,5 +1,0 @@
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\Profiling.exe.config
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\Profiling.exe
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\bin\Debug\Profiling.pdb
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\obj\Debug\Profiling.exe
-C:\Users\Tom\Documents\ivs-calculator\src\CalculatorIVS\Profiling\obj\Debug\Profiling.pdb

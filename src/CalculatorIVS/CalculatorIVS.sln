@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurMathLib", "OurMathLib\Ou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorMathLibraryTest", "..\CalculatorMathLibraryTest\CalculatorMathLibraryTest\CalculatorMathLibraryTest.csproj", "{EE23DFB4-4713-4032-BF9F-E66D5AC09709}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profiling", "Profiling\Profiling.csproj", "{659B83F5-1336-4666-AA03-2F7B58FCAC0A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Release|Any CPU.Build.0 = Release|Any CPU
-		{659B83F5-1336-4666-AA03-2F7B58FCAC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{659B83F5-1336-4666-AA03-2F7B58FCAC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{659B83F5-1336-4666-AA03-2F7B58FCAC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{659B83F5-1336-4666-AA03-2F7B58FCAC0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
