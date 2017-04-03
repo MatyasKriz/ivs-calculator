@@ -9,12 +9,7 @@ namespace OurMathLib
     public class Result
     {
         //TODO: add enumerations based on functions in OurMathLib.Math
-        public enum Operation { none, add, subtract, multiply, divide }
-
-        /// <summary>
-        /// The number of digits that can be displayed in the textbox.
-        /// </summary>
-        public const double DigitLimit = 15;
+        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot}
 
         /// <summary>
         /// The number that all operations are applied to.
@@ -72,8 +67,52 @@ namespace OurMathLib
         /// <returns>String of the current operation</returns>
         public string GetCurrentOperationSymbol()
         {
+            string toReturn = "";
+            switch (CurrentOperation)
+            {
+            case Operation.none:
+                toReturn = "";
+                break;
+            case Operation.add:
+                toReturn = "+";
+                break;
+            case Operation.subtract:
+                toReturn = "-";
+                break;
+            case Operation.multiply:
+                toReturn = "*";
+                break;
+            case Operation.divide:
+                toReturn = "/";
+                break;
+            case Operation.power2:
+                toReturn = "^2";
+                break;
+            case Operation.powern:
+                toReturn = "x^n";
+                break;
+            case Operation.lognatur:
+                toReturn = "log_e";
+                break;
+            case Operation.logx:
+                toReturn = "log_x";
+                break;
+            case Operation.fact:
+                toReturn = "!";
+                break;
+            case Operation.sqrt:
+                toReturn = "2^√";
+                break;
+            case Operation.nthroot:
+                toReturn = "n^√";
+                break;
 
-            return CurrentOperation.ToString();
+            default:
+                toReturn = "";
+                break;
+            }
+
+            return toReturn;
         }
 
         /// <summary>
@@ -83,15 +122,14 @@ namespace OurMathLib
         /// <returns>True on success; False otherwise</returns>
         public void AddNumber(char number)
         {
-            int numToAdd = 0;
+            double numToAdd = 0;
             try
             {
-                numToAdd = int.Parse(number.ToString());
-                Console.WriteLine(numToAdd);
+                numToAdd = double.Parse(number.ToString());
             }
-            catch (InvalidCastException e)
+            catch (FormatException e)
             {
-                if (number == ',' || number == '.')
+                if (number == ',' )
                 {
                     if (!isDecimal)
                     {
@@ -99,25 +137,32 @@ namespace OurMathLib
                     }
                     return;
                 }
+                else if (number == 'e')
+                {
+                    displayValue = OurMathLib.Math.E;
+                }
                 errMessage = e.Message;
                 return;
             }
             if (!isDecimal)
             {
-                displayValue *= 10;
-                displayValue += numToAdd;
+                if (displayValue == 0.0 && numToAdd == 0)
+                {
+                    //Do nothing - leading zeroes
+                }
+                else
+                {
+                    displayValue *= 10;
+                    displayValue += numToAdd;
+                }
             }
             else
             {
-                //TODO
-                return;
-
+                double numToDiv = Math.Power(10, numOfDecimalDigs);
+                numToAdd /= numToDiv;
+                numOfDecimalDigs++;
+                displayValue += numToAdd;
             }
-            if (displayValue.ToString().Length >= DigitLimit)
-            {
-                errMessage = "The number of digits exceed the DigitLimit";
-            }
-            return;
         }
 
         /// <summary>
@@ -126,6 +171,8 @@ namespace OurMathLib
        public void Revert()
         {
             displayValue = 0;
+            numOfDecimalDigs = 0;
+            isDecimal = false;
             errMessage = null;
         }
 
@@ -136,6 +183,8 @@ namespace OurMathLib
         {
             displayValue = 0;
             currentValue = 0;
+            numOfDecimalDigs = 0;
+            isDecimal = false;
             errMessage = null;
         }
 
@@ -147,10 +196,10 @@ namespace OurMathLib
         {
             //TODO: add all
             switch(op) {
-            case "plus":
+            case "add":
                 CurrentOperation = Operation.add;
                 break;
-            case "minus":
+            case "sub":
                 CurrentOperation = Operation.subtract;
                 break;
             case "mul":
@@ -159,10 +208,33 @@ namespace OurMathLib
             case "div":
                 CurrentOperation = Operation.divide;
                 break;
+            case "sqrt":
+                CurrentOperation = Operation.sqrt;
+                break;
+            case "pow":
+                CurrentOperation = Operation.powern;
+                break;
+            case "pow2":
+                CurrentOperation = Operation.power2;
+                break;
+            case "fact":
+                CurrentOperation = Operation.fact;
+                break;
+            case "logn":
+                CurrentOperation = Operation.lognatur;
+                break;
+            case "logx":
+                CurrentOperation = Operation.logx;
+                break;
+            case "nthroot":
+                CurrentOperation = Operation.nthroot;
+                break;
             default:
                 CurrentOperation = Operation.none;
                 break;
             }
+            currentValue = displayValue;
+            Revert();
         }
 
         /// <summary>
@@ -183,6 +255,36 @@ namespace OurMathLib
             case Operation.divide:
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
+            case Operation.fact:
+                //CHECK for solutions
+                currentValue = OurMathLib.Math.Factorial((ulong)displayValue); ///////////////////////
+                break;
+            case Operation.lognatur:
+                //CHECK for solutions
+                currentValue = OurMathLib.Math.Logarithm(displayValue);
+                break;
+            case Operation.logx:
+                //CHECK for solutions
+                currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
+                break;
+            case Operation.nthroot:
+                //CHECK 
+                currentValue = OurMathLib.Math.Root(displayValue, currentValue);
+                break;
+            case Operation.sqrt:
+                //CHECK
+                currentValue = OurMathLib.Math.Root(displayValue);
+                break;
+            case Operation.power2:
+                currentValue = OurMathLib.Math.Power(currentValue);
+                break;
+            case Operation.powern:
+                //CHECK
+                currentValue = OurMathLib.Math.Power(currentValue, displayValue);
+
+                break;
+            case Operation.none:
+                throw new System.InvalidOperationException("No operation selected");
             default:
                 return;
             }
