@@ -203,7 +203,7 @@ namespace OurMathLib
                 numOfDecimalDigs = 0;
                 isDecimal = false;
                 return;
-                break;
+                
             case "pow":
                 CurrentOperation = Operation.powern;
                 break;
@@ -213,7 +213,6 @@ namespace OurMathLib
                 numOfDecimalDigs = 0;
                 isDecimal = false;
                 return;
-                break;
             case "fact":
                 CurrentOperation = Operation.fact;
                 break;
@@ -278,7 +277,6 @@ namespace OurMathLib
             case Operation.powern:
                 //CHECK
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
-
                 break;
             case Operation.none:
             default:
