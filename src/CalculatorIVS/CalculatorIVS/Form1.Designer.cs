@@ -317,6 +317,7 @@
             this.resultBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.resultBox.Size = new System.Drawing.Size(287, 50);
             this.resultBox.TabIndex = 25;
+            this.resultBox.TabStop = false;
             this.resultBox.Text = "0";
             this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
