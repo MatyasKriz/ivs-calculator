@@ -133,7 +133,7 @@ namespace OurMathLib
                 {
                     displayValue = OurMathLib.Math.PI;
                 }
-                return;
+                throw new Exception(e.Message);
             }
             if (!isDecimal)
             {
@@ -162,7 +162,7 @@ namespace OurMathLib
        public void Revert()
         {
             displayValue = 0;
-            numOfDecimalDigs = 0;
+            numOfDecimalDigs = 1;
             isDecimal = false;
         }
 
@@ -173,7 +173,7 @@ namespace OurMathLib
         {
             displayValue = 0;
             currentValue = 0;
-            numOfDecimalDigs = 0;
+            numOfDecimalDigs = 1;
             isDecimal = false;
         }
 
@@ -200,7 +200,7 @@ namespace OurMathLib
             case "sqrt":
                 CurrentOperation = Operation.sqrt;
                 displayValue = OurMathLib.Math.Root(displayValue);
-                numOfDecimalDigs = 0;
+                numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
                 
@@ -210,12 +210,15 @@ namespace OurMathLib
             case "pow2":
                 CurrentOperation = Operation.power2;
                 displayValue = OurMathLib.Math.Power(displayValue);
-                numOfDecimalDigs = 0;
+                numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
             case "fact":
                 CurrentOperation = Operation.fact;
-                break;
+                displayValue = OurMathLib.Math.Factorial((ulong)displayValue);
+                numOfDecimalDigs = 1;
+                isDecimal = false;
+                return;
             case "logn":
                 CurrentOperation = Operation.lognatur;
                 break;
