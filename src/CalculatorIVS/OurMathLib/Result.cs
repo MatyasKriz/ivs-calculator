@@ -276,11 +276,11 @@ namespace OurMathLib
                 currentValue = OurMathLib.Math.Root(displayValue);
                 break;
             case Operation.power2:
-                currentValue = OurMathLib.Math.Power(displayValue);
+                currentValue = OurMathLib.Math.Power(currentValue);
                 break;
             case Operation.powern:
                 //CHECK
-                currentValue = OurMathLib.Math.Power(displayValue, currentValue);
+                currentValue = OurMathLib.Math.Power(currentValue, displayValue);
 
                 break;
             case Operation.none:
