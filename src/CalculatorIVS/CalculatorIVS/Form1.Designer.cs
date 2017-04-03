@@ -57,7 +57,7 @@
             this.button21 = new System.Windows.Forms.Button();
             this.btnloge = new System.Windows.Forms.Button();
             this.btnlogx = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btnp = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -288,6 +288,7 @@
             // 
             // resultBox
             // 
+            this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.resultBox.Location = new System.Drawing.Point(5, 5);
             this.resultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resultBox.Multiline = true;
@@ -375,16 +376,16 @@
             this.btnlogx.UseVisualStyleBackColor = true;
             this.btnlogx.Click += new System.EventHandler(this.addOperation);
             // 
-            // button24
+            // btnp
             // 
-            this.button24.Location = new System.Drawing.Point(64, 103);
-            this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(52, 36);
-            this.button24.TabIndex = 31;
-            this.button24.Text = "π";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.addNumber);
+            this.btnp.Location = new System.Drawing.Point(64, 103);
+            this.btnp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnp.Name = "btnp";
+            this.btnp.Size = new System.Drawing.Size(52, 36);
+            this.btnp.TabIndex = 31;
+            this.btnp.Text = "π";
+            this.btnp.UseVisualStyleBackColor = true;
+            this.btnp.Click += new System.EventHandler(this.addNumber);
             // 
             // btne
             // 
@@ -406,7 +407,7 @@
             this.Controls.Add(this.button21);
             this.Controls.Add(this.btnloge);
             this.Controls.Add(this.btnlogx);
-            this.Controls.Add(this.button24);
+            this.Controls.Add(this.btnp);
             this.Controls.Add(this.btne);
             this.Controls.Add(this.btnsqrt);
             this.Controls.Add(this.btnnthroot);
@@ -451,7 +452,7 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button btnloge;
         private System.Windows.Forms.Button btnlogx;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button btnp;
         private System.Windows.Forms.Button btne;
         private System.Windows.Forms.Button btnsqrt;
         private System.Windows.Forms.Button btnnthroot;

@@ -21,11 +21,10 @@ namespace CalculatorIVS
             InitializeComponent();
             KeyPreview = true;
             result1 = new Result();
-            //Update();
+
         }
-        // po kazde operaci nacist displayvalue
-        // kopirovai z display value ale psat se tam nemuze
-        // zakazat natahovani a zmencovani
+
+        
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -35,31 +34,26 @@ namespace CalculatorIVS
                 char[] pressedKey = e.KeyCode.ToString().Remove(0, 6).ToCharArray();
                 result1.AddNumber(pressedKey[0]);
                 update();
-                //resultBox.Text = pressedKey[0].ToString();
             }
             else if (e.KeyCode == Keys.Divide)
             {
                 result1.SetOperation("div");
                 update();
-                //resultBox.Text = "div";
             }
             else if (e.KeyCode == Keys.Multiply)
             {
                 result1.SetOperation("mul");
                 update();
-                //resultBox.Text = "mul";
             }
             else if (e.KeyCode == Keys.Add)
             {
                 result1.SetOperation("add");
                 update();
-                //resultBox.Text = "plus";
             }
             else if (e.KeyCode == Keys.Subtract)
             {
                 result1.SetOperation("sub");
                 update();
-                //resultBox.Text = "sub";
             }
             else if(e.KeyCode == Keys.Enter)
             {
