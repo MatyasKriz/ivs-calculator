@@ -23,22 +23,10 @@ namespace OurMathLib
         /// </summary>
         private double displayValue = 0;
 
-        /// <summary>
-        /// If any errors occur, the error message will be stored here
-        /// </summary>
-        private string errMessage = "";
     
 
         public Operation CurrentOperation = Operation.none;
 
-        /// <summary>
-        /// Return the error message set 
-        /// </summary>
-        /// <returns></returns>
-        public string GetErrMessage()
-        {
-            return errMessage;
-        }
 
         /// <summary>
         /// Returns the displayValue
@@ -141,7 +129,10 @@ namespace OurMathLib
                 {
                     displayValue = OurMathLib.Math.E;
                 }
-                errMessage = e.Message;
+                else if (number == 'p')
+                {
+                    displayValue = OurMathLib.Math.PI;
+                }
                 return;
             }
             if (!isDecimal)
@@ -173,7 +164,6 @@ namespace OurMathLib
             displayValue = 0;
             numOfDecimalDigs = 0;
             isDecimal = false;
-            errMessage = null;
         }
 
         /// <summary>
@@ -185,7 +175,6 @@ namespace OurMathLib
             currentValue = 0;
             numOfDecimalDigs = 0;
             isDecimal = false;
-            errMessage = null;
         }
 
         /// <summary>
@@ -284,7 +273,6 @@ namespace OurMathLib
 
                 break;
             case Operation.none:
-                throw new System.InvalidOperationException("No operation selected");
             default:
                 return;
             }
