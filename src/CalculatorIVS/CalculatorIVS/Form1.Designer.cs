@@ -52,12 +52,12 @@
             this.resultBox = new System.Windows.Forms.TextBox();
             this.btnpow = new System.Windows.Forms.Button();
             this.btnpow2 = new System.Windows.Forms.Button();
+            this.btnnthroot = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
-            this.btnsqrt2 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.btnloge = new System.Windows.Forms.Button();
             this.btnlogx = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btnp = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -320,27 +320,27 @@
             this.btnpow2.UseVisualStyleBackColor = true;
             this.btnpow2.Click += new System.EventHandler(this.addOperation);
             // 
+            // btnnthroot
+            // 
+            this.btnnthroot.Location = new System.Drawing.Point(181, 62);
+            this.btnnthroot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnnthroot.Name = "btnnthroot";
+            this.btnnthroot.Size = new System.Drawing.Size(52, 36);
+            this.btnnthroot.TabIndex = 28;
+            this.btnnthroot.Text = "√x";
+            this.btnnthroot.UseVisualStyleBackColor = true;
+            this.btnnthroot.Click += new System.EventHandler(this.addOperation);
+            // 
             // btnsqrt
             // 
-            this.btnsqrt.Location = new System.Drawing.Point(181, 62);
+            this.btnsqrt.Location = new System.Drawing.Point(240, 62);
             this.btnsqrt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsqrt.Name = "btnsqrt";
             this.btnsqrt.Size = new System.Drawing.Size(52, 36);
-            this.btnsqrt.TabIndex = 28;
-            this.btnsqrt.Text = "√x";
+            this.btnsqrt.TabIndex = 29;
+            this.btnsqrt.Text = "²√x";
             this.btnsqrt.UseVisualStyleBackColor = true;
             this.btnsqrt.Click += new System.EventHandler(this.addOperation);
-            // 
-            // btnsqrt2
-            // 
-            this.btnsqrt2.Location = new System.Drawing.Point(240, 62);
-            this.btnsqrt2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsqrt2.Name = "btnsqrt2";
-            this.btnsqrt2.Size = new System.Drawing.Size(52, 36);
-            this.btnsqrt2.TabIndex = 29;
-            this.btnsqrt2.Text = "²√x";
-            this.btnsqrt2.UseVisualStyleBackColor = true;
-            this.btnsqrt2.Click += new System.EventHandler(this.addOperation);
             // 
             // button21
             // 
@@ -375,16 +375,16 @@
             this.btnlogx.UseVisualStyleBackColor = true;
             this.btnlogx.Click += new System.EventHandler(this.addOperation);
             // 
-            // button24
+            // btnp
             // 
-            this.button24.Location = new System.Drawing.Point(64, 103);
-            this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(52, 36);
-            this.button24.TabIndex = 31;
-            this.button24.Text = "π";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.addNumber);
+            this.btnp.Location = new System.Drawing.Point(64, 103);
+            this.btnp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnp.Name = "btnp";
+            this.btnp.Size = new System.Drawing.Size(52, 36);
+            this.btnp.TabIndex = 31;
+            this.btnp.Text = "π";
+            this.btnp.UseVisualStyleBackColor = true;
+            this.btnp.Click += new System.EventHandler(this.addNumber);
             // 
             // btne
             // 
@@ -406,10 +406,10 @@
             this.Controls.Add(this.button21);
             this.Controls.Add(this.btnloge);
             this.Controls.Add(this.btnlogx);
-            this.Controls.Add(this.button24);
+            this.Controls.Add(this.btnp);
             this.Controls.Add(this.btne);
-            this.Controls.Add(this.btnsqrt2);
             this.Controls.Add(this.btnsqrt);
+            this.Controls.Add(this.btnnthroot);
             this.Controls.Add(this.btnpow2);
             this.Controls.Add(this.btnpow);
             this.Controls.Add(this.resultBox);
@@ -451,10 +451,10 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button btnloge;
         private System.Windows.Forms.Button btnlogx;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button btnp;
         private System.Windows.Forms.Button btne;
-        private System.Windows.Forms.Button btnsqrt2;
         private System.Windows.Forms.Button btnsqrt;
+        private System.Windows.Forms.Button btnnthroot;
         private System.Windows.Forms.Button btnpow2;
         private System.Windows.Forms.Button btnpow;
         private System.Windows.Forms.TextBox resultBox;
