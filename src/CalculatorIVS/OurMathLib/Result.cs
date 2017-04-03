@@ -9,7 +9,7 @@ namespace OurMathLib
     public class Result
     {
         //TODO: add enumerations based on functions in OurMathLib.Math
-        public enum Operation { none, add, subtract, multiply, divide }
+        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot}
 
         /// <summary>
         /// The number that all operations are applied to.
@@ -85,6 +85,28 @@ namespace OurMathLib
             case Operation.divide:
                 toReturn = "/";
                 break;
+            case Operation.power2:
+                toReturn = "^2";
+                break;
+            case Operation.powern:
+                toReturn = "x^n";
+                break;
+            case Operation.lognatur:
+                toReturn = "log_e";
+                break;
+            case Operation.logx:
+                toReturn = "log_x";
+                break;
+            case Operation.fact:
+                toReturn = "!";
+                break;
+            case Operation.sqrt:
+                toReturn = "2^√";
+                break;
+            case Operation.nthroot:
+                toReturn = "n^√";
+                break;
+
             default:
                 toReturn = "";
                 break;
@@ -107,13 +129,17 @@ namespace OurMathLib
             }
             catch (FormatException e)
             {
-                if (number == ',' || number == '.')
+                if (number == ',' )
                 {
                     if (!isDecimal)
                     {
                         isDecimal = true;
                     }
                     return;
+                }
+                else if (number == 'e')
+                {
+                    displayValue = OurMathLib.Math.E;
                 }
                 errMessage = e.Message;
                 return;
@@ -182,6 +208,27 @@ namespace OurMathLib
             case "div":
                 CurrentOperation = Operation.divide;
                 break;
+            case "sqrt":
+                CurrentOperation = Operation.sqrt;
+                break;
+            case "pow":
+                CurrentOperation = Operation.powern;
+                break;
+            case "pow2":
+                CurrentOperation = Operation.power2;
+                break;
+            case "fact":
+                CurrentOperation = Operation.fact;
+                break;
+            case "logn":
+                CurrentOperation = Operation.lognatur;
+                break;
+            case "logx":
+                CurrentOperation = Operation.logx;
+                break;
+            case "nthroot":
+                CurrentOperation = Operation.nthroot;
+                break;
             default:
                 CurrentOperation = Operation.none;
                 break;
@@ -207,6 +254,34 @@ namespace OurMathLib
                 break;
             case Operation.divide:
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
+                break;
+            case Operation.fact:
+                //CHECK for solutions
+                currentValue = OurMathLib.Math.Factorial((ulong)displayValue); ///////////////////////
+                break;
+            case Operation.lognatur:
+                //CHECK for solutions
+                currentValue = OurMathLib.Math.Logarithm(displayValue);
+                break;
+            case Operation.logx:
+                //CHECK for solutions
+                currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
+                break;
+            case Operation.nthroot:
+                //CHECK 
+                currentValue = OurMathLib.Math.Root(displayValue, currentValue);
+                break;
+            case Operation.sqrt:
+                //CHECK
+                currentValue = OurMathLib.Math.Root(displayValue);
+                break;
+            case Operation.power2:
+                currentValue = OurMathLib.Math.Power(displayValue);
+                break;
+            case Operation.powern:
+                //CHECK
+                currentValue = OurMathLib.Math.Power(displayValue, currentValue);
+
                 break;
             case Operation.none:
                 throw new System.InvalidOperationException("No operation selected");
