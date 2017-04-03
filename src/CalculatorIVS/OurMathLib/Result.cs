@@ -199,12 +199,20 @@ namespace OurMathLib
                 break;
             case "sqrt":
                 CurrentOperation = Operation.sqrt;
+                displayValue = OurMathLib.Math.Root(displayValue);
+                numOfDecimalDigs = 0;
+                isDecimal = false;
+                return;
                 break;
             case "pow":
                 CurrentOperation = Operation.powern;
                 break;
             case "pow2":
                 CurrentOperation = Operation.power2;
+                displayValue = OurMathLib.Math.Power(displayValue);
+                numOfDecimalDigs = 0;
+                isDecimal = false;
+                return;
                 break;
             case "fact":
                 CurrentOperation = Operation.fact;
