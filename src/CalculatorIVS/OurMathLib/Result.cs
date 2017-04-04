@@ -111,7 +111,6 @@ namespace OurMathLib
         /// Adds a digit to DisplayValue
         /// </summary>
         /// <param name="number">A digit or an operation to be added</param>
-        /// <returns>True on success; False otherwise</returns>
         public void AddNumber(char number)
         {
             double numToAdd = 0;
