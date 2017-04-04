@@ -189,7 +189,6 @@ namespace OurMathLib
         /// <param name="op">String of the operation</param>
         public void SetOperation(string op)
         {
-            //TODO: add all
             switch(op) {
             case "add":
                 CurrentOperation = Operation.add;
@@ -245,7 +244,7 @@ namespace OurMathLib
         /// <summary>
         /// Applies CurrentOperation using DisplayNumber to CurrentNumber if CurrentOperation is set.
         /// </summary>
-        public void ApplyOperation() //TODO: discuss what to do after applying operation, if we should wipe it or leave it the same
+        public void ApplyOperation() 
         {
             switch(CurrentOperation) {
             case Operation.add:
