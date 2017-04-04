@@ -41,7 +41,7 @@
             this.btn0 = new System.Windows.Forms.Button();
             this.btnd = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
-            this.btnminus = new System.Windows.Forms.Button();
+            this.btnsub = new System.Windows.Forms.Button();
             this.btndiv = new System.Windows.Forms.Button();
             this.btneq = new System.Windows.Forms.Button();
             this.btndelce = new System.Windows.Forms.Button();
@@ -210,17 +210,17 @@
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.addOperation);
             // 
-            // btnminus
+            // btnsub
             // 
-            this.btnminus.Location = new System.Drawing.Point(225, 276);
-            this.btnminus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnminus.Name = "btnminus";
-            this.btnminus.Size = new System.Drawing.Size(67, 60);
-            this.btnminus.TabIndex = 12;
-            this.btnminus.TabStop = false;
-            this.btnminus.Text = "-";
-            this.btnminus.UseVisualStyleBackColor = true;
-            this.btnminus.Click += new System.EventHandler(this.addOperation);
+            this.btnsub.Location = new System.Drawing.Point(225, 276);
+            this.btnsub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnsub.Name = "btnsub";
+            this.btnsub.Size = new System.Drawing.Size(67, 60);
+            this.btnsub.TabIndex = 12;
+            this.btnsub.TabStop = false;
+            this.btnsub.Text = "-";
+            this.btnsub.UseVisualStyleBackColor = true;
+            this.btnsub.Click += new System.EventHandler(this.addOperation);
             // 
             // btndiv
             // 
@@ -452,7 +452,7 @@
             this.Controls.Add(this.btndelce);
             this.Controls.Add(this.btneq);
             this.Controls.Add(this.btndiv);
-            this.Controls.Add(this.btnminus);
+            this.Controls.Add(this.btnsub);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnd);
             this.Controls.Add(this.btn0);
@@ -498,7 +498,7 @@
         private System.Windows.Forms.Button btndelce;
         private System.Windows.Forms.Button btneq;
         private System.Windows.Forms.Button btndiv;
-        private System.Windows.Forms.Button btnminus;
+        private System.Windows.Forms.Button btnsub;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnd;
         private System.Windows.Forms.Button btn0;

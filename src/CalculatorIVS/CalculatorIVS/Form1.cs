@@ -24,6 +24,9 @@ namespace CalculatorIVS
             
         }
 
+        // try catche
+        // po kliku buttonek zustane oznaceny
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             // numeric keyboard
@@ -115,6 +118,7 @@ namespace CalculatorIVS
         private void update()
         {
             resultBox.Text = result1.GetDisplayValue().ToString();
+            //result1.Focus();
         }
 
         private void resultBox_TextChanged(object sender, EventArgs e)
