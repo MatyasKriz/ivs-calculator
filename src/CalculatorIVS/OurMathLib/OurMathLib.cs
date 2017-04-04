@@ -68,6 +68,12 @@ namespace OurMathLib
             return System.Math.Abs(inputNumber);
         }
 
+        public static double Random(int from, int to)
+        {
+            Random rnd = new Random();
+            return rnd.Next(from, to);  // from <= month < to
+        }
+
         public static double StdDeviation(int[] data)
         {
             return 0.0;
