@@ -11,3 +11,4 @@ src/CalculatorIVS/CalculatorIVS/bin/
 src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/
 *.suo
 *.cache
+*.pdb
