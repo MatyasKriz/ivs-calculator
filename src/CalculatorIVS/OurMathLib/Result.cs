@@ -216,11 +216,11 @@ namespace OurMathLib
                 return;
             case "fact":
                 CurrentOperation = Operation.fact;
-                displayValue = OurMathLib.Math.Factorial((ulong)displayValue);
+                displayValue = OurMathLib.Math.Factorial(displayValue);
                 numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
-            case "logn":
+            case "ln":
                 CurrentOperation = Operation.lognatur;
                 break;
             case "logx":
@@ -256,8 +256,7 @@ namespace OurMathLib
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
             case Operation.fact:
-                //CHECK for solutions
-                currentValue = OurMathLib.Math.Factorial((ulong)displayValue); ///////////////////////
+                currentValue = OurMathLib.Math.Factorial(displayValue);
                 break;
             case Operation.lognatur:
                 //CHECK for solutions
