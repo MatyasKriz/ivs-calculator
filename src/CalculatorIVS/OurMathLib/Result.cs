@@ -17,7 +17,7 @@ namespace OurMathLib
         private double currentValue = 0;
 
         /// <summary>
-        /// Applied along with Operation to CurrentNumber.
+        /// Applied along with Operation to currentValue.
         /// Is on screen all the time.
         /// </summary>
         private double displayValue = 0;
@@ -159,7 +159,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Sets displayValue to 0, CurrentValue doesn't change
+        /// Sets displayValue to 0, currentValue doesn't change
         /// </summary>
        public void Revert()
         {
@@ -169,7 +169,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Sets both displayValue and CurrentValue to 0
+        /// Sets both displayValue and currentValue to 0
         /// </summary>
         public void Reset()
         {
@@ -238,7 +238,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Applies CurrentOperation using displayValue to CurrentNumber if CurrentOperation is set.
+        /// Applies CurrentOperation using displayValue to currentValue if CurrentOperation is set.
         /// </summary>
         public void ApplyOperation() 
         {
