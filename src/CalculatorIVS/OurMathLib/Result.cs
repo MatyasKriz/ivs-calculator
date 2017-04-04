@@ -62,9 +62,6 @@ namespace OurMathLib
             string toReturn = "";
             switch (CurrentOperation)
             {
-            case Operation.none:
-                toReturn = "";
-                break;
             case Operation.add:
                 toReturn = "+";
                 break;
@@ -285,7 +282,6 @@ namespace OurMathLib
                 //CHECK
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
                 break;
-            case Operation.none:
             default:
                 return;
             }
