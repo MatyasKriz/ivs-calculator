@@ -15,7 +15,6 @@ namespace OurMathLib
         /// The number that all operations are applied to.
         /// </summary>
         private double currentValue = 0;
-        private bool isDecimal = false;
 
         /// <summary>
         /// Applied along with Operation to CurrentNumber.
@@ -23,7 +22,14 @@ namespace OurMathLib
         /// </summary>
         private double displayValue = 0;
 
-    
+        /// <summary>
+        /// Indicates whether the input number is it's decimal part
+        /// </summary>
+        private bool isDecimal = false;
+
+        /// <summary>
+        /// </summary>
+        private int numOfDecimalDigs = 1;
 
         public Operation CurrentOperation = Operation.none;
 
@@ -45,9 +51,6 @@ namespace OurMathLib
         {
             return currentValue;
         }
-
-
-        private int numOfDecimalDigs = 1;
 
         /// <summary>
         /// Returns the string representation of the current operation symbol
