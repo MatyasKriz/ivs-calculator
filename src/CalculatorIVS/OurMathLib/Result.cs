@@ -117,7 +117,7 @@ namespace OurMathLib
             }
             catch (FormatException e)
             {
-                if (number == ',' )
+                if (number == '.')
                 {
                     if (!isDecimal)
                     {
@@ -128,10 +128,12 @@ namespace OurMathLib
                 else if (number == 'e')
                 {
                     displayValue = OurMathLib.Math.E;
+                    return;
                 }
                 else if (number == 'p')
                 {
                     displayValue = OurMathLib.Math.PI;
+                    return;
                 }
                 throw new Exception(e.Message);
             }
