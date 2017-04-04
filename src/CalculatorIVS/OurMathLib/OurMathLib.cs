@@ -49,7 +49,7 @@ namespace OurMathLib
             return System.Math.Pow(inputNumber, 1 / exponent);
         }
 
-        public static ulong Factorial(ulong inputNumber)
+        public static double Factorial(double inputNumber)
         {
             ulong result = 1;
             for(ulong i = 2; i <= inputNumber; i++) {
@@ -66,6 +66,12 @@ namespace OurMathLib
         public static double Abs(double inputNumber)
         {
             return System.Math.Abs(inputNumber);
+        }
+
+        public static double Random(int from, int to)
+        {
+            Random rnd = new Random();
+            return rnd.Next(from, to);  // from <= month < to
         }
 
         public static double StdDeviation(int[] data)

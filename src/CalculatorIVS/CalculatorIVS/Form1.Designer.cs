@@ -55,7 +55,7 @@
             this.btnnthroot = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.btnloge = new System.Windows.Forms.Button();
+            this.btnln = new System.Windows.Forms.Button();
             this.btnlogx = new System.Windows.Forms.Button();
             this.btnp = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
@@ -314,11 +314,12 @@
             this.resultBox.Multiline = true;
             this.resultBox.Name = "resultBox";
             this.resultBox.ReadOnly = true;
-            this.resultBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.resultBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.resultBox.Size = new System.Drawing.Size(287, 50);
             this.resultBox.TabIndex = 25;
             this.resultBox.TabStop = false;
             this.resultBox.Text = "0";
+            this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // btnpow
@@ -381,17 +382,17 @@
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.addOperation);
             // 
-            // btnloge
+            // btnln
             // 
-            this.btnloge.Location = new System.Drawing.Point(181, 103);
-            this.btnloge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnloge.Name = "btnloge";
-            this.btnloge.Size = new System.Drawing.Size(52, 36);
-            this.btnloge.TabIndex = 33;
-            this.btnloge.TabStop = false;
-            this.btnloge.Text = "loge";
-            this.btnloge.UseVisualStyleBackColor = true;
-            this.btnloge.Click += new System.EventHandler(this.addOperation);
+            this.btnln.Location = new System.Drawing.Point(181, 103);
+            this.btnln.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnln.Name = "btnln";
+            this.btnln.Size = new System.Drawing.Size(52, 36);
+            this.btnln.TabIndex = 33;
+            this.btnln.TabStop = false;
+            this.btnln.Text = "ln";
+            this.btnln.UseVisualStyleBackColor = true;
+            this.btnln.Click += new System.EventHandler(this.addOperation);
             // 
             // btnlogx
             // 
@@ -436,7 +437,7 @@
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(299, 474);
             this.Controls.Add(this.button21);
-            this.Controls.Add(this.btnloge);
+            this.Controls.Add(this.btnln);
             this.Controls.Add(this.btnlogx);
             this.Controls.Add(this.btnp);
             this.Controls.Add(this.btne);
@@ -482,7 +483,7 @@
 
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button btnloge;
+        private System.Windows.Forms.Button btnln;
         private System.Windows.Forms.Button btnlogx;
         private System.Windows.Forms.Button btnp;
         private System.Windows.Forms.Button btne;
