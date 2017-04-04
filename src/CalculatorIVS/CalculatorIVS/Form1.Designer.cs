@@ -54,7 +54,7 @@
             this.btnpow2 = new System.Windows.Forms.Button();
             this.btnnthroot = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btnrand = new System.Windows.Forms.Button();
             this.btnln = new System.Windows.Forms.Button();
             this.btnlogx = new System.Windows.Forms.Button();
             this.btnp = new System.Windows.Forms.Button();
@@ -370,17 +370,17 @@
             this.btnsqrt.UseVisualStyleBackColor = true;
             this.btnsqrt.Click += new System.EventHandler(this.addOperation);
             // 
-            // button21
+            // btnrand
             // 
-            this.button21.Location = new System.Drawing.Point(240, 103);
-            this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(52, 36);
-            this.button21.TabIndex = 34;
-            this.button21.TabStop = false;
-            this.button21.Text = "??";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.addOperation);
+            this.btnrand.Location = new System.Drawing.Point(240, 103);
+            this.btnrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnrand.Name = "btnrand";
+            this.btnrand.Size = new System.Drawing.Size(52, 36);
+            this.btnrand.TabIndex = 34;
+            this.btnrand.TabStop = false;
+            this.btnrand.Text = "rand";
+            this.btnrand.UseVisualStyleBackColor = true;
+            this.btnrand.Click += new System.EventHandler(this.addOperation);
             // 
             // btnln
             // 
@@ -436,7 +436,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(299, 474);
-            this.Controls.Add(this.button21);
+            this.Controls.Add(this.btnrand);
             this.Controls.Add(this.btnln);
             this.Controls.Add(this.btnlogx);
             this.Controls.Add(this.btnp);
@@ -482,7 +482,7 @@
         #endregion
 
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button btnrand;
         private System.Windows.Forms.Button btnln;
         private System.Windows.Forms.Button btnlogx;
         private System.Windows.Forms.Button btnp;

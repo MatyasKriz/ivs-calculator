@@ -35,6 +35,10 @@ namespace OurMathLib
 
         public static double Divide(double x, double y)
         {
+            if(y == 0)
+            {
+                throw new InvalidOperationException("Devision by 0.");
+            }  
             double result = x / y;
             return result;
         }
@@ -46,6 +50,10 @@ namespace OurMathLib
 
         public static double Root(double inputNumber, double exponent = 2)
         {
+            if (inputNumber < 0)
+            {
+                throw new ArgumentException("Root of negative number.");
+            }
             return System.Math.Pow(inputNumber, 1 / exponent);
         }
 
@@ -60,6 +68,10 @@ namespace OurMathLib
 
         public static double Logarithm(double inputNumber, double logBase = System.Math.E)
         {
+            if (inputNumber <= 0)
+            {
+                throw new ArgumentException("Log argument must be > 0");
+            }
             return System.Math.Log(inputNumber, logBase);
         }
 
