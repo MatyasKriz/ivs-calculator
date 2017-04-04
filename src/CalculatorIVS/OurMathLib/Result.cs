@@ -108,7 +108,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Adds a digit to DisplayValue
+        /// Adds a digit to displayValue
         /// </summary>
         /// <param name="number">A digit or an operation to be added</param>
         public void AddNumber(char number)
@@ -162,7 +162,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Sets DisplayValue to 0, CurrentValue doesn't change
+        /// Sets displayValue to 0, CurrentValue doesn't change
         /// </summary>
        public void Revert()
         {
@@ -172,7 +172,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Sets both DisplayValue and CurrentValue to 0
+        /// Sets both displayValue and CurrentValue to 0
         /// </summary>
         public void Reset()
         {
@@ -241,7 +241,7 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Applies CurrentOperation using DisplayNumber to CurrentNumber if CurrentOperation is set.
+        /// Applies CurrentOperation using displayValue to CurrentNumber if CurrentOperation is set.
         /// </summary>
         public void ApplyOperation() 
         {
