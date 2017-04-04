@@ -49,7 +49,7 @@ namespace OurMathLib
             return System.Math.Pow(inputNumber, 1 / exponent);
         }
 
-        public static ulong Factorial(ulong inputNumber)
+        public static double Factorial(double inputNumber)
         {
             ulong result = 1;
             for(ulong i = 2; i <= inputNumber; i++) {
