@@ -8,8 +8,7 @@ namespace OurMathLib
 {
     public class Result
     {
-        //TODO: add enumerations based on functions in OurMathLib.Math
-        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot}
+        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot, rnd}
 
         /// <summary>
         /// The number that all operations are applied to.
@@ -94,6 +93,9 @@ namespace OurMathLib
                 break;
             case Operation.nthroot:
                 toReturn = "n^√";
+                break;
+            case Operation.rnd:
+                toReturn = "??";
                 break;
 
             default:
@@ -200,7 +202,6 @@ namespace OurMathLib
                 numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
-                
             case "pow":
                 CurrentOperation = Operation.powern;
                 break;
@@ -227,6 +228,9 @@ namespace OurMathLib
                 break;
             case "nthroot":
                 CurrentOperation = Operation.nthroot;
+                break;
+            case "rnd":
+                CurrentOperation = Operation.rnd;
                 break;
             default:
                 CurrentOperation = Operation.none;
@@ -274,6 +278,16 @@ namespace OurMathLib
                 break;
             case Operation.powern:
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
+                break;
+            case Operation.rnd:
+                if (currentValue < displayValue)
+                {
+                    currentValue = OurMathLib.Math.Random((int)currentValue, (int)displayValue);
+                }
+                else
+                {
+                    currentValue = OurMathLib.Math.Random((int)displayValue, (int)currentValue);
+                }
                 break;
             default:
                 return;
