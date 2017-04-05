@@ -24,7 +24,6 @@ namespace CalculatorIVS
             
         }
 
-        // try catche
         // po kliku buttonek zustane oznaceny
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -90,23 +89,22 @@ namespace CalculatorIVS
 
         private void addOperation(object sender, EventArgs e)
         {
-            try
-            {
-                result1.SetOperation(((Button)sender).Name.Remove(0, 3));
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            result1.SetOperation(((Button)sender).Name.Remove(0, 3));
             update();
 
         }
 
         private void calculate(object sender, EventArgs e)
         {
-            result1.ApplyOperation();
-            update();
-
+            try
+            {
+                result1.ApplyOperation();
+                update();
+            }
+            catch (Exception ex)
+            {
+                resultBox.Text = ex.Message;
+            }
         }
 
         private void delete(object sender, EventArgs e)

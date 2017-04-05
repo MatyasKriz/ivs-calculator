@@ -52,7 +52,7 @@ namespace OurMathLib
         {
             if (inputNumber < 0)
             {
-                throw new ArgumentException("Root of negative number.");
+                throw new ArgumentException("Root of neg. number.");
             }
             return System.Math.Pow(inputNumber, 1 / exponent);
         }
@@ -70,7 +70,7 @@ namespace OurMathLib
         {
             if (inputNumber <= 0)
             {
-                throw new ArgumentException("Log argument must be > 0");
+                throw new ArgumentException("Arg must be > 0.");
             }
             return System.Math.Log(inputNumber, logBase);
         }
@@ -83,7 +83,7 @@ namespace OurMathLib
         public static double Random(int from, int to)
         {
             Random rnd = new Random();
-            return rnd.Next(from, to);  // from <= month < to
+            return rnd.Next(from, to);  // from <= x < to
         }
 
         public static double StdDeviation(int[] data)
