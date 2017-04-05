@@ -37,7 +37,7 @@ namespace OurMathLib
         {
             if(y == 0)
             {
-                throw new InvalidOperationException("Devision by 0.");
+                throw new Exception("Devision by 0.");
             }  
             double result = x / y;
             return result;

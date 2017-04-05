@@ -82,7 +82,7 @@ namespace CalculatorIVS
         private void addNumber(object sender, EventArgs e)
         {
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
-            if (pressedNumber[0] == 'd') { pressedNumber[0] = ','; } // better pass 'd'?
+            if (pressedNumber[0] == 'd') { pressedNumber[0] = '.'; } // better pass 'd'?
             result1.AddNumber(pressedNumber[0]);
             update();
         }
@@ -90,7 +90,14 @@ namespace CalculatorIVS
 
         private void addOperation(object sender, EventArgs e)
         {
-            result1.SetOperation(((Button)sender).Name.Remove(0, 3));
+            try
+            {
+                result1.SetOperation(((Button)sender).Name.Remove(0, 3));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             update();
 
         }
