@@ -86,6 +86,7 @@ namespace MathLibraryTesting
             Assert.AreEqual("+", result.GetCurrentOperationSymbol());
         }
 
+
         [Test]
         public void ResultClass_AddLeadingZeroes()
         {
