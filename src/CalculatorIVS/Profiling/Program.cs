@@ -1,6 +1,7 @@
 ﻿using System;
 using OurMathLib;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Profiling
 {
@@ -8,18 +9,10 @@ namespace Profiling
     {
         static void Main(string[] args)
         {
+            var numbers = Console.ReadLine().Split(' ').Select(token => double.Parse(token)); // input in the format eg. "3,3 2,42 9,01"
 
-
-            double[] input = { 5, 10, 15, 20, 25 };
-            //string[] parts = Console.ReadLine().Split(' ');
-
-            //double[] input = Array.ConvertAll(parts.Split(' '), Double.Parse);
+            double[] input = numbers.ToArray();
             int length = input.Length;
-            //Console.Write("delka: " + length + "\n");
-            //for (int i = 0; i < length; i++)
-            //{
-            //    Console.WriteLine(input[i]);
-            //}
 
             // calculating deviation
             double fraction = (OurMathLib.Math.Divide(1, OurMathLib.Math.Subtract(length, 1)));
@@ -39,6 +32,7 @@ namespace Profiling
             }
 
             double deviation = OurMathLib.Math.Root(OurMathLib.Math.Multiply(fraction, bigsum));
+
             //deviation calculated
 
             Console.WriteLine("Deviation: " + deviation);
