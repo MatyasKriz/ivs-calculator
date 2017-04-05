@@ -139,11 +139,7 @@ namespace OurMathLib
             }
             if (!isDecimal)
             {
-                if (displayValue == 0.0 && numToAdd == 0)
-                {
-                    //Do nothing - leading zeroes
-                }
-                else
+                if (displayValue != 0.0 || numToAdd != 0.0)
                 {
                     displayValue *= 10;
                     displayValue += numToAdd;
@@ -222,7 +218,10 @@ namespace OurMathLib
                 return;
             case "ln":
                 CurrentOperation = Operation.lognatur;
-                break;
+                displayValue = OurMathLib.Math.Logarithm(displayValue);
+                numOfDecimalDigs = 1;
+                isDecimal = false;
+                return;
             case "logx":
                 CurrentOperation = Operation.logx;
                 break;
@@ -259,26 +258,21 @@ namespace OurMathLib
                 currentValue = OurMathLib.Math.Factorial(displayValue);
                 break;
             case Operation.lognatur:
-                //CHECK for solutions
                 currentValue = OurMathLib.Math.Logarithm(displayValue);
                 break;
             case Operation.logx:
-                //CHECK for solutions
                 currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
                 break;
             case Operation.nthroot:
-                //CHECK 
                 currentValue = OurMathLib.Math.Root(displayValue, currentValue);
                 break;
             case Operation.sqrt:
-                //CHECK
                 currentValue = OurMathLib.Math.Root(displayValue);
                 break;
             case Operation.power2:
                 currentValue = OurMathLib.Math.Power(currentValue);
                 break;
             case Operation.powern:
-                //CHECK
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
                 break;
             default:
