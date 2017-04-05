@@ -31,7 +31,7 @@ namespace OurMathLib
         /// </summary>
         private int numOfDecimalDigs = 1;
 
-        public Operation CurrentOperation = Operation.none;
+        private Operation currentOperation = Operation.none;
 
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace OurMathLib
         public string GetCurrentOperationSymbol()
         {
             string toReturn = "";
-            switch (CurrentOperation)
+            switch (currentOperation)
             {
             case Operation.add:
                 toReturn = "+";
@@ -185,55 +185,55 @@ namespace OurMathLib
         {
             switch(op) {
             case "add":
-                CurrentOperation = Operation.add;
+                currentOperation = Operation.add;
                 break;
             case "sub":
-                CurrentOperation = Operation.subtract;
+                currentOperation = Operation.subtract;
                 break;
             case "mul":
-                CurrentOperation = Operation.multiply;
+                currentOperation = Operation.multiply;
                 break;
             case "div":
-                CurrentOperation = Operation.divide;
+                currentOperation = Operation.divide;
                 break;
             case "sqrt":
-                CurrentOperation = Operation.sqrt;
+                currentOperation = Operation.sqrt;
                 displayValue = OurMathLib.Math.Root(displayValue);
                 numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
             case "pow":
-                CurrentOperation = Operation.powern;
+                currentOperation = Operation.powern;
                 break;
             case "pow2":
-                CurrentOperation = Operation.power2;
+                currentOperation = Operation.power2;
                 displayValue = OurMathLib.Math.Power(displayValue);
                 numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
             case "fact":
-                CurrentOperation = Operation.fact;
+                currentOperation = Operation.fact;
                 displayValue = OurMathLib.Math.Factorial(displayValue);
                 numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
             case "ln":
-                CurrentOperation = Operation.lognatur;
+                currentOperation = Operation.lognatur;
                 displayValue = OurMathLib.Math.Logarithm(displayValue);
                 numOfDecimalDigs = 1;
                 isDecimal = false;
                 return;
             case "logx":
-                CurrentOperation = Operation.logx;
+                currentOperation = Operation.logx;
                 break;
             case "nthroot":
-                CurrentOperation = Operation.nthroot;
+                currentOperation = Operation.nthroot;
                 break;
             case "rnd":
-                CurrentOperation = Operation.rnd;
+                currentOperation = Operation.rnd;
                 break;
             default:
-                CurrentOperation = Operation.none;
+                currentOperation = Operation.none;
                 break;
             }
             currentValue = displayValue;
@@ -241,11 +241,11 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Applies CurrentOperation using displayValue to currentValue if CurrentOperation is set.
+        /// Applies currentOperation using displayValue to currentValue if currentOperation is set.
         /// </summary>
         public void ApplyOperation() 
         {
-            switch(CurrentOperation) {
+            switch(currentOperation) {
             case Operation.add:
                 currentValue = OurMathLib.Math.Add(currentValue, displayValue);
                 break;
