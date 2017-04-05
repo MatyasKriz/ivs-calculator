@@ -308,11 +308,8 @@
             // 
             // resultBox
             // 
-<<<<<<< HEAD
+
             this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-=======
-            this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
->>>>>>> refs/remotes/origin/OurMathLib
             this.resultBox.Location = new System.Drawing.Point(5, 5);
             this.resultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resultBox.Multiline = true;
@@ -323,7 +320,7 @@
             this.resultBox.TabIndex = 25;
             this.resultBox.TabStop = false;
             this.resultBox.Text = "0";
-            this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
+            //this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // btnpow
             // 
@@ -356,10 +353,7 @@
             this.btnnthroot.Name = "btnnthroot";
             this.btnnthroot.Size = new System.Drawing.Size(52, 36);
             this.btnnthroot.TabIndex = 28;
-<<<<<<< HEAD
-=======
             this.btnnthroot.TabStop = false;
->>>>>>> refs/remotes/origin/OurMathLib
             this.btnnthroot.Text = "√x";
             this.btnnthroot.UseVisualStyleBackColor = true;
             this.btnnthroot.Click += new System.EventHandler(this.addOperation);
@@ -371,10 +365,7 @@
             this.btnsqrt.Name = "btnsqrt";
             this.btnsqrt.Size = new System.Drawing.Size(52, 36);
             this.btnsqrt.TabIndex = 29;
-<<<<<<< HEAD
-=======
             this.btnsqrt.TabStop = false;
->>>>>>> refs/remotes/origin/OurMathLib
             this.btnsqrt.Text = "²√x";
             this.btnsqrt.UseVisualStyleBackColor = true;
             this.btnsqrt.Click += new System.EventHandler(this.addOperation);
@@ -422,10 +413,7 @@
             this.btnp.Name = "btnp";
             this.btnp.Size = new System.Drawing.Size(52, 36);
             this.btnp.TabIndex = 31;
-<<<<<<< HEAD
-=======
             this.btnp.TabStop = false;
->>>>>>> refs/remotes/origin/OurMathLib
             this.btnp.Text = "π";
             this.btnp.UseVisualStyleBackColor = true;
             this.btnp.Click += new System.EventHandler(this.addNumber);
