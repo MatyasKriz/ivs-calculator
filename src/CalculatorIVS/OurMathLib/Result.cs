@@ -242,6 +242,7 @@ namespace OurMathLib
 
         /// <summary>
         /// Applies currentOperation using displayValue to currentValue if currentOperation is set.
+        /// Overwrites currentValue and displayValue
         /// </summary>
         public void ApplyOperation() 
         {
