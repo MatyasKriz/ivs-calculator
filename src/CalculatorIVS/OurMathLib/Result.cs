@@ -8,7 +8,7 @@ namespace OurMathLib
 {
     public class Result
     {
-        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot, rnd}
+        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot, rnd, neg}
 
         /// <summary>
         /// The number that all operations are applied to.
@@ -232,6 +232,9 @@ namespace OurMathLib
             case "nthroot":
                 currentOperation = Operation.nthroot;
                 break;
+            case "neg":
+                displayValue = -displayValue; 
+                return;
             case "rnd":
                 currentOperation = Operation.rnd;
                 break;
