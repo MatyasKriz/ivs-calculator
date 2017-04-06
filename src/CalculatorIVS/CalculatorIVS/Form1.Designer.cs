@@ -354,7 +354,7 @@
             this.btnnthroot.Size = new System.Drawing.Size(52, 36);
             this.btnnthroot.TabIndex = 28;
             this.btnnthroot.TabStop = false;
-            this.btnnthroot.Text = "√x";
+            this.btnnthroot.Text = "ⁿ√x";
             this.btnnthroot.UseVisualStyleBackColor = true;
             this.btnnthroot.Click += new System.EventHandler(this.addOperation);
             // 

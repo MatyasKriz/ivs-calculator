@@ -90,7 +90,6 @@ namespace CalculatorIVS
         private void addOperation(object sender, EventArgs e)
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
-
         }
 
         private void calculate(object sender, EventArgs e)
