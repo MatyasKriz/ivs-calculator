@@ -45,7 +45,7 @@
             this.btndiv = new System.Windows.Forms.Button();
             this.btneq = new System.Windows.Forms.Button();
             this.btndelce = new System.Windows.Forms.Button();
-            this.btndel = new System.Windows.Forms.Button();
+            this.btnneg = new System.Windows.Forms.Button();
             this.btndelc = new System.Windows.Forms.Button();
             this.btnmul = new System.Windows.Forms.Button();
             this.btnfact = new System.Windows.Forms.Button();
@@ -258,17 +258,17 @@
             this.btndelce.UseVisualStyleBackColor = true;
             this.btndelce.Click += new System.EventHandler(this.delete);
             // 
-            // btndel
+            // btnneg
             // 
-            this.btndel.Location = new System.Drawing.Point(152, 144);
-            this.btndel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btndel.Name = "btndel";
-            this.btndel.Size = new System.Drawing.Size(67, 60);
-            this.btndel.TabIndex = 16;
-            this.btndel.TabStop = false;
-            this.btndel.Text = "delete";
-            this.btndel.UseVisualStyleBackColor = true;
-            this.btndel.Click += new System.EventHandler(this.delete);
+            this.btnneg.Location = new System.Drawing.Point(152, 144);
+            this.btnneg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnneg.Name = "btnneg";
+            this.btnneg.Size = new System.Drawing.Size(67, 60);
+            this.btnneg.TabIndex = 16;
+            this.btnneg.TabStop = false;
+            this.btnneg.Text = "+/-";
+            this.btnneg.UseVisualStyleBackColor = true;
+            this.btnneg.Click += new System.EventHandler(this.delete);
             // 
             // btndelc
             // 
@@ -449,7 +449,7 @@
             this.Controls.Add(this.btnfact);
             this.Controls.Add(this.btnmul);
             this.Controls.Add(this.btndelc);
-            this.Controls.Add(this.btndel);
+            this.Controls.Add(this.btnneg);
             this.Controls.Add(this.btndelce);
             this.Controls.Add(this.btneq);
             this.Controls.Add(this.btndiv);
@@ -495,7 +495,7 @@
         private System.Windows.Forms.Button btnfact;
         private System.Windows.Forms.Button btnmul;
         private System.Windows.Forms.Button btndelc;
-        private System.Windows.Forms.Button btndel;
+        private System.Windows.Forms.Button btnneg;
         private System.Windows.Forms.Button btndelce;
         private System.Windows.Forms.Button btneq;
         private System.Windows.Forms.Button btndiv;
