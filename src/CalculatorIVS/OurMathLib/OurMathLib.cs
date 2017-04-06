@@ -54,7 +54,14 @@ namespace OurMathLib
             {
                 throw new ArgumentException("Root of neg. number.");
             }
-            return System.Math.Pow(inputNumber, 1 / exponent);
+            if (inputNumber < 0 && (exponent % 2 == 1))
+            {
+                return -(System.Math.Pow(-inputNumber, 1 / exponent));
+            }
+            else
+            {
+                return System.Math.Pow(inputNumber, 1 / exponent);
+            }
         }
 
         public static double Factorial(double inputNumber)
