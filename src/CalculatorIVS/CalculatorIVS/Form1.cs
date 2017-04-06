@@ -24,7 +24,6 @@ namespace CalculatorIVS
             
         }
 
-        // try catche
         // po kliku buttonek zustane oznaceny
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -82,7 +81,7 @@ namespace CalculatorIVS
         private void addNumber(object sender, EventArgs e)
         {
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
-            if (pressedNumber[0] == 'd') { pressedNumber[0] = ','; } // better pass 'd'?
+            if (pressedNumber[0] == 'd') { pressedNumber[0] = '.'; } // better pass 'd'?
             result1.AddNumber(pressedNumber[0]);
             update();
         }
@@ -92,14 +91,19 @@ namespace CalculatorIVS
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
             update();
-
         }
 
         private void calculate(object sender, EventArgs e)
         {
-            result1.ApplyOperation();
-            update();
-
+            try
+            {
+                result1.ApplyOperation();
+                update();
+            }
+            catch (Exception ex)
+            {
+                resultBox.Text = ex.Message;
+            }
         }
 
         private void delete(object sender, EventArgs e)
@@ -109,9 +113,6 @@ namespace CalculatorIVS
                 result1.Revert();
             else if (operaceMazani == "delc")
                 result1.Reset();
-            else if (operaceMazani == "del");
-            // remove last character;
-
             update();
         }
 

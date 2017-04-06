@@ -35,6 +35,10 @@ namespace OurMathLib
 
         public static double Divide(double x, double y)
         {
+            if(y == 0)
+            {
+                throw new Exception("Devision by 0.");
+            }  
             double result = x / y;
             return result;
         }
@@ -46,20 +50,36 @@ namespace OurMathLib
 
         public static double Root(double inputNumber, double exponent = 2)
         {
-            return System.Math.Pow(inputNumber, 1 / exponent);
+            if (inputNumber < 0 && (exponent % 2 == 1))
+            {
+                return -(System.Math.Pow(-inputNumber, 1 / exponent));
+            }
+            else
+            {
+                return System.Math.Pow(inputNumber, 1 / exponent);
+            }
         }
 
         public static double Factorial(double inputNumber)
         {
-            ulong result = 1;
+
+            double result = 1;
             for(ulong i = 2; i <= inputNumber; i++) {
                 result *= i;
+                if (double.IsInfinity(result))  
+                {
+                    break;
+                }
             }
             return result;
         }
 
         public static double Logarithm(double inputNumber, double logBase = System.Math.E)
         {
+            if (inputNumber <= 0)
+            {
+                throw new ArgumentException("Arg must be > 0.");
+            }
             return System.Math.Log(inputNumber, logBase);
         }
 
@@ -71,7 +91,7 @@ namespace OurMathLib
         public static double Random(int from, int to)
         {
             Random rnd = new Random();
-            return rnd.Next(from, to);  // from <= month < to
+            return rnd.Next(from, to);  // from <= x < to
         }
 
         public static double StdDeviation(int[] data)
