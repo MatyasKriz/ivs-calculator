@@ -330,7 +330,7 @@
             this.btnpow.Size = new System.Drawing.Size(52, 36);
             this.btnpow.TabIndex = 26;
             this.btnpow.TabStop = false;
-            this.btnpow.Text = "x^n";
+            this.btnpow.Text = "xⁿ";
             this.btnpow.UseVisualStyleBackColor = true;
             this.btnpow.Click += new System.EventHandler(this.addOperation);
             // 
@@ -402,7 +402,7 @@
             this.btnlogx.Size = new System.Drawing.Size(52, 36);
             this.btnlogx.TabIndex = 32;
             this.btnlogx.TabStop = false;
-            this.btnlogx.Text = "logx";
+            this.btnlogx.Text = "logₐx";
             this.btnlogx.UseVisualStyleBackColor = true;
             this.btnlogx.Click += new System.EventHandler(this.addOperation);
             // 
