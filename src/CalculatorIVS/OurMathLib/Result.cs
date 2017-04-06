@@ -74,13 +74,13 @@ namespace OurMathLib
                 toReturn = "/";
                 break;
             case Operation.power2:
-                toReturn = "^2";
+                toReturn = "²";
                 break;
             case Operation.powern:
-                toReturn = "x^n";
+                toReturn = "ⁿ";
                 break;
             case Operation.lognatur:
-                toReturn = "log_e";
+                toReturn = "ln";
                 break;
             case Operation.logx:
                 toReturn = "log_x";
@@ -89,13 +89,13 @@ namespace OurMathLib
                 toReturn = "!";
                 break;
             case Operation.sqrt:
-                toReturn = "2^√";
+                toReturn = "√x";
                 break;
             case Operation.nthroot:
-                toReturn = "n^√";
+                toReturn = "ⁿ√x";
                 break;
             case Operation.rnd:
-                toReturn = "??";
+                toReturn = "?";
                 break;
 
             default:
