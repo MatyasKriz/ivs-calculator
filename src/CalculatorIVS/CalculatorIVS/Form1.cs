@@ -84,7 +84,9 @@ namespace CalculatorIVS
 
         private void addOperation(object sender, EventArgs e)
         {
-            result1.SetOperation(((Button)sender).Name.Remove(0, 3));
+            string operace = ((Button)sender).Name.Remove(0, 3);
+            result1.SetOperation(operace);
+            if(operace == "neg") { update(); }
         }
 
         private void calculate(object sender, EventArgs e)

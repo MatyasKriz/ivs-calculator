@@ -268,7 +268,7 @@
             this.btnneg.TabStop = false;
             this.btnneg.Text = "+/-";
             this.btnneg.UseVisualStyleBackColor = true;
-            this.btnneg.Click += new System.EventHandler(this.delete);
+            this.btnneg.Click += new System.EventHandler(this.addOperation);
             // 
             // btndelc
             // 
