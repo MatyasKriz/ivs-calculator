@@ -21,14 +21,12 @@ namespace CalculatorIVS
             InitializeComponent();
             KeyPreview = true;
             result1 = new Result();
-            
         }
 
         // po kliku buttonek zustane oznaceny
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            // numeric keyboard
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 char[] pressedKey = e.KeyCode.ToString().Remove(0, 6).ToCharArray();
@@ -38,39 +36,36 @@ namespace CalculatorIVS
             else if (e.KeyCode == Keys.Divide)
             {
                 result1.SetOperation("div");
-                update();
             }
             else if (e.KeyCode == Keys.Multiply)
             {
                 result1.SetOperation("mul");
-                update();
             }
             else if (e.KeyCode == Keys.Add)
             {
                 result1.SetOperation("add");
-                update();
             }
             else if (e.KeyCode == Keys.Subtract)
             {
                 result1.SetOperation("sub");
-                update();
             }
             else if(e.KeyCode == Keys.Enter)
             {
-                result1.ApplyOperation();
-                update();
+                try
+                {
+                    result1.ApplyOperation();
+                    update();
+                }
+                catch (Exception ex)
+                {
+                    resultBox.Text = ex.Message;
+                }
             }
             else if(e.KeyCode == Keys.Back)
             {
                 result1.Revert();
                 update();
             }
-            //else if (e.KeyCode >= Keys.D0 && e.KeyCode >= Keys.D9) // non-numeric BUG - TODO
-            //{
-            //    string pressedKey2 = e.KeyCode.ToString().Remove(0, 1);
-            //    resultBox.Text = pressedKey2;
-            //}
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

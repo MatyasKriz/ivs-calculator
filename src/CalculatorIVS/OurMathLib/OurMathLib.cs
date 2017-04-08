@@ -50,9 +50,9 @@ namespace OurMathLib
 
         public static double Root(double inputNumber, double exponent = 2)
         {
-            if (inputNumber < 0)
+            if (inputNumber < 0 && (exponent % 2 == 0))
             {
-                throw new ArgumentException("Root of neg. number.");
+                throw new ArgumentException("Cannot make root.");
             }
             if (inputNumber < 0 && (exponent % 2 == 1))
             {
