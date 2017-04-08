@@ -8,37 +8,31 @@ namespace OurMathLib
 {
     public class Result
     {
-        //TODO: add enumerations based on functions in OurMathLib.Math
-        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot}
+        public enum Operation { none, add, subtract, multiply, divide, power2, powern, lognatur, logx, fact, sqrt, nthroot, rnd, neg}
 
         /// <summary>
         /// The number that all operations are applied to.
         /// </summary>
         private double currentValue = 0;
-        private bool isDecimal = false;
 
         /// <summary>
-        /// Applied along with Operation to CurrentNumber.
+        /// Applied along with Operation to currentValue.
         /// Is on screen all the time.
         /// </summary>
         private double displayValue = 0;
 
         /// <summary>
-        /// If any errors occur, the error message will be stored here
+        /// Indicates whether the input number is it's decimal part
         /// </summary>
-        private string errMessage = "";
-    
-
-        public Operation CurrentOperation = Operation.none;
+        private bool isDecimal = false;
 
         /// <summary>
-        /// Return the error message set 
+        /// Counts the position of the next decimal number
         /// </summary>
-        /// <returns></returns>
-        public string GetErrMessage()
-        {
-            return errMessage;
-        }
+        private int numOfDecimalDigs = 1;
+
+        private Operation currentOperation = Operation.none;
+
 
         /// <summary>
         /// Returns the displayValue
@@ -58,9 +52,6 @@ namespace OurMathLib
             return currentValue;
         }
 
-
-        private int numOfDecimalDigs = 1;
-
         /// <summary>
         /// Returns the string representation of the current operation symbol
         /// </summary>
@@ -68,11 +59,8 @@ namespace OurMathLib
         public string GetCurrentOperationSymbol()
         {
             string toReturn = "";
-            switch (CurrentOperation)
+            switch (currentOperation)
             {
-            case Operation.none:
-                toReturn = "";
-                break;
             case Operation.add:
                 toReturn = "+";
                 break;
@@ -86,13 +74,13 @@ namespace OurMathLib
                 toReturn = "/";
                 break;
             case Operation.power2:
-                toReturn = "^2";
+                toReturn = "²";
                 break;
             case Operation.powern:
-                toReturn = "x^n";
+                toReturn = "ⁿ";
                 break;
             case Operation.lognatur:
-                toReturn = "log_e";
+                toReturn = "ln";
                 break;
             case Operation.logx:
                 toReturn = "log_x";
@@ -101,10 +89,13 @@ namespace OurMathLib
                 toReturn = "!";
                 break;
             case Operation.sqrt:
-                toReturn = "2^√";
+                toReturn = "√x";
                 break;
             case Operation.nthroot:
-                toReturn = "n^√";
+                toReturn = "ⁿ√x";
+                break;
+            case Operation.rnd:
+                toReturn = "?";
                 break;
 
             default:
@@ -116,10 +107,9 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Adds a digit to DisplayValue
+        /// Adds a digit to displayValue
         /// </summary>
         /// <param name="number">A digit or an operation to be added</param>
-        /// <returns>True on success; False otherwise</returns>
         public void AddNumber(char number)
         {
             double numToAdd = 0;
@@ -129,7 +119,7 @@ namespace OurMathLib
             }
             catch (FormatException e)
             {
-                if (number == ',' )
+                if (number == '.')
                 {
                     if (!isDecimal)
                     {
@@ -140,17 +130,18 @@ namespace OurMathLib
                 else if (number == 'e')
                 {
                     displayValue = OurMathLib.Math.E;
+                    return;
                 }
-                errMessage = e.Message;
-                return;
+                else if (number == 'p')
+                {
+                    displayValue = OurMathLib.Math.PI;
+                    return;
+                }
+                throw new Exception(e.Message);
             }
             if (!isDecimal)
             {
-                if (displayValue == 0.0 && numToAdd == 0)
-                {
-                    //Do nothing - leading zeroes
-                }
-                else
+                if (displayValue != 0.0 || numToAdd != 0.0)
                 {
                     displayValue *= 10;
                     displayValue += numToAdd;
@@ -166,26 +157,24 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Sets DisplayValue to 0, CurrentValue doesn't change
+        /// Sets displayValue to 0, currentValue doesn't change
         /// </summary>
        public void Revert()
         {
             displayValue = 0;
-            numOfDecimalDigs = 0;
+            numOfDecimalDigs = 1;
             isDecimal = false;
-            errMessage = null;
         }
 
         /// <summary>
-        /// Sets both DisplayValue and CurrentValue to 0
+        /// Sets both displayValue and currentValue to 0
         /// </summary>
         public void Reset()
         {
             displayValue = 0;
             currentValue = 0;
-            numOfDecimalDigs = 0;
+            numOfDecimalDigs = 1;
             isDecimal = false;
-            errMessage = null;
         }
 
         /// <summary>
@@ -194,43 +183,60 @@ namespace OurMathLib
         /// <param name="op">String of the operation</param>
         public void SetOperation(string op)
         {
-            //TODO: add all
             switch(op) {
             case "add":
-                CurrentOperation = Operation.add;
+                currentOperation = Operation.add;
                 break;
             case "sub":
-                CurrentOperation = Operation.subtract;
+                currentOperation = Operation.subtract;
                 break;
             case "mul":
-                CurrentOperation = Operation.multiply;
+                currentOperation = Operation.multiply;
                 break;
             case "div":
-                CurrentOperation = Operation.divide;
+                currentOperation = Operation.divide;
                 break;
             case "sqrt":
-                CurrentOperation = Operation.sqrt;
-                break;
+                currentOperation = Operation.sqrt;
+                displayValue = OurMathLib.Math.Root(displayValue);
+                numOfDecimalDigs = 1;
+                isDecimal = false;
+                return;
             case "pow":
-                CurrentOperation = Operation.powern;
+                currentOperation = Operation.powern;
                 break;
             case "pow2":
-                CurrentOperation = Operation.power2;
-                break;
+                currentOperation = Operation.power2;
+                displayValue = OurMathLib.Math.Power(displayValue);
+                numOfDecimalDigs = 1;
+                isDecimal = false;
+                return;
             case "fact":
-                CurrentOperation = Operation.fact;
-                break;
-            case "logn":
-                CurrentOperation = Operation.lognatur;
-                break;
+                currentOperation = Operation.fact;
+                displayValue = OurMathLib.Math.Factorial(displayValue);
+                numOfDecimalDigs = 1;
+                isDecimal = false;
+                return;
+            case "ln":
+                currentOperation = Operation.lognatur;
+                displayValue = OurMathLib.Math.Logarithm(displayValue);
+                numOfDecimalDigs = 1;
+                isDecimal = false;
+                return;
             case "logx":
-                CurrentOperation = Operation.logx;
+                currentOperation = Operation.logx;
                 break;
             case "nthroot":
-                CurrentOperation = Operation.nthroot;
+                currentOperation = Operation.nthroot;
+                break;
+            case "neg":
+                displayValue = -displayValue; 
+                return;
+            case "rnd":
+                currentOperation = Operation.rnd;
                 break;
             default:
-                CurrentOperation = Operation.none;
+                currentOperation = Operation.none;
                 break;
             }
             currentValue = displayValue;
@@ -238,11 +244,12 @@ namespace OurMathLib
         }
 
         /// <summary>
-        /// Applies CurrentOperation using DisplayNumber to CurrentNumber if CurrentOperation is set.
+        /// Applies currentOperation using displayValue to currentValue if currentOperation is set.
+        /// Overwrites currentValue and displayValue
         /// </summary>
-        public void ApplyOperation() //TODO: discuss what to do after applying operation, if we should wipe it or leave it the same
+        public void ApplyOperation() 
         {
-            switch(CurrentOperation) {
+            switch(currentOperation) {
             case Operation.add:
                 currentValue = OurMathLib.Math.Add(currentValue, displayValue);
                 break;
@@ -256,35 +263,36 @@ namespace OurMathLib
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
             case Operation.fact:
-                //CHECK for solutions
-                currentValue = OurMathLib.Math.Factorial((ulong)displayValue); ///////////////////////
+                currentValue = OurMathLib.Math.Factorial(displayValue);
                 break;
             case Operation.lognatur:
-                //CHECK for solutions
                 currentValue = OurMathLib.Math.Logarithm(displayValue);
                 break;
             case Operation.logx:
-                //CHECK for solutions
                 currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
                 break;
             case Operation.nthroot:
-                //CHECK 
                 currentValue = OurMathLib.Math.Root(displayValue, currentValue);
                 break;
             case Operation.sqrt:
-                //CHECK
                 currentValue = OurMathLib.Math.Root(displayValue);
                 break;
             case Operation.power2:
                 currentValue = OurMathLib.Math.Power(currentValue);
                 break;
             case Operation.powern:
-                //CHECK
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
-
                 break;
-            case Operation.none:
-                throw new System.InvalidOperationException("No operation selected");
+            case Operation.rnd:
+                if (currentValue < displayValue)
+                {
+                    currentValue = OurMathLib.Math.Random((int)currentValue, (int)displayValue);
+                }
+                else
+                {
+                    currentValue = OurMathLib.Math.Random((int)displayValue, (int)currentValue);
+                }
+                break;
             default:
                 return;
             }

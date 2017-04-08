@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorIVS", "Calculator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurMathLib", "OurMathLib\OurMathLib.csproj", "{236743A7-8D04-4369-AEDA-40CC3B825B55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorMathLibraryTest", "..\CalculatorMathLibraryTest\CalculatorMathLibraryTest\CalculatorMathLibraryTest.csproj", "{EE23DFB4-4713-4032-BF9F-E66D5AC09709}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{236743A7-8D04-4369-AEDA-40CC3B825B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{236743A7-8D04-4369-AEDA-40CC3B825B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{236743A7-8D04-4369-AEDA-40CC3B825B55}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE23DFB4-4713-4032-BF9F-E66D5AC09709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

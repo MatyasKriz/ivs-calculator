@@ -50,10 +50,6 @@ namespace OurMathLib
 
         public static double Root(double inputNumber, double exponent = 2)
         {
-            if (inputNumber < 0 && (exponent % 2 == 0))
-            {
-                throw new ArgumentException("Cannot make root.");
-            }
             if (inputNumber < 0 && (exponent % 2 == 1))
             {
                 return -(System.Math.Pow(-inputNumber, 1 / exponent));
@@ -66,9 +62,14 @@ namespace OurMathLib
 
         public static double Factorial(double inputNumber)
         {
-            ulong result = 1;
+
+            double result = 1;
             for(ulong i = 2; i <= inputNumber; i++) {
                 result *= i;
+                if (double.IsInfinity(result))  
+                {
+                    break;
+                }
             }
             return result;
         }
