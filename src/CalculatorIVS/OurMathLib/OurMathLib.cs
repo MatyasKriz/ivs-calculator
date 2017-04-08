@@ -37,7 +37,7 @@ namespace OurMathLib
         {
             if(y == 0)
             {
-                throw new Exception("Devision by 0.");
+                throw new Exception("Division by 0.");
             }  
             double result = x / y;
             return result;
@@ -50,6 +50,10 @@ namespace OurMathLib
 
         public static double Root(double inputNumber, double exponent = 2)
         {
+            if (inputNumber < 0 && (exponent % 2 == 0))
+            {
+                throw new Exception("Cannot make root.");
+            }
             if (inputNumber < 0 && (exponent % 2 == 1))
             {
                 return -(System.Math.Pow(-inputNumber, 1 / exponent));
