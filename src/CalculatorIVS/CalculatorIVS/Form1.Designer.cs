@@ -68,7 +68,7 @@
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(5, 342);
+            this.btn1.Location = new System.Drawing.Point(6, 336);
             this.btn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(67, 60);
@@ -80,7 +80,7 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(79, 342);
+            this.btn2.Location = new System.Drawing.Point(80, 336);
             this.btn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(67, 60);
@@ -92,7 +92,7 @@
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(152, 342);
+            this.btn3.Location = new System.Drawing.Point(153, 336);
             this.btn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(67, 60);
@@ -104,7 +104,7 @@
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(5, 276);
+            this.btn4.Location = new System.Drawing.Point(6, 270);
             this.btn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(67, 60);
@@ -116,7 +116,7 @@
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(79, 276);
+            this.btn5.Location = new System.Drawing.Point(80, 270);
             this.btn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(67, 60);
@@ -128,7 +128,7 @@
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(152, 276);
+            this.btn6.Location = new System.Drawing.Point(153, 270);
             this.btn6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(67, 60);
@@ -140,7 +140,7 @@
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(5, 210);
+            this.btn7.Location = new System.Drawing.Point(6, 204);
             this.btn7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(67, 60);
@@ -152,7 +152,7 @@
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(79, 210);
+            this.btn8.Location = new System.Drawing.Point(80, 204);
             this.btn8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(67, 60);
@@ -164,7 +164,7 @@
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(152, 210);
+            this.btn9.Location = new System.Drawing.Point(153, 204);
             this.btn9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(67, 60);
@@ -176,7 +176,7 @@
             // 
             // btn0
             // 
-            this.btn0.Location = new System.Drawing.Point(5, 409);
+            this.btn0.Location = new System.Drawing.Point(6, 403);
             this.btn0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(67, 60);
@@ -188,7 +188,7 @@
             // 
             // btnd
             // 
-            this.btnd.Location = new System.Drawing.Point(79, 409);
+            this.btnd.Location = new System.Drawing.Point(80, 403);
             this.btnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnd.Name = "btnd";
             this.btnd.Size = new System.Drawing.Size(67, 60);
@@ -200,7 +200,7 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(225, 342);
+            this.btnadd.Location = new System.Drawing.Point(226, 336);
             this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(67, 60);
@@ -212,7 +212,7 @@
             // 
             // btnsub
             // 
-            this.btnsub.Location = new System.Drawing.Point(225, 276);
+            this.btnsub.Location = new System.Drawing.Point(226, 270);
             this.btnsub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsub.Name = "btnsub";
             this.btnsub.Size = new System.Drawing.Size(67, 60);
@@ -224,7 +224,7 @@
             // 
             // btndiv
             // 
-            this.btndiv.Location = new System.Drawing.Point(225, 144);
+            this.btndiv.Location = new System.Drawing.Point(226, 138);
             this.btndiv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndiv.Name = "btndiv";
             this.btndiv.Size = new System.Drawing.Size(67, 60);
@@ -236,7 +236,7 @@
             // 
             // btneq
             // 
-            this.btneq.Location = new System.Drawing.Point(152, 409);
+            this.btneq.Location = new System.Drawing.Point(153, 403);
             this.btneq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btneq.Name = "btneq";
             this.btneq.Size = new System.Drawing.Size(140, 60);
@@ -248,7 +248,7 @@
             // 
             // btndelce
             // 
-            this.btndelce.Location = new System.Drawing.Point(5, 144);
+            this.btndelce.Location = new System.Drawing.Point(6, 138);
             this.btndelce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndelce.Name = "btndelce";
             this.btndelce.Size = new System.Drawing.Size(67, 60);
@@ -260,7 +260,7 @@
             // 
             // btnneg
             // 
-            this.btnneg.Location = new System.Drawing.Point(152, 144);
+            this.btnneg.Location = new System.Drawing.Point(153, 138);
             this.btnneg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnneg.Name = "btnneg";
             this.btnneg.Size = new System.Drawing.Size(67, 60);
@@ -272,7 +272,7 @@
             // 
             // btndelc
             // 
-            this.btndelc.Location = new System.Drawing.Point(79, 144);
+            this.btndelc.Location = new System.Drawing.Point(80, 138);
             this.btndelc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndelc.Name = "btndelc";
             this.btndelc.Size = new System.Drawing.Size(67, 60);
@@ -284,7 +284,7 @@
             // 
             // btnmul
             // 
-            this.btnmul.Location = new System.Drawing.Point(225, 210);
+            this.btnmul.Location = new System.Drawing.Point(226, 204);
             this.btnmul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmul.Name = "btnmul";
             this.btnmul.Size = new System.Drawing.Size(67, 60);
@@ -296,7 +296,7 @@
             // 
             // btnfact
             // 
-            this.btnfact.Location = new System.Drawing.Point(5, 62);
+            this.btnfact.Location = new System.Drawing.Point(6, 56);
             this.btnfact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnfact.Name = "btnfact";
             this.btnfact.Size = new System.Drawing.Size(52, 36);
@@ -309,7 +309,7 @@
             // resultBox
             // 
             this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.resultBox.Location = new System.Drawing.Point(5, 5);
+            this.resultBox.Location = new System.Drawing.Point(6, 11);
             this.resultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resultBox.Name = "resultBox";
             this.resultBox.ReadOnly = true;
@@ -323,7 +323,7 @@
             // 
             // btnpow
             // 
-            this.btnpow.Location = new System.Drawing.Point(64, 62);
+            this.btnpow.Location = new System.Drawing.Point(65, 56);
             this.btnpow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnpow.Name = "btnpow";
             this.btnpow.Size = new System.Drawing.Size(52, 36);
@@ -335,7 +335,7 @@
             // 
             // btnpow2
             // 
-            this.btnpow2.Location = new System.Drawing.Point(124, 62);
+            this.btnpow2.Location = new System.Drawing.Point(125, 56);
             this.btnpow2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnpow2.Name = "btnpow2";
             this.btnpow2.Size = new System.Drawing.Size(52, 36);
@@ -347,7 +347,7 @@
             // 
             // btnnthroot
             // 
-            this.btnnthroot.Location = new System.Drawing.Point(181, 62);
+            this.btnnthroot.Location = new System.Drawing.Point(182, 56);
             this.btnnthroot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnthroot.Name = "btnnthroot";
             this.btnnthroot.Size = new System.Drawing.Size(52, 36);
@@ -359,7 +359,7 @@
             // 
             // btnsqrt
             // 
-            this.btnsqrt.Location = new System.Drawing.Point(240, 62);
+            this.btnsqrt.Location = new System.Drawing.Point(241, 56);
             this.btnsqrt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsqrt.Name = "btnsqrt";
             this.btnsqrt.Size = new System.Drawing.Size(52, 36);
@@ -371,7 +371,7 @@
             // 
             // btnrnd
             // 
-            this.btnrnd.Location = new System.Drawing.Point(240, 103);
+            this.btnrnd.Location = new System.Drawing.Point(241, 97);
             this.btnrnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrnd.Name = "btnrnd";
             this.btnrnd.Size = new System.Drawing.Size(52, 36);
@@ -383,7 +383,7 @@
             // 
             // btnln
             // 
-            this.btnln.Location = new System.Drawing.Point(181, 103);
+            this.btnln.Location = new System.Drawing.Point(182, 97);
             this.btnln.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnln.Name = "btnln";
             this.btnln.Size = new System.Drawing.Size(52, 36);
@@ -395,7 +395,7 @@
             // 
             // btnlogx
             // 
-            this.btnlogx.Location = new System.Drawing.Point(124, 103);
+            this.btnlogx.Location = new System.Drawing.Point(125, 97);
             this.btnlogx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogx.Name = "btnlogx";
             this.btnlogx.Size = new System.Drawing.Size(52, 36);
@@ -407,7 +407,7 @@
             // 
             // btnp
             // 
-            this.btnp.Location = new System.Drawing.Point(64, 103);
+            this.btnp.Location = new System.Drawing.Point(65, 97);
             this.btnp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnp.Name = "btnp";
             this.btnp.Size = new System.Drawing.Size(52, 36);
@@ -419,7 +419,7 @@
             // 
             // btne
             // 
-            this.btne.Location = new System.Drawing.Point(5, 103);
+            this.btne.Location = new System.Drawing.Point(6, 97);
             this.btne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btne.Name = "btne";
             this.btne.Size = new System.Drawing.Size(52, 36);
@@ -467,6 +467,7 @@
             this.Controls.Add(this.btn1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "The BEST calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
