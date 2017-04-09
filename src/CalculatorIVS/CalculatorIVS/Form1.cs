@@ -23,16 +23,15 @@ namespace CalculatorIVS
             result1 = new Result();
         }
 
-        // po kliku buttonek zustane oznaceny
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            // catches numeric keys
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 char[] pressedKey = e.KeyCode.ToString().Remove(0, 6).ToCharArray();
                 result1.AddNumber(pressedKey[0]);
                 update();
-            }
+            } // catches the rest
             else if (e.KeyCode == Keys.Divide)
             {
                 result1.SetOperation("div");
@@ -72,7 +71,7 @@ namespace CalculatorIVS
         {
 
         }
-
+        // appends digit to the number displayed on the display
         private void addNumber(object sender, EventArgs e)
         {
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
@@ -81,12 +80,12 @@ namespace CalculatorIVS
             update();
         }
     
-
+        // sets the opration the user is willing to do
         private void addOperation(object sender, EventArgs e)
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
         }
-
+        // the same, but refresh the result immediately. Eg, we want to calculate second root.
         private void addOperationUpdate(object sender, EventArgs e)
         {
             try
@@ -100,7 +99,7 @@ namespace CalculatorIVS
             }
 
         }
-
+        // the = button
         private void calculate(object sender, EventArgs e)
         {
             try
@@ -113,7 +112,7 @@ namespace CalculatorIVS
                 resultBox.Text = ex.Message;
             }
         }
-
+        // deleting from display
         private void delete(object sender, EventArgs e)
         {
             string operaceMazani = ((Button)sender).Name.Remove(0, 3);
@@ -123,11 +122,10 @@ namespace CalculatorIVS
                 result1.Reset();
             update();
         }
-
+        // updates the display value
         private void update()
         {
             resultBox.Text = result1.GetDisplayValue().ToString();
-            //result1.Focus();
         }
 
         private void resultBox_TextChanged(object sender, EventArgs e)

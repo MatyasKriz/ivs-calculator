@@ -52,7 +52,7 @@ namespace OurMathLib
         {
             if (inputNumber < 0 && (exponent % 2 == 0))
             {
-                throw new Exception("Cannot make root.");
+                throw new Exception("Cannot calculate root.");
             }
             if (inputNumber < 0 && (exponent % 2 == 1))
             {
@@ -82,7 +82,7 @@ namespace OurMathLib
         {
             if (inputNumber <= 0)
             {
-                throw new ArgumentException("Arg must be > 0.");
+                throw new ArgumentException("Log base must be > 0.");
             }
             return System.Math.Log(inputNumber, logBase);
         }
