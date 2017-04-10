@@ -80,9 +80,9 @@ namespace OurMathLib
 
         public static double Logarithm(double inputNumber, double logBase = System.Math.E)
         {
-            if (inputNumber <= 0)
+            if (inputNumber <= 0 || logBase == 1 || logBase <= 0)
             {
-                throw new ArgumentException("Log base must be > 0.");
+                throw new ArgumentException("Cannot calculate log.");
             }
             return System.Math.Log(inputNumber, logBase);
         }
@@ -98,9 +98,5 @@ namespace OurMathLib
             return rnd.Next(from, to);  // from <= x < to
         }
 
-        public static double StdDeviation(int[] data)
-        {
-            return 0.0;
-        }
     }
 }
