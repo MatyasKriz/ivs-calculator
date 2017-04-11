@@ -3,3 +3,6 @@ obj/
 *.exe
 *.suo
 *.cache
+*.swp
+*.vshost.exe
+*.exe

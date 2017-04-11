@@ -21,87 +21,120 @@ namespace CalculatorIVS
             InitializeComponent();
             KeyPreview = true;
             result1 = new Result();
-            
         }
-
-        // try catche
-        // po kliku buttonek zustane oznaceny
-
+        /// <summary>
+        /// Catches pressed keys.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            // numeric keyboard
+            // catches numeric keys
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 char[] pressedKey = e.KeyCode.ToString().Remove(0, 6).ToCharArray();
                 result1.AddNumber(pressedKey[0]);
                 update();
-            }
+            } // catches the rest
             else if (e.KeyCode == Keys.Divide)
             {
                 result1.SetOperation("div");
-                update();
             }
             else if (e.KeyCode == Keys.Multiply)
             {
                 result1.SetOperation("mul");
-                update();
             }
             else if (e.KeyCode == Keys.Add)
             {
                 result1.SetOperation("add");
-                update();
             }
             else if (e.KeyCode == Keys.Subtract)
             {
                 result1.SetOperation("sub");
-                update();
             }
             else if(e.KeyCode == Keys.Enter)
             {
-                result1.ApplyOperation();
-                update();
+                try
+                {
+                    result1.ApplyOperation();
+                    update();
+                }
+                catch (Exception ex)
+                {
+                    resultBox.Text = ex.Message;
+                }
             }
             else if(e.KeyCode == Keys.Back)
             {
                 result1.Revert();
                 update();
             }
-            //else if (e.KeyCode >= Keys.D0 && e.KeyCode >= Keys.D9) // non-numeric BUG - TODO
-            //{
-            //    string pressedKey2 = e.KeyCode.ToString().Remove(0, 1);
-            //    resultBox.Text = pressedKey2;
-            //}
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// Appends digit to the number displayed on the display.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void addNumber(object sender, EventArgs e)
         {
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
-            if (pressedNumber[0] == 'd') { pressedNumber[0] = ','; } // better pass 'd'?
+            if (pressedNumber[0] == 'd') { pressedNumber[0] = '.'; }
             result1.AddNumber(pressedNumber[0]);
             update();
         }
-    
-
+        /// <summary>
+        /// Sets the operation the user is willing to do.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void addOperation(object sender, EventArgs e)
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
-            update();
+        }
+        /// <summary>
+        /// Sets the operation the user is willing to do and refreshes the displayed result immediately.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
+        private void addOperationUpdate(object sender, EventArgs e)
+        {
+            try
+            {
+                result1.SetOperation(((Button)sender).Name.Remove(0, 3));
+                update();
+            }
+            catch (Exception ex)
+            {
+                resultBox.Text = ex.Message;
+            }
 
         }
-
+        /// <summary>
+        /// Calls ApplyOperation() after click on the '=' button.
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void calculate(object sender, EventArgs e)
         {
-            result1.ApplyOperation();
-            update();
-
+            try
+            {
+                result1.ApplyOperation();
+                update();
+            }
+            catch (Exception ex)
+            {
+                resultBox.Text = ex.Message;
+            }
         }
-
+        /// <summary>
+        /// Deletes the result and updates the display value.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void delete(object sender, EventArgs e)
         {
             string operaceMazani = ((Button)sender).Name.Remove(0, 3);
@@ -109,16 +142,14 @@ namespace CalculatorIVS
                 result1.Revert();
             else if (operaceMazani == "delc")
                 result1.Reset();
-            else if (operaceMazani == "del");
-            // remove last character;
-
             update();
         }
-
+        /// <summary>
+        /// Updates the display value.
+        /// </summary>
         private void update()
         {
             resultBox.Text = result1.GetDisplayValue().ToString();
-            //result1.Focus();
         }
 
         private void resultBox_TextChanged(object sender, EventArgs e)
