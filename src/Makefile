@@ -1,5 +1,4 @@
 CC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
-CCFLAGS=
 
 .PHONY: all clean pack install 
 
