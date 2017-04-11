@@ -5,6 +5,9 @@ CCFLAGS=
 
 all: CalculatorIVS.exe 
 
+install:
+	msiexec /i CalculatorIVS/CalculatorSetup/Debug/CalculatorSetup.msi /quiet
+
 CalculatorIVS.exe: 
 	$(CC) CalculatorIVS/CalculatorIVS.sln
 
