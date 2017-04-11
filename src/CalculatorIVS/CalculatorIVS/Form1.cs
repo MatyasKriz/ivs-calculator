@@ -22,7 +22,11 @@ namespace CalculatorIVS
             KeyPreview = true;
             result1 = new Result();
         }
-
+        /// <summary>
+        /// Catches pressed keys.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             // catches numeric keys
@@ -71,7 +75,11 @@ namespace CalculatorIVS
         {
 
         }
-        // appends digit to the number displayed on the display
+        /// <summary>
+        /// Appends digit to the number displayed on the display.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void addNumber(object sender, EventArgs e)
         {
             char[] pressedNumber = ((Button)sender).Name.Remove(0, 3).ToCharArray();
@@ -79,13 +87,20 @@ namespace CalculatorIVS
             result1.AddNumber(pressedNumber[0]);
             update();
         }
-    
-        // sets the opration the user is willing to do
+        /// <summary>
+        /// Sets the operation the user is willing to do.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void addOperation(object sender, EventArgs e)
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
         }
-        // the same, but refresh the result immediately. Eg, we want to calculate second root.
+        /// <summary>
+        /// Sets the operation the user is willing to do and refreshes the displayed result immediately.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void addOperationUpdate(object sender, EventArgs e)
         {
             try
@@ -99,7 +114,10 @@ namespace CalculatorIVS
             }
 
         }
-        // the = button
+        /// <summary>
+        /// Calls ApplyOperation() after click on the '=' button.
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void calculate(object sender, EventArgs e)
         {
             try
@@ -112,7 +130,11 @@ namespace CalculatorIVS
                 resultBox.Text = ex.Message;
             }
         }
-        // deleting from display
+        /// <summary>
+        /// Deletes the result and updates the display value.
+        /// </summary>
+        /// <param name="sender">Object which called the function.</param>
+        /// <param name="e">The key which was sent.</param>
         private void delete(object sender, EventArgs e)
         {
             string operaceMazani = ((Button)sender).Name.Remove(0, 3);
@@ -122,7 +144,9 @@ namespace CalculatorIVS
                 result1.Reset();
             update();
         }
-        // updates the display value
+        /// <summary>
+        /// Updates the display value.
+        /// </summary>
         private void update()
         {
             resultBox.Text = result1.GetDisplayValue().ToString();
