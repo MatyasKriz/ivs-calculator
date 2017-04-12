@@ -27,6 +27,11 @@ namespace OurMathLib
         private bool isDecimal = false;
 
         /// <summary>
+        /// Indicates whether the displayValue is a const.
+        /// </summary>
+        bool isConstDisplayed = false;
+
+        /// <summary>
         /// Counts the position of the next decimal number
         /// </summary>
         private int numOfDecimalDigs = 1;
@@ -130,14 +135,21 @@ namespace OurMathLib
                 else if (number == 'e')
                 {
                     displayValue = OurMathLib.Math.E;
+                    isConstDisplayed = true;
                     return;
                 }
                 else if (number == 'p')
                 {
                     displayValue = OurMathLib.Math.PI;
+                    isConstDisplayed = true;
                     return;
                 }
                 throw new Exception(e.Message);
+            }
+            if (isConstDisplayed)
+            {
+                displayValue = 0.0;
+                isConstDisplayed = false;
             }
             if (!isDecimal)
             {
