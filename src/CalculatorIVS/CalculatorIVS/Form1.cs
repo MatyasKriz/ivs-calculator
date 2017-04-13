@@ -71,6 +71,7 @@ namespace CalculatorIVS
         {
 
         }
+
         // appends digit to the number displayed on the display
         private void addNumber(object sender, EventArgs e)
         {
