@@ -113,6 +113,7 @@ namespace OurMathLib
 
         /// <summary>
         /// Adds a digit to displayValue
+        /// Displays constants if their representing character is sent
         /// </summary>
         /// <param name="number">A digit or an operation to be added</param>
         public void AddNumber(char number)
@@ -192,6 +193,7 @@ namespace OurMathLib
 
         /// <summary>
         /// Sets the currentOperation to the op param
+        /// Performs the operation if the operation is onClick
         /// </summary>
         /// <param name="op">String of the operation</param>
         public void SetOperation(string op)
@@ -243,6 +245,17 @@ namespace OurMathLib
             currentValue = displayValue;
             Revert();
         }
+
+        /// <summary>
+        /// Stores the displayValue before equals was pressed 
+        /// </summary>
+        double lastInputValue = 0.0;
+
+        /// <summary>
+        /// Stores the selected operation before equals was pressed
+        /// </summary>
+        Operation lastOperation = Operation.none;
+
 
         /// <summary>
         /// Applies currentOperation using displayValue to currentValue if currentOperation is set.
