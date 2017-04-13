@@ -148,8 +148,9 @@ namespace OurMathLib
             }
             if (isConstDisplayed)
             {
-                displayValue = 0.0;
                 isConstDisplayed = false;
+                Revert();
+
             }
             if (!isDecimal)
             {
@@ -209,31 +210,19 @@ namespace OurMathLib
                 currentOperation = Operation.divide;
                 break;
             case "sqrt":
-                currentOperation = Operation.sqrt;
                 displayValue = OurMathLib.Math.Root(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "pow":
                 currentOperation = Operation.powern;
                 break;
             case "pow2":
-                currentOperation = Operation.power2;
                 displayValue = OurMathLib.Math.Power(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "fact":
-                currentOperation = Operation.fact;
                 displayValue = OurMathLib.Math.Factorial(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "ln":
-                currentOperation = Operation.lognatur;
                 displayValue = OurMathLib.Math.Logarithm(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "logx":
                 currentOperation = Operation.logx;
