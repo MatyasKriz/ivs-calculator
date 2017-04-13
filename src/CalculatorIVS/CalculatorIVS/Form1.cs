@@ -30,7 +30,7 @@ namespace CalculatorIVS
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             // catches numeric keys
-            if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
+            if(e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 char[] pressedKey = e.KeyCode.ToString().Remove(0, 6).ToCharArray();
                 result1.AddNumber(pressedKey[0]);
@@ -52,7 +52,7 @@ namespace CalculatorIVS
             {
                 result1.SetOperation("sub");
             }
-            else if(e.KeyCode == Keys.Enter)
+            else if (e.KeyCode == Keys.Enter)
             {
                 try
                 {
@@ -69,6 +69,7 @@ namespace CalculatorIVS
                 result1.Revert();
                 update();
             }
+            focusor.Focus(); // defocuses the button
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,6 +87,7 @@ namespace CalculatorIVS
             if (pressedNumber[0] == 'd') { pressedNumber[0] = '.'; }
             result1.AddNumber(pressedNumber[0]);
             update();
+            focusor.Focus(); // defocuses the button
         }
         /// <summary>
         /// Sets the operation the user is willing to do.
@@ -95,6 +97,7 @@ namespace CalculatorIVS
         private void addOperation(object sender, EventArgs e)
         {
             result1.SetOperation(((Button)sender).Name.Remove(0, 3));
+            focusor.Focus(); // defocuses the button
         }
         /// <summary>
         /// Sets the operation the user is willing to do and refreshes the displayed result immediately.
@@ -112,7 +115,7 @@ namespace CalculatorIVS
             {
                 resultBox.Text = ex.Message;
             }
-
+            focusor.Focus(); // defocuses the button
         }
         /// <summary>
         /// Calls ApplyOperation() after click on the '=' button.
@@ -129,6 +132,7 @@ namespace CalculatorIVS
             {
                 resultBox.Text = ex.Message;
             }
+            focusor.Focus(); // defocuses the button
         }
         /// <summary>
         /// Deletes the result and updates the display value.
@@ -143,6 +147,7 @@ namespace CalculatorIVS
             else if (operaceMazani == "delc")
                 result1.Reset();
             update();
+            focusor.Focus(); // defocuses the button
         }
         /// <summary>
         /// Updates the display value.
