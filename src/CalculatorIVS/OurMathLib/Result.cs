@@ -263,6 +263,7 @@ namespace OurMathLib
         /// </summary>
         public void ApplyOperation() 
         {
+            isConstDisplayed = true;
             switch(currentOperation) {
             case Operation.add:
                 currentValue = OurMathLib.Math.Add(currentValue, displayValue);
