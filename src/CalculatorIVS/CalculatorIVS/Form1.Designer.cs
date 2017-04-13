@@ -444,7 +444,7 @@
             // 
             // btnp
             // 
-            this.helpProvider.SetHelpString(this.btnp, "Provides π number.");
+            this.helpProvider.SetHelpString(this.btnp, "Provides the pi number.");
             this.btnp.Location = new System.Drawing.Point(65, 97);
             this.btnp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnp.Name = "btnp";
@@ -458,7 +458,7 @@
             // 
             // btne
             // 
-            this.helpProvider.SetHelpString(this.btne, "Provies e number.");
+            this.helpProvider.SetHelpString(this.btne, "Provies the e number.");
             this.btne.Location = new System.Drawing.Point(6, 97);
             this.btne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btne.Name = "btne";
