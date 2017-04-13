@@ -263,23 +263,11 @@ namespace OurMathLib
             case Operation.divide:
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
-            case Operation.fact:
-                currentValue = OurMathLib.Math.Factorial(displayValue);
-                break;
-            case Operation.lognatur:
-                currentValue = OurMathLib.Math.Logarithm(displayValue);
-                break;
             case Operation.logx:
                 currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
                 break;
             case Operation.nthroot:
                 currentValue = OurMathLib.Math.Root(displayValue, currentValue);
-                break;
-            case Operation.sqrt:
-                currentValue = OurMathLib.Math.Root(displayValue);
-                break;
-            case Operation.power2:
-                currentValue = OurMathLib.Math.Power(currentValue);
                 break;
             case Operation.powern:
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
