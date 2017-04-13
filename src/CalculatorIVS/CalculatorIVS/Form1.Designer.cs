@@ -200,6 +200,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnadd.Location = new System.Drawing.Point(226, 336);
             this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnadd.Name = "btnadd";
@@ -212,6 +213,7 @@
             // 
             // btnsub
             // 
+            this.btnsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnsub.Location = new System.Drawing.Point(226, 270);
             this.btnsub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsub.Name = "btnsub";
@@ -224,6 +226,7 @@
             // 
             // btndiv
             // 
+            this.btndiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btndiv.Location = new System.Drawing.Point(226, 138);
             this.btndiv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndiv.Name = "btndiv";
@@ -236,6 +239,7 @@
             // 
             // btneq
             // 
+            this.btneq.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btneq.Location = new System.Drawing.Point(153, 403);
             this.btneq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btneq.Name = "btneq";
@@ -284,6 +288,7 @@
             // 
             // btnmul
             // 
+            this.btnmul.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnmul.Location = new System.Drawing.Point(226, 204);
             this.btnmul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmul.Name = "btnmul";
