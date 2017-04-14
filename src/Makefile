@@ -12,3 +12,6 @@ CalculatorIVS.exe:
 
 clean: 
 	del *.cache *.exe
+
+pack:
+	powershell.exe -nologo -noprofile -command "& { Get-ChildItem -Path ../ -force | Compress-Archive -force -DestinationPath ../xkrizm06_xkucer92_xkunic01.zip }"
