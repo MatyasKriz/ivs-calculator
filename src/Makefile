@@ -1,6 +1,6 @@
 CC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
 
-.PHONY: all clean pack install 
+.PHONY: all clean pack install
 
 all: CalculatorIVS.exe 
 
@@ -11,7 +11,7 @@ CalculatorIVS.exe:
 	$(CC) CalculatorIVS/CalculatorIVS.sln
 
 clean: 
-	del *.cache *.exe
+	powershell.exe -nologo -noprofile -command "& { Get-ChildItem ../ obj -Directory -recurse | Remove-Item -Recurse ; Get-ChildItem ../ bin -Directory -recurse | Remove-Item -Recurse }"
 
 pack:
 	powershell.exe -nologo -noprofile -command "& { Get-ChildItem -Path ../ -force | Compress-Archive -force -DestinationPath ../xkrizm06_xkucer92_xkunic01.zip }"
