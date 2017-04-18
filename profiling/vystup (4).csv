@@ -1,0 +1,5 @@
+Level,Function Name,Inclusive Samples,Exclusive Samples,Inclusive Samples %,Exclusive Samples %,Module Name,
+0,"Profiling.exe",2,0,"100,00","0,00","",
+0,"Profiling.Program.Main",2,0,"100,00","0,00","Profiling.exe",
+1,"[clr.dll]",1,1,"50,00","50,00","clr.dll",
+1,"System.Console.get_Out",1,1,"50,00","50,00","mscorlib.ni.dll",

@@ -1,0 +1,8 @@
+Type,Root Function Name,Function Name,Inclusive Samples,Exclusive Samples,Inclusive Samples %,Exclusive Samples %,
+"Root","[clr.dll]","[clr.dll]",1,1,"50,00","50,00",
+"Caller","[clr.dll]","Profiling.Program.Main",1,1,"50,00","50,00",
+"Root","Profiling.Program.Main","Profiling.Program.Main",2,0,"100,00","0,00",
+"Callee","Profiling.Program.Main","[clr.dll]",1,1,"50,00","50,00",
+"Callee","Profiling.Program.Main","System.Console.get_Out",1,1,"50,00","50,00",
+"Root","System.Console.get_Out","System.Console.get_Out",1,1,"50,00","50,00",
+"Caller","System.Console.get_Out","Profiling.Program.Main",1,1,"50,00","50,00",

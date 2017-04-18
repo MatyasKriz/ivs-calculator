@@ -1,0 +1,5 @@
+Function Name,Exclusive Samples,Exclusive Samples %,Inclusive Samples,Inclusive Samples %,Source Line Begin,Source Character Begin,Source Line End,Source Character End,
+"[clr.dll]",1,"50,00",1,"50,00",0,0,0,0,
+"System.Console.get_Out",1,"50,00",1,"50,00",0,0,0,0,
+"Profiling.Program.Main",0,"0,00",1,"50,00",14,17,14,98,
+"Profiling.Program.Main",0,"0,00",1,"50,00",40,17,40,62,

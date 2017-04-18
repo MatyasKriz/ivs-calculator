@@ -1,0 +1,6 @@
+Function Name,Inclusive Samples,Exclusive Samples,Inclusive Samples %,Exclusive Samples %,
+"System.Console.ReadLine",2,2,"40,00","40,00",
+"[clr.dll]",1,1,"20,00","20,00",
+"System.Linq.Enumerable.Select[System.__Canon,System.Double]",1,1,"20,00","20,00",
+"System.Linq.Enumerable.ToArray[System.Double]",1,1,"20,00","20,00",
+"Profiling.Program.Main",5,0,"100,00","0,00",
