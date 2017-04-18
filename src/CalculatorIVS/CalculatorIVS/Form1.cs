@@ -142,8 +142,6 @@ namespace CalculatorIVS
                 result1.Revert();
             else if (operaceMazani == "delc")
                 result1.Reset();
-            else if (operaceMazani == "del");
-            // remove last character;
 
             update();
         }
