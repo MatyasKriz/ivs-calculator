@@ -276,10 +276,10 @@ namespace OurMathLib
                 currentValue = OurMathLib.Math.Divide(currentValue, lastInputValue);
                 break;
             case Operation.logx:
-                currentValue = OurMathLib.Math.Logarithm(displayValue, lastInputValue);
+                currentValue = OurMathLib.Math.Logarithm(currentValue, lastInputValue);
                 break;
             case Operation.nthroot:
-                currentValue = OurMathLib.Math.Root(lastInputValue, currentValue);
+                currentValue = OurMathLib.Math.Root(currentValue, lastInputValue);
                 break;
             case Operation.powern:
                 currentValue = OurMathLib.Math.Power(currentValue, lastInputValue);
@@ -324,9 +324,11 @@ namespace OurMathLib
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
             case Operation.logx:
+                lastInputValue = currentValue;
                 currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
                 break;
             case Operation.nthroot:
+                lastInputValue = currentValue;
                 currentValue = OurMathLib.Math.Root(displayValue, currentValue);
                 break;
             case Operation.powern:
@@ -348,11 +350,7 @@ namespace OurMathLib
 
             if (currentOperation != Operation.none)
             {
-                if (currentOperation == Operation.logx || currentOperation == Operation.nthroot)
-                {
-                    lastInputValue = currentValue;
-                }
-                else
+                if (!(currentOperation == Operation.logx || currentOperation == Operation.nthroot))
                 {
                     lastInputValue = displayValue;
                 }
