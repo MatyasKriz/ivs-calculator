@@ -256,6 +256,9 @@ namespace OurMathLib
         /// </summary>
         Operation lastOperation = Operation.none;
 
+        /// <summary>
+        /// Performs calculation if =  was pressed more times in row using lastInputValue & lastOperation
+        /// </summary>
         private void reapply()
         {
             isConstDisplayed = true;
