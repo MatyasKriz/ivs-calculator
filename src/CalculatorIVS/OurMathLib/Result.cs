@@ -256,6 +256,46 @@ namespace OurMathLib
         /// </summary>
         Operation lastOperation = Operation.none;
 
+        private void reapply()
+        {
+            isConstDisplayed = true;
+            switch(lastOperation) {
+            case Operation.add:
+                currentValue = OurMathLib.Math.Add(currentValue, lastInputValue);
+                break;
+            case Operation.subtract:
+                currentValue = OurMathLib.Math.Subtract(currentValue, lastInputValue);
+                break;
+            case Operation.multiply:
+                currentValue = OurMathLib.Math.Multiply(currentValue, lastInputValue);
+                break;
+            case Operation.divide:
+                currentValue = OurMathLib.Math.Divide(currentValue, lastInputValue);
+                break;
+            case Operation.logx:
+                currentValue = OurMathLib.Math.Logarithm(displayValue, lastInputValue);
+                break;
+            case Operation.nthroot:
+                currentValue = OurMathLib.Math.Root(lastInputValue, currentValue);
+                break;
+            case Operation.powern:
+                currentValue = OurMathLib.Math.Power(currentValue, lastInputValue);
+                break;
+            case Operation.rnd:
+                if (currentValue < displayValue)
+                {
+                    currentValue = OurMathLib.Math.Random((int)currentValue, (int)displayValue);
+                }
+                else
+                {
+                    currentValue = OurMathLib.Math.Random((int)displayValue, (int)currentValue);
+                }
+                break;
+            default:
+                return;
+            }
+        }
+
 
         /// <summary>
         /// Applies currentOperation using displayValue to currentValue if currentOperation is set.
@@ -265,6 +305,9 @@ namespace OurMathLib
         {
             isConstDisplayed = true;
             switch(currentOperation) {
+            case Operation.none:
+                reapply();
+                break;
             case Operation.add:
                 currentValue = OurMathLib.Math.Add(currentValue, displayValue);
                 break;
@@ -299,6 +342,21 @@ namespace OurMathLib
             default:
                 return;
             }
+
+            if (currentOperation != Operation.none)
+            {
+                if (currentOperation == Operation.logx || currentOperation == Operation.nthroot)
+                {
+                    lastInputValue = currentValue;
+                }
+                else
+                {
+                    lastInputValue = displayValue;
+                }
+
+                lastOperation = currentOperation;
+            }
+            currentOperation = Operation.none;
             displayValue = currentValue;
         }
     }
