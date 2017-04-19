@@ -27,6 +27,11 @@ namespace OurMathLib
         private bool isDecimal = false;
 
         /// <summary>
+        /// Indicates whether the displayValue is a const.
+        /// </summary>
+        bool isConstDisplayed = false;
+
+        /// <summary>
         /// Counts the position of the next decimal number
         /// </summary>
         private int numOfDecimalDigs = 1;
@@ -108,6 +113,7 @@ namespace OurMathLib
 
         /// <summary>
         /// Adds a digit to displayValue
+        /// Displays constants if their representing character is sent
         /// </summary>
         /// <param name="number">A digit or an operation to be added</param>
         public void AddNumber(char number)
@@ -130,14 +136,22 @@ namespace OurMathLib
                 else if (number == 'e')
                 {
                     displayValue = OurMathLib.Math.E;
+                    isConstDisplayed = true;
                     return;
                 }
                 else if (number == 'p')
                 {
                     displayValue = OurMathLib.Math.PI;
+                    isConstDisplayed = true;
                     return;
                 }
                 throw new Exception(e.Message);
+            }
+            if (isConstDisplayed)
+            {
+                isConstDisplayed = false;
+                Revert();
+
             }
             if (!isDecimal)
             {
@@ -179,6 +193,7 @@ namespace OurMathLib
 
         /// <summary>
         /// Sets the currentOperation to the op param
+        /// Performs the operation if the operation is onClick
         /// </summary>
         /// <param name="op">String of the operation</param>
         public void SetOperation(string op)
@@ -197,31 +212,19 @@ namespace OurMathLib
                 currentOperation = Operation.divide;
                 break;
             case "sqrt":
-                currentOperation = Operation.sqrt;
                 displayValue = OurMathLib.Math.Root(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "pow":
                 currentOperation = Operation.powern;
                 break;
             case "pow2":
-                currentOperation = Operation.power2;
                 displayValue = OurMathLib.Math.Power(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "fact":
-                currentOperation = Operation.fact;
                 displayValue = OurMathLib.Math.Factorial(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "ln":
-                currentOperation = Operation.lognatur;
                 displayValue = OurMathLib.Math.Logarithm(displayValue);
-                numOfDecimalDigs = 1;
-                isDecimal = false;
                 return;
             case "logx":
                 currentOperation = Operation.logx;
@@ -241,12 +244,70 @@ namespace OurMathLib
         }
 
         /// <summary>
+        /// Stores the displayValue before equals was pressed 
+        /// </summary>
+        double lastInputValue = 0.0;
+
+        /// <summary>
+        /// Stores the selected operation before equals was pressed
+        /// </summary>
+        Operation lastOperation = Operation.none;
+
+        /// <summary>
+        /// Performs calculation if =  was pressed more times in row using lastInputValue & lastOperation
+        /// </summary>
+        private void reapply()
+        {
+            isConstDisplayed = true;
+            switch(lastOperation) {
+            case Operation.add:
+                currentValue = OurMathLib.Math.Add(currentValue, lastInputValue);
+                break;
+            case Operation.subtract:
+                currentValue = OurMathLib.Math.Subtract(currentValue, lastInputValue);
+                break;
+            case Operation.multiply:
+                currentValue = OurMathLib.Math.Multiply(currentValue, lastInputValue);
+                break;
+            case Operation.divide:
+                currentValue = OurMathLib.Math.Divide(currentValue, lastInputValue);
+                break;
+            case Operation.logx:
+                currentValue = OurMathLib.Math.Logarithm(currentValue, lastInputValue);
+                break;
+            case Operation.nthroot:
+                currentValue = OurMathLib.Math.Root(currentValue, lastInputValue);
+                break;
+            case Operation.powern:
+                currentValue = OurMathLib.Math.Power(currentValue, lastInputValue);
+                break;
+            case Operation.rnd:
+                if (currentValue < displayValue)
+                {
+                    currentValue = OurMathLib.Math.Random((int)currentValue, (int)displayValue);
+                }
+                else
+                {
+                    currentValue = OurMathLib.Math.Random((int)displayValue, (int)currentValue);
+                }
+                break;
+            default:
+                return;
+            }
+        }
+
+
+        /// <summary>
         /// Applies currentOperation using displayValue to currentValue if currentOperation is set.
         /// Overwrites currentValue and displayValue
         /// </summary>
         public void ApplyOperation() 
         {
+            isConstDisplayed = true;
             switch(currentOperation) {
+            case Operation.none:
+                reapply();
+                break;
             case Operation.add:
                 currentValue = OurMathLib.Math.Add(currentValue, displayValue);
                 break;
@@ -259,23 +320,13 @@ namespace OurMathLib
             case Operation.divide:
                 currentValue = OurMathLib.Math.Divide(currentValue, displayValue);
                 break;
-            case Operation.fact:
-                currentValue = OurMathLib.Math.Factorial(displayValue);
-                break;
-            case Operation.lognatur:
-                currentValue = OurMathLib.Math.Logarithm(displayValue);
-                break;
             case Operation.logx:
+                lastInputValue = currentValue;
                 currentValue = OurMathLib.Math.Logarithm(displayValue, currentValue);
                 break;
             case Operation.nthroot:
+                lastInputValue = currentValue;
                 currentValue = OurMathLib.Math.Root(displayValue, currentValue);
-                break;
-            case Operation.sqrt:
-                currentValue = OurMathLib.Math.Root(displayValue);
-                break;
-            case Operation.power2:
-                currentValue = OurMathLib.Math.Power(currentValue);
                 break;
             case Operation.powern:
                 currentValue = OurMathLib.Math.Power(currentValue, displayValue);
@@ -293,6 +344,17 @@ namespace OurMathLib
             default:
                 return;
             }
+
+            if (currentOperation != Operation.none)
+            {
+                if (!(currentOperation == Operation.logx || currentOperation == Operation.nthroot))
+                {
+                    lastInputValue = displayValue;
+                }
+
+                lastOperation = currentOperation;
+            }
+            currentOperation = Operation.none;
             displayValue = currentValue;
         }
     }
