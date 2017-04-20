@@ -26,12 +26,6 @@ namespace MathLibraryTesting
         }
 
         [Test]
-        public void ResultClass_ApplyOperationNone()
-        {
-            Assert.Throws<InvalidOperationException>(delegate { result.ApplyOperation(); });
-        }
-
-        [Test]
         public void ResultClass_InsertNumber()
         {
             result.AddNumber('4');
