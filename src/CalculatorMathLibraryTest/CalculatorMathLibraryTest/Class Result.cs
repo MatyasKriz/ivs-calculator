@@ -113,6 +113,18 @@ namespace MathLibraryTesting
             result.SetOperation("div");
             Assert.Throws<InvalidOperationException>(delegate { result.ApplyOperation(); });
         }
+
+        [Test]
+        public void ResultClass_MultipleApplyOperation()
+        {
+            result.AddNumber('5');
+            result.SetOperation("sub");
+            result.AddNumber('1');
+            for(int i = 0; i < 5; i++) {
+                result.ApplyOperation();
+            }
+            Assert.AreEqual(0, result.GetDisplayValue());
+        }
         #endregion
     }
 }
