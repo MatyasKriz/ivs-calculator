@@ -64,7 +64,7 @@ namespace OurMathLib
         public string GetCurrentOperationSymbol()
         {
             string toReturn = "";
-            switch (currentOperation)
+            switch (lastOperation)
             {
             case Operation.add:
                 toReturn = "+";
