@@ -64,7 +64,7 @@ namespace OurMathLib
         public string GetCurrentOperationSymbol()
         {
             string toReturn = "";
-            switch (currentOperation)
+            switch (lastOperation)
             {
             case Operation.add:
                 toReturn = "+";
@@ -185,6 +185,9 @@ namespace OurMathLib
         /// </summary>
         public void Reset()
         {
+            lastInputValue = 0.0;
+            lastOperation = Operation.none;
+            isConstDisplayed = false;
             displayValue = 0;
             currentValue = 0;
             numOfDecimalDigs = 1;
