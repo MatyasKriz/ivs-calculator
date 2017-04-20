@@ -83,7 +83,7 @@ namespace MathLibraryTesting
             result.Reset();
             Assert.AreEqual(0, result.GetDisplayValue());
             Assert.AreEqual(0, result.GetCurrentValue());
-            Assert.AreEqual("+", result.GetCurrentOperationSymbol());
+            Assert.AreEqual("", result.GetCurrentOperationSymbol());
         }
 
 
