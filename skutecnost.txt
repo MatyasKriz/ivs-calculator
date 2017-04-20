@@ -1,7 +1,7 @@
-xkrizm06 - instalátor, testy (git manager)
+xkrizm06 - instalátor, testy, (git manager)
 xkucer92 - vnitøní struktura, dokumentace
 xkulha08 - *opustila pøedmìt*
-xkunic01 - GUI, vnitøní struktura, manuál, matematická knihovna
+xkunic01 - GUI, manuál, matematická knihovna
 
 20. 3. - vytvoøit patøièné testy a doplnit matematickou knihovnu | SPLNÌNO DO STANOVENÉHO TERMÍNU
 30. 3. - dokonèit vnitøní strukturu kalkulaèky 			 | SPLNÌNO DO STANOVENÉHO TERMÍNU
