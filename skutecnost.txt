@@ -1,0 +1,20 @@
+xkrizm06 - instalátor, testy (git manager)
+xkucer92 - vnitøní struktura, dokumentace
+xkulha08 - *opustila pøedmìt*
+xkunic01 - GUI, vnitøní struktura, manuál, matematická knihovna
+
+20. 3. - vytvoøit patøièné testy a doplnit matematickou knihovnu | SPLNÌNO DO STANOVENÉHO TERMÍNU
+30. 3. - dokonèit vnitøní strukturu kalkulaèky 			 | SPLNÌNO DO STANOVENÉHO TERMÍNU
+10. 4. - propojit graficke rozhrani s vnitrni strukturou	 | SPLNÌNO DO STANOVENÉHO TERMÍNU
+20. 4. - finální úpravy, vyladìní projektu			 | SPLNÌNO DO STANOVENÉHO TERMÍNU
+
+komunikaèní kanály - Slack, pravidlo: dávat pøíspìvky do patøièních kanálù | SPLNÌNO
+
+zvolený systém pro správu verzí a hosting - Git a GitHub, byla pozvána ivskontrola
+
+----------------------------------------------------------
+
+xkrizm06:
+- tým byl spolehlivý a jsem s nimi spokojený, všechny stanovené termíny jsme dodrželi
+- s výsledkem spokojený
+- .editorconfig nebyl potøeba, jelikož jsme se shodli na základním nastavení Visual Studia
