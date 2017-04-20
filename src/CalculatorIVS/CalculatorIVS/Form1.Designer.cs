@@ -457,7 +457,7 @@
             // 
             // btne
             // 
-            this.helpProvider.SetHelpString(this.btne, "Provides the e number.");
+            this.helpProvider.SetHelpString(this.btne, "Provides the euler number.");
             this.btne.Location = new System.Drawing.Point(6, 97);
             this.btne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btne.Name = "btne";
