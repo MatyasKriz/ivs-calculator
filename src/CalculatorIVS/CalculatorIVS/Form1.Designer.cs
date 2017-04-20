@@ -59,7 +59,7 @@
             this.btnlogx = new System.Windows.Forms.Button();
             this.btnp = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
-            this.focusor = new System.Windows.Forms.Label();
+            this.helpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,9 +189,11 @@
             // 
             // btnd
             // 
+            this.helpProvider.SetHelpString(this.btnd, "Decimal point.");
             this.btnd.Location = new System.Drawing.Point(80, 403);
             this.btnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnd.Name = "btnd";
+            this.helpProvider.SetShowHelp(this.btnd, true);
             this.btnd.Size = new System.Drawing.Size(67, 60);
             this.btnd.TabIndex = 10;
             this.btnd.TabStop = false;
@@ -201,10 +203,11 @@
             // 
             // btnadd
             // 
-            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.helpProvider.SetHelpString(this.btnadd, "The addition sign.");
             this.btnadd.Location = new System.Drawing.Point(226, 336);
             this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnadd.Name = "btnadd";
+            this.helpProvider.SetShowHelp(this.btnadd, true);
             this.btnadd.Size = new System.Drawing.Size(67, 60);
             this.btnadd.TabIndex = 11;
             this.btnadd.TabStop = false;
@@ -214,10 +217,11 @@
             // 
             // btnsub
             // 
-            this.btnsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.helpProvider.SetHelpString(this.btnsub, "The subtraction sign.");
             this.btnsub.Location = new System.Drawing.Point(226, 270);
             this.btnsub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsub.Name = "btnsub";
+            this.helpProvider.SetShowHelp(this.btnsub, true);
             this.btnsub.Size = new System.Drawing.Size(67, 60);
             this.btnsub.TabIndex = 12;
             this.btnsub.TabStop = false;
@@ -227,10 +231,11 @@
             // 
             // btndiv
             // 
-            this.btndiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.helpProvider.SetHelpString(this.btndiv, "The division sign.");
             this.btndiv.Location = new System.Drawing.Point(226, 138);
             this.btndiv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndiv.Name = "btndiv";
+            this.helpProvider.SetShowHelp(this.btndiv, true);
             this.btndiv.Size = new System.Drawing.Size(67, 60);
             this.btndiv.TabIndex = 13;
             this.btndiv.TabStop = false;
@@ -240,10 +245,12 @@
             // 
             // btneq
             // 
-            this.btneq.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.helpProvider.SetHelpNavigator(this.btneq, System.Windows.Forms.HelpNavigator.Index);
+            this.helpProvider.SetHelpString(this.btneq, "Calculates the result.");
             this.btneq.Location = new System.Drawing.Point(153, 403);
             this.btneq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btneq.Name = "btneq";
+            this.helpProvider.SetShowHelp(this.btneq, true);
             this.btneq.Size = new System.Drawing.Size(140, 60);
             this.btneq.TabIndex = 14;
             this.btneq.TabStop = false;
@@ -253,9 +260,11 @@
             // 
             // btndelce
             // 
+            this.helpProvider.SetHelpString(this.btndelce, "Deletes just the value on the display.");
             this.btndelce.Location = new System.Drawing.Point(6, 138);
             this.btndelce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndelce.Name = "btndelce";
+            this.helpProvider.SetShowHelp(this.btndelce, true);
             this.btndelce.Size = new System.Drawing.Size(67, 60);
             this.btndelce.TabIndex = 15;
             this.btndelce.TabStop = false;
@@ -265,9 +274,11 @@
             // 
             // btnneg
             // 
+            this.helpProvider.SetHelpString(this.btnneg, "Changes the sign of the value.");
             this.btnneg.Location = new System.Drawing.Point(153, 138);
             this.btnneg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnneg.Name = "btnneg";
+            this.helpProvider.SetShowHelp(this.btnneg, true);
             this.btnneg.Size = new System.Drawing.Size(67, 60);
             this.btnneg.TabIndex = 16;
             this.btnneg.TabStop = false;
@@ -277,9 +288,11 @@
             // 
             // btndelc
             // 
+            this.helpProvider.SetHelpString(this.btndelc, "Deletes all the calculations in the memory.");
             this.btndelc.Location = new System.Drawing.Point(80, 138);
             this.btndelc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndelc.Name = "btndelc";
+            this.helpProvider.SetShowHelp(this.btndelc, true);
             this.btndelc.Size = new System.Drawing.Size(67, 60);
             this.btndelc.TabIndex = 17;
             this.btndelc.TabStop = false;
@@ -289,10 +302,11 @@
             // 
             // btnmul
             // 
-            this.btnmul.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.helpProvider.SetHelpString(this.btnmul, "The multiplication sign.");
             this.btnmul.Location = new System.Drawing.Point(226, 204);
             this.btnmul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmul.Name = "btnmul";
+            this.helpProvider.SetShowHelp(this.btnmul, true);
             this.btnmul.Size = new System.Drawing.Size(67, 60);
             this.btnmul.TabIndex = 18;
             this.btnmul.TabStop = false;
@@ -302,9 +316,11 @@
             // 
             // btnfact
             // 
+            this.helpProvider.SetHelpString(this.btnfact, "Factorial of the number.");
             this.btnfact.Location = new System.Drawing.Point(6, 56);
             this.btnfact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnfact.Name = "btnfact";
+            this.helpProvider.SetShowHelp(this.btnfact, true);
             this.btnfact.Size = new System.Drawing.Size(52, 36);
             this.btnfact.TabIndex = 19;
             this.btnfact.TabStop = false;
@@ -329,9 +345,11 @@
             // 
             // btnpow
             // 
+            this.helpProvider.SetHelpString(this.btnpow, "Provides the n-th power of the number.");
             this.btnpow.Location = new System.Drawing.Point(65, 56);
             this.btnpow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnpow.Name = "btnpow";
+            this.helpProvider.SetShowHelp(this.btnpow, true);
             this.btnpow.Size = new System.Drawing.Size(52, 36);
             this.btnpow.TabIndex = 26;
             this.btnpow.TabStop = false;
@@ -341,9 +359,11 @@
             // 
             // btnpow2
             // 
+            this.helpProvider.SetHelpString(this.btnpow2, "Provides the power of 2 of the number.");
             this.btnpow2.Location = new System.Drawing.Point(125, 56);
             this.btnpow2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnpow2.Name = "btnpow2";
+            this.helpProvider.SetShowHelp(this.btnpow2, true);
             this.btnpow2.Size = new System.Drawing.Size(52, 36);
             this.btnpow2.TabIndex = 27;
             this.btnpow2.TabStop = false;
@@ -353,9 +373,11 @@
             // 
             // btnnthroot
             // 
+            this.helpProvider.SetHelpString(this.btnnthroot, "Provides the n-th root.");
             this.btnnthroot.Location = new System.Drawing.Point(182, 56);
             this.btnnthroot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnthroot.Name = "btnnthroot";
+            this.helpProvider.SetShowHelp(this.btnnthroot, true);
             this.btnnthroot.Size = new System.Drawing.Size(52, 36);
             this.btnnthroot.TabIndex = 28;
             this.btnnthroot.TabStop = false;
@@ -365,9 +387,11 @@
             // 
             // btnsqrt
             // 
+            this.helpProvider.SetHelpString(this.btnsqrt, "Provides square root of the number.");
             this.btnsqrt.Location = new System.Drawing.Point(241, 56);
             this.btnsqrt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsqrt.Name = "btnsqrt";
+            this.helpProvider.SetShowHelp(this.btnsqrt, true);
             this.btnsqrt.Size = new System.Drawing.Size(52, 36);
             this.btnsqrt.TabIndex = 29;
             this.btnsqrt.TabStop = false;
@@ -377,9 +401,11 @@
             // 
             // btnrnd
             // 
+            this.helpProvider.SetHelpString(this.btnrnd, "Generates random numer.");
             this.btnrnd.Location = new System.Drawing.Point(241, 97);
             this.btnrnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrnd.Name = "btnrnd";
+            this.helpProvider.SetShowHelp(this.btnrnd, true);
             this.btnrnd.Size = new System.Drawing.Size(52, 36);
             this.btnrnd.TabIndex = 34;
             this.btnrnd.TabStop = false;
@@ -389,9 +415,11 @@
             // 
             // btnln
             // 
+            this.helpProvider.SetHelpString(this.btnln, "Provides the natural logarithm.");
             this.btnln.Location = new System.Drawing.Point(182, 97);
             this.btnln.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnln.Name = "btnln";
+            this.helpProvider.SetShowHelp(this.btnln, true);
             this.btnln.Size = new System.Drawing.Size(52, 36);
             this.btnln.TabIndex = 33;
             this.btnln.TabStop = false;
@@ -401,9 +429,11 @@
             // 
             // btnlogx
             // 
+            this.helpProvider.SetHelpString(this.btnlogx, "Provides the logarithm with the given base.");
             this.btnlogx.Location = new System.Drawing.Point(125, 97);
             this.btnlogx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogx.Name = "btnlogx";
+            this.helpProvider.SetShowHelp(this.btnlogx, true);
             this.btnlogx.Size = new System.Drawing.Size(52, 36);
             this.btnlogx.TabIndex = 32;
             this.btnlogx.TabStop = false;
@@ -413,9 +443,11 @@
             // 
             // btnp
             // 
+            this.helpProvider.SetHelpString(this.btnp, "Provides the pi number.");
             this.btnp.Location = new System.Drawing.Point(65, 97);
             this.btnp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnp.Name = "btnp";
+            this.helpProvider.SetShowHelp(this.btnp, true);
             this.btnp.Size = new System.Drawing.Size(52, 36);
             this.btnp.TabIndex = 31;
             this.btnp.TabStop = false;
@@ -425,9 +457,11 @@
             // 
             // btne
             // 
+            this.helpProvider.SetHelpString(this.btne, "Provides the euler number.");
             this.btne.Location = new System.Drawing.Point(6, 97);
             this.btne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btne.Name = "btne";
+            this.helpProvider.SetShowHelp(this.btne, true);
             this.btne.Size = new System.Drawing.Size(52, 36);
             this.btne.TabIndex = 30;
             this.btne.TabStop = false;
@@ -435,21 +469,12 @@
             this.btne.UseVisualStyleBackColor = true;
             this.btne.Click += new System.EventHandler(this.addNumber);
             // 
-            // focusor
-            // 
-            this.focusor.AutoSize = true;
-            this.focusor.Location = new System.Drawing.Point(76, 145);
-            this.focusor.Name = "focusor";
-            this.focusor.Size = new System.Drawing.Size(0, 17);
-            this.focusor.TabIndex = 35;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(299, 467);
-            this.Controls.Add(this.focusor);
             this.Controls.Add(this.btnrnd);
             this.Controls.Add(this.btnln);
             this.Controls.Add(this.btnlogx);
@@ -480,10 +505,13 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HelpButton = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.helpProvider.SetShowHelp(this, true);
             this.Text = "The BEST calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Enter += new System.EventHandler(this.addOperation);
@@ -527,7 +555,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Label focusor;
+        private System.Windows.Forms.HelpProvider helpProvider;
     }
 }
 
