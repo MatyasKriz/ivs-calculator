@@ -373,7 +373,7 @@
             // 
             // btnnthroot
             // 
-            this.helpProvider.SetHelpString(this.btnnthroot, "Enter the n value, click on this button and then enter the x value.");
+            this.helpProvider.SetHelpString(this.btnnthroot, "Provides the n-th root.");
             this.btnnthroot.Location = new System.Drawing.Point(182, 56);
             this.btnnthroot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnthroot.Name = "btnnthroot";
@@ -401,8 +401,7 @@
             // 
             // btnrnd
             // 
-            this.helpProvider.SetHelpString(this.btnrnd, "Random number. Enter the minimum value, then click the rand button and than enter" +
-        " the max value.");
+            this.helpProvider.SetHelpString(this.btnrnd, "Generates random numer.");
             this.btnrnd.Location = new System.Drawing.Point(241, 97);
             this.btnrnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrnd.Name = "btnrnd";
@@ -416,7 +415,7 @@
             // 
             // btnln
             // 
-            this.helpProvider.SetHelpString(this.btnln, "Enter the value and then click the ln button.");
+            this.helpProvider.SetHelpString(this.btnln, "Provides the natural logarithm.");
             this.btnln.Location = new System.Drawing.Point(182, 97);
             this.btnln.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnln.Name = "btnln";
@@ -430,7 +429,7 @@
             // 
             // btnlogx
             // 
-            this.helpProvider.SetHelpString(this.btnlogx, "Enter base, click log button and then enter the value.");
+            this.helpProvider.SetHelpString(this.btnlogx, "Provides the logarithm with the given base.");
             this.btnlogx.Location = new System.Drawing.Point(125, 97);
             this.btnlogx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogx.Name = "btnlogx";
@@ -458,7 +457,7 @@
             // 
             // btne
             // 
-            this.helpProvider.SetHelpString(this.btne, "Provies the e number.");
+            this.helpProvider.SetHelpString(this.btne, "Provides the e number.");
             this.btne.Location = new System.Drawing.Point(6, 97);
             this.btne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btne.Name = "btne";
