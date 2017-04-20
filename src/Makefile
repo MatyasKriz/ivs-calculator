@@ -1,11 +1,14 @@
 CC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
 
-.PHONY: all clean pack install
+.PHONY: all clean pack install doc
 
 all: CalculatorIVS.exe 
 
 install:
 	msiexec /i CalculatorIVS/CalculatorSetup/Debug/CalculatorSetup.msi /quiet
+
+doc:
+	doxygen Doxyfile
 
 CalculatorIVS.exe: 
 	$(CC) CalculatorIVS/CalculatorIVS.sln
