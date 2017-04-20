@@ -58,7 +58,7 @@ namespace OurMathLib
         {
             if(y == 0)
             {
-                throw new Exception("Division by 0.");
+                throw new InvalidOperationException("Division by 0.");
             }  
             double result = x / y;
             return result;
@@ -83,7 +83,7 @@ namespace OurMathLib
         {
             if (inputNumber < 0 && (exponent % 2 == 0))
             {
-                throw new Exception("Cannot calculate root.");
+                throw new ArgumentException("Cannot calculate root.");
             }
             if (inputNumber < 0 && (exponent % 2 == 1))
             {

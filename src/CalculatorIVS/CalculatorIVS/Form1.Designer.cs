@@ -59,6 +59,7 @@
             this.btnlogx = new System.Windows.Forms.Button();
             this.btnp = new System.Windows.Forms.Button();
             this.btne = new System.Windows.Forms.Button();
+            this.focusor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,6 +201,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnadd.Location = new System.Drawing.Point(226, 336);
             this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnadd.Name = "btnadd";
@@ -212,6 +214,7 @@
             // 
             // btnsub
             // 
+            this.btnsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnsub.Location = new System.Drawing.Point(226, 270);
             this.btnsub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsub.Name = "btnsub";
@@ -224,6 +227,7 @@
             // 
             // btndiv
             // 
+            this.btndiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btndiv.Location = new System.Drawing.Point(226, 138);
             this.btndiv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndiv.Name = "btndiv";
@@ -236,6 +240,7 @@
             // 
             // btneq
             // 
+            this.btneq.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btneq.Location = new System.Drawing.Point(153, 403);
             this.btneq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btneq.Name = "btneq";
@@ -284,6 +289,7 @@
             // 
             // btnmul
             // 
+            this.btnmul.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnmul.Location = new System.Drawing.Point(226, 204);
             this.btnmul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmul.Name = "btnmul";
@@ -429,12 +435,21 @@
             this.btne.UseVisualStyleBackColor = true;
             this.btne.Click += new System.EventHandler(this.addNumber);
             // 
+            // focusor
+            // 
+            this.focusor.AutoSize = true;
+            this.focusor.Location = new System.Drawing.Point(76, 145);
+            this.focusor.Name = "focusor";
+            this.focusor.Size = new System.Drawing.Size(0, 17);
+            this.focusor.TabIndex = 35;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(299, 467);
+            this.Controls.Add(this.focusor);
             this.Controls.Add(this.btnrnd);
             this.Controls.Add(this.btnln);
             this.Controls.Add(this.btnlogx);
@@ -512,6 +527,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Label focusor;
     }
 }
 
