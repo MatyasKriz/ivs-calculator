@@ -401,7 +401,7 @@
             // 
             // btnrnd
             // 
-            this.helpProvider.SetHelpString(this.btnrnd, "Generates random numer.");
+            this.helpProvider.SetHelpString(this.btnrnd, "Generates random number.");
             this.btnrnd.Location = new System.Drawing.Point(241, 97);
             this.btnrnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrnd.Name = "btnrnd";
