@@ -12,13 +12,13 @@ namespace MathLibraryTesting
         [Test]
         public void Pi()
         {
-            Assert.AreEqual(Math.PI, OurMathLib.Math.PI, Delta);
+            Assert.AreEqual(System.Math.PI, OurMathLib.Math.PI, Delta);
         }
 
         [Test]
         public void Euler()
         {
-            Assert.AreEqual(Math.E, OurMathLib.Math.E, Delta);
+            Assert.AreEqual(System.Math.E, OurMathLib.Math.E, Delta);
         }
         #endregion
     }

@@ -14,7 +14,7 @@ namespace MathLibraryTesting
         {
             Assert.AreEqual(1, OurMathLib.Math.Root(1));
             Assert.AreEqual(2, OurMathLib.Math.Root(4));
-            Assert.AreEqual(Math.Sqrt(2), OurMathLib.Math.Root(2), Delta);
+            Assert.AreEqual(System.Math.Sqrt(2), OurMathLib.Math.Root(2), Delta);
         }
 
         [Test]

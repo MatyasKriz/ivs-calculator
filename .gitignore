@@ -1,10 +1,8 @@
-src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/bin/
-src/CalculatorMathLibraryTest/packages/
-src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/
+bin/
+obj/
 *.exe
-src/CalculatorIVS/CalculatorIVS/obj/Debug/
+*.suo
+*.cache
+*.swp
 src/CalculatorIVS/packages/
-src/CalculatorIVS/OurMathLib/bin/
-src/CalculatorIVS/OurMathLib/obj/Debug/
-src/CalculatorIVS/CalculatorIVS/bin/
-src/CalculatorMathLibraryTest/CalculatorMathLibraryTest/obj/Debug/
+src/CalculatorMathLibraryTest/packages/
