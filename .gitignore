@@ -6,3 +6,4 @@ obj/
 *.swp
 *.vshost.exe
 *.exe
+src/CalculatorIVS/packages/
