@@ -7,7 +7,7 @@ all: CalculatorIVS.exe
 install:
 	msiexec /i CalculatorIVS/CalculatorSetup/Debug/CalculatorSetup.msi /quiet
 
-doc:
+doc: docclean
 	doxygen Doxyfile
 
 CalculatorIVS.exe: 
@@ -16,6 +16,9 @@ CalculatorIVS.exe:
 clean: 
 	powershell.exe -nologo -noprofile -command "& { Get-ChildItem ../ obj -Directory -recurse | Remove-Item -Recurse ; Get-ChildItem ../ bin -Directory -recurse | Remove-Item -Recurse }"
 
-pack:
+docclean:
+	powershell.exe -nologo -noprofile -command "& { Remove-Item -Recurse -Force ../doc }"
+
+pack: doc
 	powershell.exe -nologo -noprofile -command "& { Get-ChildItem -Path ../ -force | Compress-Archive -force -DestinationPath ../xkrizm06_xkucer92_xkunic01.zip }"
 
