@@ -21,5 +21,5 @@ docclean:
 	powershell.exe -nologo -noprofile -command "& { Remove-Item -Recurse -Force ../doc }"
 
 pack: doc
-	powershell.exe -nologo -noprofile -command "& {md -Force ../tmp/doc ; md -Force ../tmp/install ; md -Force ../tmp/repo ; cp -recurse -force .\CalculatorIVS\CalculatorSetup\ ../tmp/install/ ; cp -force -recurse ../doc ../tmp/doc; gci -force ../ | where FullName -notlike "*tmp" | cp -recurse -force -Destination ../tmp/repo ; Compress-Archive -force -Path ../tmp/* -DestinationPath ../xkrizm06_xkucer92_xkunic01.zip ; Remove-Item -Recurse -Force ../tmp }"
+	powershell.exe -nologo -noprofile -command "& {md -Force ../tmp/xkrizm06_xkucer92_xkulha08_xkunic01/doc ; md -Force ../tmp/xkrizm06_xkucer92_xkulha08_xkunic01/install ; md -Force ../tmp/xkrizm06_xkucer92_xkulha08_xkunic01/repo ; cp -recurse -force .\CalculatorIVS\CalculatorSetup\ ../tmp/xkrizm06_xkucer92_xkulha08_xkunic01/install/ ; cp -force -recurse ../doc ../tmp/xkrizm06_xkucer92_xkulha08_xkunic01/doc; gci -force ../ | where FullName -notlike "*tmp" | cp -recurse -force -Destination ../tmp/xkrizm06_xkucer92_xkulha08_xkunic01/repo ; Compress-Archive -force -Path ../tmp/* -DestinationPath ../xkrizm06_xkucer92_xkulha08_xkunic01.zip ; Remove-Item -Recurse -Force ../tmp }"
 
