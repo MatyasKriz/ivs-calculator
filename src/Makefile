@@ -1,17 +1,18 @@
 CC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
 
-.PHONY: all clean pack install doc
+.PHONY: run clean pack install doc all
 
-all: CalculatorIVS.exe 
+all:
+	echo "Use the Visual Studio solution located in CalculatorIVS subdirectory for compiling the program."
+
+run:
+	CalculatorIVS/CalculatorIVS/bin/Debug/CalculatorIVS.exe
 
 install:
 	msiexec /i CalculatorIVS/CalculatorSetup/Debug/CalculatorSetup.msi /quiet
 
 doc: docclean
 	doxygen Doxyfile
-
-CalculatorIVS.exe: 
-	$(CC) CalculatorIVS/CalculatorIVS.sln
 
 clean: 
 	powershell.exe -nologo -noprofile -command "& { Get-ChildItem ../ obj -Directory -recurse | Remove-Item -Recurse ; Get-ChildItem ../ bin -Directory -recurse | Remove-Item -Recurse }"
