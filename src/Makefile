@@ -3,6 +3,7 @@ CC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
 .PHONY: run clean pack install doc all
 
 all:
+	echo "Use the Visual Studio solution located in CalculatorIVS subdirectory for compiling the program."
 
 run:
 	CalculatorIVS/CalculatorIVS/bin/Debug/CalculatorIVS.exe
