@@ -1,4 +1,4 @@
-xkrizm06 100% (instalator, testy, (git manager))
-xkucer92 100% (vnitrni struktura, dokumentace, Makefile)
-xkulha08 0% (nic)
-xkunic01 100% (GUI, manual, matematicka knihovna, profiling)
+xkrizm06 100 (instalator, testy, (git manager))
+xkucer92 100 (vnitrni struktura, dokumentace, Makefile)
+xkulha08 0 (nic)
+xkunic01 100 (GUI, manual, matematicka knihovna, profiling)
