@@ -6,10 +6,10 @@ all:
 	echo "Use the Visual Studio solution located in CalculatorIVS subdirectory for compiling the program."
 
 run:
-	CalculatorIVS/CalculatorIVS/bin/Debug/CalculatorIVS.exe
+	CalculatorIVS/CalculatorIVS/bin/Debug/CalculatorIVS.exe || echo Failed to find program, please install it with the provided solution
 
 install:
-	msiexec /i CalculatorIVS/CalculatorSetup/Debug/CalculatorSetup.msi /quiet
+	powershell.exe -nologo -noprofile -command "&{ msiexec /i CalculatorIVS\CalculatorSetup\Release\CalculatorIVS.msi }"
 
 doc: docclean
 	doxygen Doxyfile
