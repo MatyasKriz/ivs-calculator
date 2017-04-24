@@ -5,11 +5,11 @@ CC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
 all:
 	echo "Use the Visual Studio solution located in CalculatorIVS subdirectory for compiling the program."
 
-run:
+run: all
 	CalculatorIVS/CalculatorIVS/bin/Debug/CalculatorIVS.exe
 
 install:
-	msiexec /i CalculatorIVS\CalculatorSetup\Release\CalculatorIVS.msi
+	powershell.exe -nologo -noprofile -command "&{ msiexec /i CalculatorIVS\CalculatorSetup\Release\CalculatorIVS.msi }"
 
 doc: docclean
 	doxygen Doxyfile
