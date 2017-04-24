@@ -6,6 +6,7 @@ all:
 	echo "Use the Visual Studio solution located in CalculatorIVS subdirectory for compiling the program."
 
 run: all
+	CalculatorIVS/CalculatorIVS/bin/Debug/CalculatorIVS.exe || echo Failed to find program, please install it with the provided solution
 
 install:
 	powershell.exe -nologo -noprofile -command "&{ msiexec /i CalculatorIVS\CalculatorSetup\Release\CalculatorIVS.msi }"
