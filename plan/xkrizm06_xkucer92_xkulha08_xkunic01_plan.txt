@@ -1,0 +1,12 @@
+xkrizm06 - instalátor, testy
+xkucer92 - vnitřní struktura
+xkunic01 - GUI, vnitřní struktura
+
+20. 3. - vytvořit patřičné testy a doplnit matematickou knihovnu
+30. 3. - dokončit vnitřní strukturu kalkulačky
+10. 4. - propojit graficke rozhrani s vnitrni strukturou
+20. 4. - finální úpravy, vyladění projektu
+
+komunikační kanály - Slack, pravidlo: dávat příspěvky do patřičních kanálů
+
+zvolený systém pro správu verzí a hosting - Git a GitHub, byla pozvána ivskontrola
